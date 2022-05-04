@@ -1,0 +1,7 @@
+# General
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+node_modules
+dist
+public

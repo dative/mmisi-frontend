@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "mblode.twig-language-2",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-typescript-next",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "donjayamanne.githistory",
+    "GitHub.copilot",
+    "heybourn.headwind",
+    "MS-vsliveshare.vsliveshare",
+    "pflannery.vscode-versionlens"
+  ]
+}

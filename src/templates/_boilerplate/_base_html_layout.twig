@@ -1,0 +1,68 @@
+{# -- Base HTML layout template that all HTML requests inherit from -- #}
+{#
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ┌─────────────────────────────────────────────────────────────────────────┐ │
+│ │                                headMeta                                 │ │
+│ └─────────────────────────────────────────────────────────────────────────┘ │
+│ ┌─────────────────────────────────────────────────────────────────────────┐ │
+│ │                                headLinks                                │ │
+│ └─────────────────────────────────────────────────────────────────────────┘ │
+│ ┌─────────────────────────────────────────────────────────────────────────┐ │
+│ │                                 headJs                                  │ │
+│ └─────────────────────────────────────────────────────────────────────────┘ │
+│ ┌─────────────────────────────────────────────────────────────────────────┐ │
+│ │                                 headCss                                 │ │
+│ └─────────────────────────────────────────────────────────────────────────┘ │
+│                                                                             │
+│                                 headContent                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ┌─────────────────────────────────────────────────────────────────────────┐ │
+│ │                                bodyHtml                                 │ │
+│ └─────────────────────────────────────────────────────────────────────────┘ │
+│ ┌─────────────────────────────────────────────────────────────────────────┐ │
+│ │                                 bodyJs                                  │ │
+│ └─────────────────────────────────────────────────────────────────────────┘ │
+│                                                                             │
+│                                 bodyContent                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+#}
+{% extends "_boilerplate/_base_web_layout.twig" %}
+
+{% block htmlTag %}
+  <html class="fonts-loaded" lang="en" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+{% endblock htmlTag %}
+
+{# -- Page content that should be included in the <head> -- #}
+{% block headContent %}
+  {# -- Any <meta> tags that should be included in the <head> #}
+  {% block headMeta %}{% endblock headMeta %}
+
+  {# -- Any <link> tags that should be included in the <head> #}
+  {% block headLinks %}{% endblock headLinks %}
+
+  {# -- Inline and polyfill JS #}
+  {% include "_boilerplate/_head_js.twig" %}
+
+  {# -- Any JavaScript that should be included before </head> -- #}
+  {% block headJs %}{% endblock headJs %}
+
+  {# -- Inline and critical CSS #}
+  <style>
+    {# -- Any CSS that should be included before </head> -- #}
+    {% block headCss %}{% endblock headCss %}
+  </style>
+
+{% endblock headContent %}
+
+{# -- Page content that should be included in the <body> -- #}
+{% block bodyContent %}
+  {# -- Page content that should be included in the <body> -- #}
+  {% block bodyHtml %}{% endblock bodyHtml %}
+
+  {# -- Inline JS #}
+  {% include "_boilerplate/_body_js.twig" %}
+
+  {# -- Any JavaScript that should be included before </body> -- #}
+  {% block bodyJs %}{% endblock bodyJs %}
+{% endblock bodyContent %}

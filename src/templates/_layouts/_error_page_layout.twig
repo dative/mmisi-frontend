@@ -1,0 +1,41 @@
+{# -- Layout template for error pages -- #}
+{#
+ ┌─────────────────────────────────────────────────────────────────────────────┐
+ │ ┌─────────────────────────────────────────────────────────────────────────┐ │
+ │ │                                                                         │ │
+ │ │                                                                         │ │
+ │ │                                                                         │ │
+ │ │                                 content                                 │ │
+ │ └─────────────────────────────────────────────────────────────────────────┘ │
+ │ ┌─────────────────────────────────────────────────────────────────────────┐ │
+ │ │                                                                         │ │
+ │ │                                                                         │ │
+ │ │                                                                         │ │
+ │ │                               subContent                                │ │
+ │ └─────────────────────────────────────────────────────────────────────────┘ │
+ │                                                                             │
+ │                                  bodyHtml                                   │
+ └─────────────────────────────────────────────────────────────────────────────┘
+#}
+{% extends "_layouts/_generic_page_layout.twig" %}
+
+{% block content %}
+{% endblock %}
+
+{% block subcontent %}
+<section>
+	<div class="container py-8 mx-auto">
+		<div class="p-8 mb-8 text-center">
+			<h1 class="pt-4 font-mono text-5xl italic font-bold">
+        {{ errorHeadline|default('Error') }}
+			</h1>
+			<p class="pt-4 font-sans text-xl">
+        {{ errorText|default('An error has occurred.')|nl2br }}
+			</p>
+		</div>
+	</div>
+</section>
+{% endblock %}
+
+{# -- Any JavaScript that should be included before </body> -- #}
+{% block bodyJs %}{% endblock bodyJs %}

@@ -1,0 +1,69 @@
+{# -- Layout template for HTML pages -- #}
+{#
+ ┌─────────────────────────────────────────────────────────────────────────────┐
+ │ ┌─────────────────────────────────────────────────────────────────────────┐ │
+ │ │                                                                         │ │
+ │ │                                                                         │ │
+ │ │                                                                         │ │
+ │ │                                 content                                 │ │
+ │ └─────────────────────────────────────────────────────────────────────────┘ │
+ │ ┌─────────────────────────────────────────────────────────────────────────┐ │
+ │ │                                                                         │ │
+ │ │                                                                         │ │
+ │ │                                                                         │ │
+ │ │                               subContent                                │ │
+ │ └─────────────────────────────────────────────────────────────────────────┘ │
+ │                                                                             │
+ │                                  bodyHtml                                   │
+ └─────────────────────────────────────────────────────────────────────────────┘
+#}
+{% extends "_boilerplate/_base_html_layout.twig" %}
+
+{# -- Any <meta> tags that should be included in the <head> #}
+{% block headMeta %}
+{% endblock headMeta %}
+
+{# -- Any <link> tags that should be included in the <head> #}
+{% block headLinks %}
+  <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+{% endblock headLinks %}
+
+{# -- Any CSS that should be included before </head> -- #}
+{% block headCss %}
+{% endblock headCss %}
+
+{# -- Page body -- #}
+{% block bodyHtml %}
+  <div id="page-container" class="overflow-hidden leading-tight">
+    <div id="component-container"></div>
+    <div id="content-container">
+
+      {# -- Info header, including _navbar.twig -- #}
+      {% include "_partials/_site_header.twig" %}
+
+      <main>
+        {# -- Primary content block -- #}
+        {% block content %}
+        {% endblock %}
+      </main>
+    </div>
+
+    {# -- Content that appears below the primary content block -- #}
+    {% block subcontent %}
+    {% endblock %}
+
+    {# -- Info footer -- #}
+    {% include "_partials/_site_footer.twig" %}
+
+    {# -- HTML Footer -- #}
+    {% include "_partials/_global_footer.twig" %}
+  </div>
+{% endblock bodyHtml %}
+
+
+{# -- Any JavaScript that should be included before </body> -- #}
+{% block bodyJs %}
+<script src="{{ mix('/js/manifest.js') }}"></script>
+<script src="{{ mix('/js/vendor.js') }}"></script>
+<script src="{{ mix('/js/app.js') }}"></script>
+{% endblock bodyJs %}
