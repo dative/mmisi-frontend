@@ -1,10 +1,9 @@
 ---
 name: Bug Report / Help
-about: Describe this issue template's purpose here.
+about: Report a bug or ask for help
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 ### Issue and Steps to Reproduce
