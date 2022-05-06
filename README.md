@@ -25,8 +25,10 @@ This will fire up the local development, with live reload. It will run on [`http
 
 This will build the production version of the site inside the `public` directory.
 
-### Design Files & Tasks
+### Program Guidelines
+
+Please review the [Program Guidelines](https://github.com/dative/mmisi-frontend/blob/main/GUIDELINES.md) to learn about our program format and code of conduct.
 
 The design for the new website was created in [Figma and can be found here](https://www.figma.com/file/8pzqHnSLkdZocdYIMOc47C/Design-Docs-v3-Frontend?node-id=0%3A1)
 
-Tasks will be managed in [Github Discussion](https://github.com/dative/mmisi-frontend/discussions). Please take your time to review all topics.
+Resources can be found under [Github Discussion](https://github.com/dative/mmisi-frontend/discussions). Please take your time to review all the topics.
