@@ -8,19 +8,19 @@ assignees: ''
 
 ### Tasks
 
-- [] Create a fork of this repo
-- [] Clone your fork to your local dev environment
-- [] Install the dependencies and run the `npm run dev` command without issues
-- [] Confirm access to the design Figma file
-- [] Review the implementation approach with Lead Developer
-- [] Create website "shell" layout on `_generic_page_layout.twig`
-  - [] Review and define webfonts
-  - [] Review and define colors
-  - [] Review and define containers
-  - [] Implement `_site_header.twig` component
-  - [] Implement `_site_footer.twig` component
-  - [] Implement `typography.twig` page
-  - [] Make sure non-photo images are either inline SVG or URL encoded when used in CSS.
+- [ ] Create a fork of this repo
+- [ ] Clone your fork to your local dev environment
+- [ ] Install the dependencies and run the `npm run dev` command without issues
+- [ ] Confirm access to the design Figma file
+- [ ] Review the implementation approach with Lead Developer
+- [ ] Create website "shell" layout on `_generic_page_layout.twig`
+  - [ ] Review and define webfonts
+  - [ ] Review and define colors
+  - [ ] Review and define containers
+  - [ ] Implement `_site_header.twig` component
+  - [ ] Implement `_site_footer.twig` component
+  - [ ] Implement `typography.twig` page
+  - [ ] Make sure non-photo images are either inline SVG or URL encoded when used in CSS.
 
 ### Discussion to follow
 
