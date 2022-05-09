@@ -17,5 +17,23 @@
 {# -- General global variables -- #}
 {% set baseUrl = siteUrl ~ '/' %}
 
+{# Navbar variables #}
+{% set services = [
+  { url: "#", text: "Our Company" },
+  { url: "#", text: "Our Services" },
+  { url: "#", text: "Schedule a Call"},
+] %}
+
+{% set nav = [
+  { url: "#", text: "Client Portal" },
+  { url: "#", text: "Make a Payment" },
+  { url: "#", text: "Report a Claim" },
+  { url: "#", text: "Request Certificate/Binder" },
+  { url: "#", text: "Contact" },
+  { url: "#", text: "Blog" },
+  { url: "#", text: "Careers" },
+  { url: "#", text: "Privacy & Accessibility" },
+] %}
+
 {# -- Twig output from the render; this must be in a block -- #}
 {% endapply %}{% block htmlPage %}{% endblock %}
