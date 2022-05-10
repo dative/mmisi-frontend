@@ -2,7 +2,7 @@
 
 module.exports = {
   content: [
-    "./src/**/*.{js,ts,css,twig,svg}",
+    "./src/**/*.{js,ts,css,twig}",
   ],
   theme: {
     colors: {
