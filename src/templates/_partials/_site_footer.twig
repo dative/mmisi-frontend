@@ -1,36 +1,38 @@
 <footer id="site-footer" class="bg-plum-gradient text-white">
   <section class="max-w-narrow mx-auto">
-    <div class="p-7 flex flex-col gap-7">
-      <div>
-      {# Logo #}
-        <a hfef="/" class="">
-          {% include "_partials/_logo_white.svg.twig" %}
-        </a> 
-      </div>  
-      {# Main links #}
-      <div>
-        <ul  class="flex flex-col gap-4">
-          {% for item in nav %}
-            <li><a href="{{item.url}}" class="font-bold tracking-[2px] leading-[27px] text-[22px]">{{item.text}}</a></li> 
-          {% endfor %}
-        </ul>
-      </div>
-      {# Secondary links #}
-      <nav>
-        <ul class="flex flex-col gap-4">
-          {% for item in nav %}
-            <li><a href="{{item.url}}" class="font-medium tracking-[2px]">{{item.text}}</a></li> 
-          {% endfor %}
-        </ul>
-      </nav>
-      {# Social Midia #}
-      <div class="flex flex-row gap-4"> 
-        <a href="#">
-          {% include "_partials/_facebook.icon.svg.twig" %}
-        </a>
-        <a href="#">
-          {% include "_partials/_linkedin.icon.svg.twig" %}
-        </a>
+    <div class="p-7">
+      <div class="relative flex flex-col gap-7 md:flex-row md:min-h-[160px] md:justify-between">
+        <div>
+        {# Logo #}
+          <a href="/">
+            {% include "_partials/_logo_white.svg.twig" %}
+          </a> 
+        </div>  
+        {# Main links #}
+        <div class="md:hidden">
+          <ul  class="flex flex-col gap-4">
+            {% for item in services %}
+              <li><a href="{{item.url}}" class="font-bold tracking-[2px] leading-[27px] text-[22px]">{{item.text}}</a></li> 
+            {% endfor %}
+          </ul>
+        </div>
+        {# Secondary links #}
+        <nav class="flex-1 md:max-w-[635px] md:flex md:items-center">
+          <ul class="flex flex-col gap-4 md:flex-row md:flex-wrap md:gap-x-0">
+            {% for item in nav %}
+              <li class="w-full md:w-1/2"><a href="{{item.url}}" class="font-medium md:font-bold tracking-[2px]">{{item.text}}</a></li> 
+            {% endfor %}
+          </ul>
+        </nav>
+        {# Social Midia #}
+        <div class="flex flex-row gap-4 md:absolute md:bottom-0"> 
+          <a href="#">
+            {% include "_partials/_facebook.icon.svg.twig" %}
+          </a>
+          <a href="#">
+            {% include "_partials/_linkedin.icon.svg.twig" %}
+          </a>
+        </div>
       </div>
     </div>
   </section>
