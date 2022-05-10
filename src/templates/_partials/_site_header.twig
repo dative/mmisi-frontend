@@ -1,5 +1,47 @@
 <header id="site-header">
   <section class="max-w-screen-lg mx-auto">
-    <h2>site-header</h2>
+    <div class="bg-plum-lightest md:bg-transparent">
+      <div
+        class="flex flex-row px-12 py-2 text-sm justify-center md:justify-end">
+        <div class="font-semibold text-plum uppercase">
+          client portal
+        </div>
+        <div class="px-5 text-plum-light">
+          |
+        </div>
+        <div class="font-semibold text-plum uppercase">
+          1-800-800-8990
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-row pt-1 pl-3 pb-7 justify-between">
+        <div class="flex flex-col">
+          <a href="/">
+            {% include "_partials/img/_logo_color.svg.twig" %}
+          </a>
+        </div>
+        <div class="flex flex-col justify-end md:hidden">
+          <button class="hamburger hamburger--squeeze" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+          <nav class="flex-1 md:max-w-[485px] hidden md:block md:flex md:items-center">
+            <ul class="flex flex-col items-center md:flex-row">
+              <li class="p-2 font-medium"><a href="#">Our Company</a></li>
+              <li class="p-2 font-medium"><a href="#">Our Services</a></li>
+              <li class="p-2">
+                <a href="#">
+                  <button class="rounded-lg bg-plum p-5
+                  text-white font-semibold">
+                      Save Changes
+                  </button>
+                </a>
+              </li>
+          </ul>
+        </nav>
+    </div>
   </section>
 </header>
