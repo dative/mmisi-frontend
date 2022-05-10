@@ -24,6 +24,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Montserrat', 'sans-serif'],
+      mono: ['Fira Mono', 'sans-serif'],
     },
     screens: {
       'sm': '640px',
