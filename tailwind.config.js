@@ -2,7 +2,7 @@
 
 module.exports = {
   content: [
-    "./src/**/*.{js,ts,css,twig}",
+    "./src/**/*.{js,ts,css,twig,svg}",
   ],
   theme: {
     colors: {
@@ -24,6 +24,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Montserrat', 'sans-serif'],
+      mono: ['Fira Mono', 'sans-serif'],
     },
     screens: {
       'sm': '640px',
@@ -34,6 +35,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         'plum-gradient': 'linear-gradient(180deg, #775AA0 0%, #574275 100%);',
+      },
+      maxWidth: {
+        'narrow': '1110px'
       }
     },
   },

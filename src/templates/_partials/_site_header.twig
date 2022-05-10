@@ -1,3 +1,45 @@
 <header id="site-header">
-  <h2>site-header</h2>
+  <section class="max-w-screen-lg mx-auto">
+    <div class="bg-plum-lightest md:bg-transparent">
+      <div
+        class="flex flex-row px-12 divide-x-2 divide-plum-light py-2 text-sm justify-center md:justify-end">
+        <div class="font-semibold text-plum  pr-5 uppercase">
+          client portal
+        </div>
+
+        <div class="font-semibold text-plum pl-5">
+          1-800-800-8990
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-row pt-1 pl-3 pb-7 justify-between">
+        <div class="flex flex-col">
+          <a href="/">
+            {% include "_partials/img/_logo_color.svg.twig" %}
+          </a>
+        </div>
+        <div class="flex flex-col justify-end md:hidden">
+          <button class="hamburger hamburger--squeeze" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+          <nav class="flex-1 md:max-w-[485px] hidden md:block md:flex md:items-center">
+            <ul class="flex flex-col items-center md:flex-row">
+              <li class="p-2 font-medium"><a href="#" class="p-4 hover:bg-plum rounded-lg hover:text-white">Our Company</a></li>
+              <li class="p-2 font-medium"><a href="#" class="p-4 hover:bg-plum rounded-lg hover:text-white">Our Services</a></li>
+              <li class="p-2">
+                <a href="#">
+                  <button class="rounded-lg bg-plum p-5 hover:bg-plum-dark
+                  text-white font-semibold">
+                      Save Changes
+                  </button>
+                </a>
+              </li>
+          </ul>
+        </nav>
+    </div>
+  </section>
 </header>
