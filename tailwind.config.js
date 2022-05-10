@@ -34,6 +34,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         'plum-gradient': 'linear-gradient(180deg, #775AA0 0%, #574275 100%);',
+      },
+      maxWidth: {
+        'narrow': '1110px'
       }
     },
   },
