@@ -40,10 +40,6 @@ module.exports = {
         'narrow': '1110px',
       },
     },
-
-    utilities : {
-      'isActive': 'is-active',
-    }
   },
   plugins: [
     require('@tailwindcss/typography'),
