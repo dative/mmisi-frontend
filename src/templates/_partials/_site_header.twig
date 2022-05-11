@@ -1,5 +1,52 @@
 <header id="site-header">
-  <section class="max-w-screen-xl mx-auto">
-		<h2>site-header</h2>
-	</section>
+		<section class="max-w-screen-xl mx-auto">
+				{# Client Portal #}
+				<div class="">	
+					<div class="flex justify-between md:mx-0 mx-auto gap-1 p-2 md:px-7  max-w-[300px] md:max-w-none md:justify-end">
+						<a  href="#" class="uppercase font-semibold text-plum">Client Portal</a>
+						<div class="w-[2px] bg-plum-light"></div>
+						<a href="#" class="uppercase font-semibold text-plum">1-800-800-8990</a>
+					</div>
+				</div>
+				
+				<div class="md:flex md:flex-row md:justify-between">
+					<div class="flex flex-row px-2">
+						{# Logo#}
+						<a href="/" class="w-full">
+							{% include "_partials/_logo_colorful.svg.twig" %}
+						</a> 
+						{# BUtton #}
+							<button id="menu" class="hamburger hamburger--collapse md:hidden" type="button">
+								<span class="hamburger-box">
+									<span class="hamburger-inner"></span>
+								</span>
+							</button>
+					</div>
+					
+					{# hamburger menu #}
+					<div class="relative hidden md:flex flex-col gap-7 p-7 md:pb-0 md:justify-center" role="menubar"> 
+						<div>
+							<ul  class="flex flex-col gap-4 md:flex-row md:gap-6">
+								{% for item in services %}
+									{% if item.text != "Schedule a Call" %}
+										<li><a href="{{item.url}}" class="font-bold text-[#9B51E0] md:text-black md:font-semibold md:text-sm tracking-[2px] leading-[27px] text-[22px] md:py-5">{{item.text}}</a></li> 
+									{% endif %}
+								{% endfor %}
+								<li><a href="#" class="font-bold text-[#9B51E0] 
+								md:font-semibold md:text-sm tracking-[2px] 
+								leading-[27px] text-[22px] md:bg-plum-gradient md:rounded-md 
+								md:text-white md:p-5">Schedule a Call</a></li> 
+							</ul>
+						</div>
+
+						<nav class="flex-1 md:hidden">
+							<ul class="flex flex-col gap-4">
+								{% for item in nav %}
+									<li class="w-full md:w-1/2 text-plum"><a href="{{item.url}}" class="font-medium md:font-bold tracking-[2px]">{{item.text}}</a></li> 
+								{% endfor %}
+							</ul>
+						</nav>
+					</div>
+				</div>
+		</section>
 </header>

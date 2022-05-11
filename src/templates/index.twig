@@ -5,20 +5,13 @@
 {% endblock headLinks %}
 
 {% block content %}
-	<div class="">
-			<section class="max-w-screen-xl mx-auto">
-				<h1 class="">content</h1>
-			</section>
-	</div
+
 {% endblock %}
 
-{# {% block subcontent %}
-	<section>
-		<h2>subcontent</h2>
-	</section>
-{% endblock %} #}
+{% block subcontent %}
+{% endblock %}
 
 {# -- Any JavaScript that should be included before </body> -- #}
-{# {% block bodyJs %}
+{% block bodyJs %}
 	{{ parent() }}
-{% endblock bodyJs %} #}
+{% endblock bodyJs %}
