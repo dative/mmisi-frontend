@@ -1,48 +1,53 @@
 <header id="site-header" class="max-w-screen-lg mx-auto">
-	<section class="flex flex-row items-center md:justify-end justify-center md:bg-white bg-plum-lightest ">
-		{% set h1_css = "text-sm leading-5 font-semibold tracking-[2%] text-plum m-2.5" %}
-		<h1 class="{{ h1_css }}">
-			CLIENT PORTAL
-		</h1>
-		{% include "_partials/_line.svg.twig" %}
-		<h1 class="{{ h1_css }}">
-			1-800-800-8990
-		</h1>
+	<section>
+		<ul class="flex flex-row items-center justify-center md:justify-end md:bg-white bg-plum-lightest">
+			{% for n in [
+                { url: '#', text: 'CLIENT PORTAL' },
+                { url: '#', text: '1-800-800-8990' },
+              ] %}
+				<li>
+					<a href="{{ n.url }}" class="flex gap-3.5 text-sm leading-5 font-semibold tracking-[2%] text-plum m-2.5">
+						{{ n.text}}
+						{% if not loop.last %}
+							<span class="w-px h-5 bg-plum-light"></span>
+						{% endif %}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
 	</section>
-	<section class="flex flex-row items-center md:justify-between justify-evenly my-2 md:mx-7">
-		<div class="">
-			{% include "_partials/_logo_black.svg.twig" %}
-		</div>
-		<button onclick="addClass()" id="button" class="hamburger hamburger--squeeze self-end md:hidden" type="button">
+	<section class="flex flex-row items-center md:justify-between justify-evenly md:mx-7 h-36">
+		<a href="#">
+			{% include "_partials/_logo_color.svg.twig" %}
+			<span class="sr-only">Murray and McDonald Insurance Services, Inc.</span>
+		</a>
+		<button id="hamburger-button" class="self-end hamburger hamburger--squeeze md:hidden" type="button">
 			<span class="hamburger-box">
 				<span class="hamburger-inner !bg-plum before:!bg-plum after:!bg-plum"></span>
 			</span>
 		</button>
-	</span>
-</button>
-<nav class="hidden md:flex md:self-end">
-	<ul class="flex flex-row gap-4 items-center">
-		{% for n in [
-                { url: '#', text: 'Our Company' },
-                { url: '#', text: 'Our Services' },
-              ] %}
-			<li>
-				<a href="{{ n.url }}" class="leading-5 font-medium text-lg">
-					{{ n.text}}
-				</a>
-			</li>
-		{% endfor %}
-		<li class="text-white bg-plum-gradient h-16 flex items-center p-5 rounded-md">
-			<a href="#" class="leading-5 font-medium text-lg">
-				Schedule a Call
-			</a>
-		</li>
-	</ul>
-</nav></section></header><script>function addClass() {
-const button = document.querySelector('#button');
-if (button.classList.contains('is-active')) {
-button.classList.remove('is-active');
-return
-}
-button.classList.add('is-active');
-}</script>
+		<nav class="hidden md:flex md:self-end">
+			<ul class="flex flex-row items-center gap-4">
+				{% for n in [
+                    { url: '#', text: 'Our Company' },
+                    { url: '#', text: 'Our Services' },
+                    { url: '#', text: 'Schedule a Call' },
+                  ] %}
+					{% if loop.last %}
+						<li class="flex items-center h-16 p-5 text-white rounded-md bg-plum-gradient">
+							<a href="{{ n.url }}" class="text-lg font-medium leading-5">
+								{{ n.text}}
+							</a>
+						</li>
+					{% else %}
+						<li>
+							<a href="{{ n.url }}" class="text-lg font-medium leading-5">
+								{{ n.text}}
+							</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</nav>
+	</section>
+</header>

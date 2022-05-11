@@ -13,3 +13,79 @@
 * {
   @apply antialiased;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer typography {
+  .typography {
+    * {
+      @apply text-black !important;
+      @apply text-left !important;
+      @apply tracking-normal !important;
+      @apply font-sans !important;
+    }
+
+    h1 {
+      @apply mb-3 !important;
+      @apply text-4xl !important;
+      @apply font-medium !important;
+      @apply leading-[50px] !important;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5 {
+      @apply text-2xl !important;
+      @apply font-bold !important;
+      @apply leading-8 !important;
+      @apply my-5 !important;
+    }
+
+    h3, h5 {
+      @apply font-medium !important;
+    }
+
+    ul,
+    ol {
+      @apply m-4 !important;
+      @apply list-outside !important;
+      @apply text-base !important;
+    }
+
+    ul {
+      @apply marker:text-plum-light !important;
+      @apply list-disc !important;
+    }
+
+    ol {
+      @apply marker:text-plum !important;
+      @apply list-decimal !important;
+    }
+
+    li {
+      @apply my-3.5 !important;
+    }
+
+    li span {
+      @apply relative !important;
+      @apply left-1 !important;
+    }
+
+    p, h6, pre {
+      @apply text-lg !important;
+      @apply leading-8 !important;
+      @apply font-normal !important;
+    }
+
+    pre {
+      @apply my-3.5 !important;
+    }
+
+    kbd {
+      @apply font-medium !important;
+    }
+  }
+}
