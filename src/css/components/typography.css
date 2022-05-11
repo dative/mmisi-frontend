@@ -18,74 +18,74 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer typography {
+@layer components {
   .typography {
     * {
-      @apply text-black !important;
-      @apply text-left !important;
-      @apply tracking-normal !important;
-      @apply font-sans !important;
+      @apply text-black;
+      @apply text-left;
+      @apply tracking-normal;
+      @apply font-sans;
     }
 
     h1 {
-      @apply mb-3 !important;
-      @apply text-4xl !important;
-      @apply font-medium !important;
-      @apply leading-[50px] !important;
+      @apply mb-3;
+      @apply text-4xl;
+      @apply font-medium;
+      @apply leading-[50px];
     }
 
     h2,
     h3,
     h4,
     h5 {
-      @apply text-2xl !important;
-      @apply font-bold !important;
-      @apply leading-8 !important;
-      @apply my-5 !important;
+      @apply text-2xl;
+      @apply font-bold;
+      @apply leading-8;
+      @apply my-5;
     }
 
     h3, h5 {
-      @apply font-medium !important;
+      @apply font-medium;
     }
 
     ul,
     ol {
-      @apply m-4 !important;
-      @apply list-outside !important;
-      @apply text-base !important;
+      @apply m-4;
+      @apply list-outside;
+      @apply text-base;
     }
 
     ul {
-      @apply marker:text-plum-light !important;
-      @apply list-disc !important;
+      @apply marker:text-plum-light;
+      @apply list-disc;
     }
 
     ol {
-      @apply marker:text-plum !important;
-      @apply list-decimal !important;
+      @apply marker:text-plum;
+      @apply list-decimal;
     }
 
     li {
-      @apply my-3.5 !important;
+      @apply my-3.5;
     }
 
     li span {
-      @apply relative !important;
-      @apply left-1 !important;
+      @apply relative;
+      @apply left-1;
     }
 
     p, h6, pre {
-      @apply text-lg !important;
-      @apply leading-8 !important;
-      @apply font-normal !important;
+      @apply text-lg;
+      @apply leading-8;
+      @apply font-normal;
     }
 
     pre {
-      @apply my-3.5 !important;
+      @apply my-3.5;
     }
 
     kbd {
-      @apply font-medium !important;
+      @apply font-medium;
     }
   }
 }
