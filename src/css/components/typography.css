@@ -13,3 +13,41 @@
 * {
   @apply antialiased;
 }
+
+
+.header-1 {
+  @apply font-medium text-[32px] leading-[48px] text-black md:text-[48px] md:leading-[50px]
+}
+
+
+.header-2 {
+  @apply font-bold text-[24px] leading-[32px] text-black md:text-[32px] md:leading-10
+}
+
+.header-3 {
+  @apply font-medium text-[24px] leading-[32px] text-black md:text-[32px] md:leading-10
+}
+
+.header-4 {
+  @apply font-bold text-[24px] leading-[32px] text-black
+}
+
+.header-5 {
+  @apply font-semibold text-[24px] leading-[32px] text-black
+}
+
+.header-6 {
+  @apply text-accent-dark font-medium text-xl
+}
+
+.paragraph {
+  @apply font-normal text-[18px] leading-[28px] text-black md:text-[20px] md:leading-8
+}
+
+.o-list {
+  @apply marker:text-plum-light list-decimal pl-5 space-y-3 text-black paragraph
+}
+
+.u-list {
+  @apply marker:text-plum-light list-disc pl-5 space-y-3 text-black paragraph
+}
