@@ -1,52 +1,54 @@
 <header id="site-header">
-		<section class="max-w-screen-xl mx-auto">
-				{# Client Portal #}
-				<div class="">	
-					<div class="flex justify-between md:mx-0 mx-auto gap-1 p-2 md:px-7  max-w-[300px] md:max-w-none md:justify-end">
-						<a  href="#" class="uppercase font-semibold text-plum">Client Portal</a>
-						<div class="w-[2px] bg-plum-light"></div>
-						<a href="#" class="uppercase font-semibold text-plum">1-800-800-8990</a>
-					</div>
-				</div>
-				
-				<div class="md:flex md:flex-row md:justify-between">
-					<div class="flex flex-row px-2">
-						{# Logo#}
-						<a href="/" class="w-full">
-							{% include "_partials/_logo_colorful.svg.twig" %}
-						</a> 
-						{# BUtton #}
-							<button id="menu" class="hamburger hamburger--collapse md:hidden" type="button">
-								<span class="hamburger-box">
-									<span class="hamburger-inner"></span>
-								</span>
-							</button>
-					</div>
-					
-					{# hamburger menu #}
-					<div class="relative hidden md:flex flex-col gap-7 p-7 md:pb-0 md:justify-center" role="menubar"> 
-						<div>
-							<ul  class="flex flex-col gap-4 md:flex-row md:gap-6">
-								{% for item in services %}
-									{% if item.text != "Schedule a Call" %}
-										<li><a href="{{item.url}}" class="font-bold text-[#9B51E0] md:text-black md:font-semibold md:text-sm tracking-[2px] leading-[27px] text-[22px] md:py-5">{{item.text}}</a></li> 
-									{% endif %}
-								{% endfor %}
-								<li><a href="#" class="font-bold text-[#9B51E0] 
-								md:font-semibold md:text-sm tracking-[2px] 
-								leading-[27px] text-[22px] md:bg-plum-gradient md:rounded-md 
-								md:text-white md:p-5">Schedule a Call</a></li> 
-							</ul>
-						</div>
+	<section class="max-w-screen-xl mx-auto pb-3 md:px-5">
 
-						<nav class="flex-1 md:hidden">
-							<ul class="flex flex-col gap-4">
-								{% for item in nav %}
-									<li class="w-full md:w-1/2 text-plum"><a href="{{item.url}}" class="font-medium md:font-bold tracking-[2px]">{{item.text}}</a></li> 
-								{% endfor %}
-							</ul>
-						</nav>
+			<div class="bg-plum-lightest md:bg-transparent md:mb-[-30px] overflow-x-scroll scroll md:overflow-x-hidden">
+				<div class="w-max md:w-full mx-auto">
+					<div class="flex gap-4 p-2 md:justify-end">
+						{% for item in headerInfo %}
+							<a href="{{item.url}}" class="uppercase font-medium text-plum z-10">{{item.text}}</a>
+							<div class="w-[2px] bg-plum-light last:hidden"></div>
+						{% endfor %}
 					</div>
+				</div>	
+			</div>
+			
+			<div class="md:flex md:justify-between">
+				<div class="flex px-5">
+					<a href="/" class="w-full">
+						{% include "_partials/_logo_colorful.svg.twig" %}
+					</a> 
+
+					<button id="menu" class="hamburger hamburger--collapse md:hidden" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
 				</div>
-		</section>
+
+				<div class="flex-col hidden py-10 px-5 gap-7 md:px-0 md:flex md:justify-end md:pb-4" role="menubar"> 
+					<div>
+						<ul  class="flex flex-col gap-4 md:flex-row md:gap-6">
+							{% for item in services %}
+								{% if item.text != "Schedule a Call" %}
+									<li><a href="{{item.url}}" class="font-bold text-[#9B51E0] md:text-black md:font-semibold md:text-sm tracking-[2px] leading-[27px] text-[22px] md:py-5">{{item.text}}</a></li>
+									{% else %}
+									<li><a href="#" class="font-bold text-[#9B51E0] 
+									md:font-semibold md:text-sm tracking-[2px] 
+									leading-[27px] text-[22px] md:bg-plum-gradient md:rounded-md 
+								md:text-white md:p-5">Schedule a Call</a></li> 
+								{% endif %}
+							{% endfor %}
+						</ul>
+					</div>
+
+					<nav class="md:hidden">
+						<ul class="flex flex-col gap-4">
+							{% for item in nav %}
+								<li><a href="{{item.url}}" class="text-plum font-medium md:font-bold tracking-[2px]">{{item.text}}</a></li> 
+							{% endfor %}
+						</ul>
+					</nav>
+				</div>
+			</div>
+	</section>
 </header>
