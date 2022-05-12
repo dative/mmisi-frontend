@@ -1,5 +1,30 @@
 <header id="site-header">
-  <section class="max-w-screen-lg mx-auto">
-    <h2>site-header</h2>
-  </section>
+	<section class="box-border w-screen flex-column align-center">
+		<div class="flex justify-around pr-2 mx-auto align-center bg-plum-lightest md:absolute md:right-2 md:top-2 md:bg-white">
+			<a href="#" class="font-semibold text-plum ">CLIENTE PORTAL</a>
+			<div class="w-px h-5 bg-plum-light md:h-3 md:m-2"></div>
+			<a href="#" class="font-semibold text-plum ">1-800-800-8990</a>
+		</div>
+		<div
+			class="flex justify-between p-2 align-bottom bg-white ">
+			{# Verificar altura #}
+			<a href="#"><img class="h-24" src="./img/logo.svg" alt="logo Murray & MacDonald"></a>
+
+			{# Parte do Hamburguer --> Ex:2 https://larainfo.com/blogs/tailwind-css-navbar-ui-example #}
+			<div class="items-center self-end hidden space-x-8 md:flex">
+				<a href="#">Our Company</a>
+				<a href="#">Our Services</a>
+				<a class="p-5 font-bold text-white rounded-md bg-plum-gradient hover:bg-plum " href="#">Schedule a Calll</a>
+
+			</div>
+			<button class="self-end md:hidden hamburger hamburger--squeeze " type="button">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</button>
+			{# <div class="flex self-end w-8 md:hidden ">
+							<img src="./img/burguer.svg">
+						</div> #}
+		</div>
+	</section>
 </header>

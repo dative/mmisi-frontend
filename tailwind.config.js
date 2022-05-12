@@ -5,6 +5,7 @@ module.exports = {
     "./src/**/*.{js,ts,css,twig}",
   ],
   theme: {
+
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -25,6 +26,7 @@ module.exports = {
     fontFamily: {
       sans: ['Montserrat', 'sans-serif'],
     },
+
     screens: {
       'sm': '640px',
       'md': '1024px',
