@@ -1,16 +1,16 @@
 <header id="site-header">
 	<section class="max-w-screen-narrow mx-auto">
-		<div>
-			<div class="flex justify-center p-3 font-semibold text-plum bg-plum-lightest md:justify-end md:bg-white md:p-3 md:pb-0">
+		<div class="">
+			<div class="flex justify-center py-3 px-4 font-semibold text-plum bg-plum-lightest md:justify-end md:bg-white md:p-3 md:pb-0">
 				<a href="#">CLIENT PORTAL</a>
 				<div class="px-3">{% include "_partials/_retangle.svg.twig"%}</div>
 				<a href="#">1-800-8990</a>
 			</div>
-			<div class="flex justify-between px-3 py-1 max-h-fit">
+			<div class="flex justify-between px-4 pb-3 max-h-fit">
 				<div>{% include "_partials/_logo.svg.twig"%}</div>
 				<div class="flex items-end justify-end">
 					<div class="sm:flex md:hidden">
-						<button class="hamburger hamburger--squeeze" type="button">
+						<button onclick="sidebar()" class="hamburger hamburger--squeeze" type="button">
 							<span class="hamburger-box">
 								<span class="hamburger-inner"></span>
 							</span>
@@ -28,5 +28,17 @@
 				</div>
 			</div>
 		</div>
+		<div id="sidebar" class="min-w-full min-h-full z-10 hidden md:hidden">Sidebar</div>
 	</section>
 </header>
+
+<script>
+	function sidebar() {
+let sideScreen = document.getElementById('sidebar');
+if (sideScreen.style.display == 'none') {
+sideScreen.style.display = 'flex';
+} else {
+sideScreen.style.display = 'none';
+}
+}
+</script>

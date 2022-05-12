@@ -1,33 +1,33 @@
 <footer id="site-footer" class="text-white bg-plum-gradient">
-  <section class="mx-auto max-w-narrow">
-    <div class="p-7">
-      <div class="relative flex flex-col gap-7 md:flex-row md:justify-between md:min-h-[160px]">
+	<section class="mx-auto max-w-narrow">
+		<div class="p-7">
+			<div class="relative flex flex-col gap-7 md:flex-row md:justify-between md:min-h-[160px]">
 
-        <div>
-          <a href="/">
-            {% include "_partials/_logo_white.svg.twig" %}
-          </a>
-        </div>
+				<div>
+					<a href="/">
+						{% include "_partials/_logo_white.svg.twig" %}
+					</a>
+				</div>
 
-        <div class="md:hidden">
-          <ul class="flex flex-col gap-4">
-            {% for n in [
+				<div class="md:hidden">
+					<ul class="flex flex-col gap-4">
+						{% for n in [
               { url: '#', text: 'Our Company' },
               { url: '#', text: 'Our Services' },
               { url: '#', text: 'Schedule a Call' },
             ] %}
-              <li>
-                <a href="{{ n.url }}" class="font-bold text-[22px] leading-[27px] tracking-[2px]">
-                  {{ n.text}}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
+							<li>
+								<a href="{{ n.url }}" class="font-bold text-[22px] leading-[27px] tracking-[2px]">
+									{{ n.text}}
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
 
-        <nav class="flex-1 md:max-w-[635px] md:flex md:items-center">
-          <ul class="flex flex-col gap-4 md:flex-row md:flex-wrap md:gap-x-0">
-            {% for n in [
+				<nav class="flex-1 md:max-w-[635px] md:flex md:items-center">
+					<ul class="flex flex-col gap-4 md:flex-row md:flex-wrap md:gap-x-0">
+						{% for n in [
               { url: '#', text: 'Client Portal' },
               { url: '#', text: 'Make a Payment' },
               { url: '#', text: 'Report a Claim' },
@@ -37,24 +37,24 @@
               { url: '#', text: 'Careers' },
               { url: '#', text: 'Privacy & Accessibility' },
             ] %}
-              <li class="w-full md:w-1/2">
-                <a href="{{ n.url }}" class="font-medium tracking-[2px] md:font-bold">
-                  {{ n.text}}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </nav>
+							<li class="w-full md:w-1/2">
+								<a href="{{ n.url }}" class="font-medium tracking-[2px] md:font-bold">
+									{{ n.text}}
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</nav>
 
-        <div class="flex flex-row gap-4 md:absolute md:bottom-0">
-          <a href="#">
-            {% include "_partials/_facebook_icon.svg.twig" %}
-          </a>
-          <a href="#">
-            {% include "_partials/_linkedin_icon.svg.twig" %}
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+				<div class="flex flex-row gap-4 md:absolute md:bottom-0">
+					<a href="#">
+						{% include "_partials/_facebook_icon.svg.twig" %}
+					</a>
+					<a href="#">
+						{% include "_partials/_linkedin_icon.svg.twig" %}
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
 </footer>
