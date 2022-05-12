@@ -10,42 +10,84 @@
  *
  */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   @apply antialiased;
 }
 
-.header-1 {
-  @apply font-medium text-[32px] leading-[48px] text-black md:text-[48px] md:leading-[50px]
-}
+@layer components {
+  .typography {
+    * {
+      @apply text-black
+    }
 
-.header-2 {
-  @apply font-bold text-[24px] leading-[32px] text-black md:text-[32px] md:leading-10
-}
+    h1 {
+      @apply font-medium text-[32px] mb-3 leading-[48px];
+      @screen md {
+        @apply text-[48px] leading-[50px]
+      }
+    }
+    
+    h2 {
+      @apply font-bold text-[24px] leading-[32px] my-5;
+      @screen md {
+        @apply text-[32px] leading-10
+      }
+    }
 
-.header-3 {
-  @apply font-medium text-[24px] leading-[32px] text-black md:text-[32px] md:leading-10
-}
+    h3 {
+      @apply font-medium text-[24px] leading-[32px] my-5;
+      @screen md {
+        @apply text-[32px] leading-10
+      }
+    }
 
-.header-4 {
-  @apply font-bold text-[24px] leading-[32px] text-black
-}
+    h4 {
+      @apply font-bold text-[24px] leading-[32px] my-5
+    }
 
-.header-5 {
-  @apply font-semibold text-[24px] leading-[32px] text-black
-}
+    h5 {
+      @apply font-semibold text-[24px] leading-[32px] my-5
+    }
 
-.header-6 {
-  @apply text-accent-dark font-medium text-xl
-}
+    h6 {
+      @apply text-accent-dark font-medium text-xl my-5
+    }
 
-.paragraph {
-  @apply font-normal text-[18px] leading-[28px] text-black md:text-[20px] md:leading-8
-}
+    ul {
+      @apply marker:text-plum-light list-disc pl-5 text-[18px] ;
+      @screen md {
+        @apply text-[20px]
+      }
+    }
 
-.o-list {
-  @apply marker:text-plum-light list-decimal pl-5 space-y-3 text-black paragraph
-}
+    ol {
+      @apply marker:text-plum-light list-decimal pl-5 text-[18px];
+      @screen md {
+        @apply text-[20px]
+      }
+    }
 
-.u-list {
-  @apply marker:text-plum-light list-disc pl-5 space-y-3 text-black paragraph
+    li {
+      @apply my-3;
+    }
+    
+    p {
+      @apply font-normal text-[18px] leading-[28px];
+      @screen md {
+        @apply text-[20px] leading-8
+      }
+    }
+
+    h6, pre {
+      @apply text-lg leading-8 font-normal font-sans;
+    }
+
+    pre {
+      @apply my-3.5;
+    }
+  }
 }
