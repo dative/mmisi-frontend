@@ -1,16 +1,17 @@
 const navBtn = document.querySelector("#menu")
 const menuBar = document.querySelector('[role="menubar"]')
-let menuOpen = false
+let isExpanded = false
 
 // @ts-ignore
 navBtn.addEventListener('click', () => {
-  if (!menuOpen) {
-    navBtn?.classList.add("is-active") 
-    menuOpen = true
+  if (!isExpanded) {
+    navBtn?.classList.add("is-active")
+    navBtn?.setAttribute("aria-expanded","true")
+    isExpanded = true
   }else {
     navBtn?.classList.remove("is-active")
-    menuOpen = false
-    console.log(menuOpen)
+    navBtn?.setAttribute("aria-expanded","false")
+    isExpanded = false
   }
   menuBar?.classList.toggle('flex')
   menuBar?.classList.toggle('hidden')

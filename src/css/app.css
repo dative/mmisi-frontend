@@ -32,6 +32,7 @@
 @import './components/webfonts.css';
 @import './components/typography.css';
 @import './components/global.css';
+@import './components/hamburger.css';
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your
@@ -52,6 +53,3 @@
  */
 @import 'vendor.css';
 
-
-/* hamburgers menu */
-@import "components/hamburgers.min.css";
