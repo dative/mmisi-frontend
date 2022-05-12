@@ -1,5 +1,32 @@
 <header id="site-header">
-  <section class="max-w-screen-lg mx-auto">
-    <h2>site-header</h2>
-  </section>
+	<section class="max-w-screen-lg mx-auto">
+		<div class="pb-5">
+			<div class="flex justify-center p-3 font-semibold bg-plum-lightest text-plum md:justify-end">
+				<a href="#">CLIENT PORTAL</a>
+				<div class="px-3">{% include "_partials/_retangle.svg.twig"%}</div>
+				<a href="#">1-800-8990</a>
+			</div>
+			<div class="flex justify-between px-3 py-1 max-h-fit">
+				<div>{% include "_partials/_logo.svg.twig"%}</div>
+				<div>
+					<div class="sm:visible md:hidden">
+						<button class="invisible hamburger hamburger--collapse is-active" type="button">
+							<span class="hamburger-box">
+								<span class="hamburger-inner"></span>
+							</span>
+						</button>
+					</div>
+
+
+					<div class="justify-between flex-1 invisible font-medium align-middle md:visible w-96">
+						<a href="#">Our Company</a>
+						<a href="#">Our Services</a>
+						<button class="h-24 text-white rounded bg-plum">
+							Schedule a Call
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </header>

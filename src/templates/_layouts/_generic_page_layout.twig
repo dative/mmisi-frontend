@@ -19,54 +19,51 @@
 #}
 {% extends "_boilerplate/_base_html_layout.twig" %}
 
-{# -- Any <meta> tags that should be included in the <head> #}
-{% block headMeta %}
+{# -- Any <meta> tags that should be included in the <head> #}{% block headMeta %}
 {% endblock headMeta %}
 
 {# -- Any <link> tags that should be included in the <head> #}
-{% block headLinks %}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+	{% block headLinks %}
+	<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+
 {% endblock headLinks %}
 
 {# -- Any CSS that should be included before </head> -- #}
-{% block headCss %}
-{% endblock headCss %}
+{% block headCss %}{% endblock headCss %}
 
 {# -- Page body -- #}
 {% block bodyHtml %}
-  <div id="page-container" class="overflow-hidden leading-tight">
-    <div id="component-container"></div>
-    <div id="content-container">
+	<div id="page-container" class="overflow-hidden leading-tight">
+		<div id="component-container"></div>
+		<div
+			id="content-container">
 
-      {# -- Info header, including _navbar.twig -- #}
-      {% include "_partials/_site_header.twig" %}
+			{# -- Info header, including _navbar.twig -- #}
+			{% include "_partials/_site_header.twig" %}
 
-      <main>
-        {# -- Primary content block -- #}
-        {% block content %}
-        {% endblock %}
-      </main>
-    </div>
+			<main>
+				{# -- Primary content block -- #}
+				{% block content %}{% endblock %}
+			</main>
+		</div>
 
-    {# -- Content that appears below the primary content block -- #}
-    {% block subcontent %}
-    {% endblock %}
+		{# -- Content that appears below the primary content block -- #}
+		{% block subcontent %}{% endblock %}
 
-    {# -- Info footer -- #}
-    {% include "_partials/_site_footer.twig" %}
+		{# -- Info footer -- #}
+		{% include "_partials/_site_footer.twig" %}
 
-    {# -- HTML Footer -- #}
-    {% include "_partials/_global_footer.twig" %}
-  </div>
+		{# -- HTML Footer -- #}
+		{% include "_partials/_global_footer.twig" %}
+	</div>
 {% endblock bodyHtml %}
 
 
 {# -- Any JavaScript that should be included before </body> -- #}
 {% block bodyJs %}
-<script src="{{ mix('/js/manifest.js') }}"></script>
-<script src="{{ mix('/js/vendor.js') }}"></script>
-<script src="{{ mix('/js/app.js') }}"></script>
+	<script src="{{ mix('/js/manifest.js') }}"></script>
+	<script src="{{ mix('/js/vendor.js') }}"></script>
+	<script src="{{ mix('/js/app.js') }}"></script>
 {% endblock bodyJs %}

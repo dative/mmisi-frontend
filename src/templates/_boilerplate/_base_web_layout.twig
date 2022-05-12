@@ -1,4 +1,3 @@
-
 {# -- Base web layout template that all web requests inherit from -- #}
 {#
  ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -31,29 +30,28 @@
 {% extends "_layouts/_global_variables.twig" %}
 
 {%- block htmlPage -%}
-  <!DOCTYPE html>
+<!DOCTYPE html>
 
-    {% block htmlTag %}
-      <html lang="en">
-    {% endblock htmlTag %}
+{% block htmlTag %}
+	<html lang="en">
+	{% endblock htmlTag %}
 
-    {% block headTag %}
-      <head>
-    {% endblock headTag %}
+	{% block headTag %}
+		<head>
+		{% endblock headTag %}
 
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,minimum-scale=1">
+		<meta charset="utf-8">
+		<meta
+		name="viewport" content="width=device-width,minimum-scale=1">
 
-      {# -- Page content that should be included in the <head> -- #}
-      {% block headContent %}{% endblock headContent %}
-      </head>
+		{# -- Page content that should be included in the <head> -- #}
+		{% block headContent %}{% endblock headContent %}
+	</head>
 
-      {% block bodyTag %}
-      <body>
-      {% endblock bodyTag %}
-        {# -- Page content that should be included in the <body> -- #}
-        {% block bodyContent %}{% endblock bodyContent %}
-      </body>
-  </html>
-
-{%- endblock htmlPage -%}
+	{% block bodyTag %}
+		<body>
+		{% endblock bodyTag %}
+		{# -- Page content that should be included in the <body> -- #}
+		{% block bodyContent %}{% endblock bodyContent %}
+	</body>
+</html>{%- endblock htmlPage -%}

@@ -13,3 +13,9 @@
 * {
   @apply antialiased;
 }
+
+.allContent{
+  h1 {
+    color: #321332;
+  }
+}
