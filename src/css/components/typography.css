@@ -13,4 +13,40 @@
 * {
   @apply antialiased;
 }
+.richContent {
+  h1 {
+    @apply text-3xl leading-relaxed md:leading-loose;
+  }
+  h2 {
+    @apply py-3 text-2xl font-bold md:leading-loose;
+  }
+  h3 {
+    @apply py-3 text-2xl md:leading-loose;
+  }
+  h4 {
+    @apply py-3 text-2xl font-bold md:leading-loose;
+  }
+  h5 {
+    @apply py-3 text-2xl md:leading-loose;
+  }
+  h6 {
+    @apply py-3 text-2xl md:leading-loose;
+  }
 
+  p {
+    @apply leading-normal;
+  }
+  ul {
+    @apply ml-4 list-disc list-outside marker:text-plum-light;
+  }
+  ol {
+    @apply ml-5 list-decimal list-outside marker:text-plum;
+  }
+
+  li {
+    @apply leading-loose;
+  }
+  pre{
+    @apply whitespace-normal;
+  }
+}
