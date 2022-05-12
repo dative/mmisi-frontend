@@ -1,19 +1,23 @@
 <header id="site-header">
   <section class="max-w-screen-lg mx-auto">
-    <div class="bg-plum-lightest md:bg-transparent">
-      <div
-        class="flex flex-row px-12 divide-x-2 divide-plum-light py-2 text-sm justify-center md:justify-end">
-        <div class="font-semibold text-plum  pr-5 uppercase">
-          <a href="#">client portal</a>
-        </div>
-
-        <div class="font-semibold text-plum pl-5">
-          <a href="tel:+1-800-800-8990">1-800-800-8990</a>
-        </div>
-      </div>
+    <div class="bg-plum-lightest overflow-x-auto md:bg-transparent">
+      <ul
+        class="flex flex-row divide-x-2 divide-plum-light py-2  justify-center md:justify-end">
+        {% for n in [
+          { url: '#', text: 'Covid'},
+          { url: '#', text: 'Weather Alert'},
+          { url: '#', text: 'Weather Alert'},
+          { url: '#', text: 'client portal'},
+          { url: 'tel:1-800-800-8990', text: '1-800-800-8990'},
+          ] %}
+        <li class="px-5 flex-none">
+          <a href="{{ n.url }}" class="font-semibold text-sm text-plum uppercase">{{ n.text }}</a>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
 
-    <div class="flex flex-row pt-1 pl-3 pb-7 justify-between">
+    <div class="flex flex-row pt-1 px-3 justify-between items-center">
         <div class="flex flex-col">
           <a href="/">
             {% include "_partials/img/_logo_color.svg.twig" %}
