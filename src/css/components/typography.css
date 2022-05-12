@@ -9,7 +9,64 @@
  * @Last Modified time: 2022-04-28 16:38:09
  *
  */
+ @tailwind components;
 
-* {
-  @apply antialiased;
+@layer components {
+    .typography-section {
+    * {
+      @apply antialiased;
+    }
+
+    h1 {
+      @apply font-medium text-4xl mb-7 md:text-5xl;
+    }
+
+    h2 {
+      @apply leading-tight font-bold text-4xl my-7 md:text-3xl;
+    }
+
+    h3 {
+      @apply leading-tight font-medium text-2xl my-7 md:text-2xl;
+    }
+
+    h4 {
+      @apply leading-tight font-medium text-3xl my-7 md:text-4xl;
+    }
+
+    h5 {
+      @apply leading-tight font-medium text-3xl my-7 md:text-2xl;
+    }
+
+    h6 {
+      @apply font-normal leading-normal text-xl my-7 md:text-xl;
+    }
+
+    ul, ol {
+      @apply list-inside my-5
+    }
+
+    ul {
+      @apply list-disc marker:text-plum-light;
+    }
+
+    ol {
+      @apply list-decimal marker:text-plum;
+    }
+
+    li {
+      @apply font-normal text-2xl md:text-base md:leading-[2rem];
+    }
+
+    p {
+      @apply font-normal leading-normal text-xl md:text-lg;
+    }
+
+    pre {
+      @apply mt-4;
+    }
+
+    footer {
+      @apply font-normal leading-normal text-xl md:text-base;
+    }
+  }
 }
