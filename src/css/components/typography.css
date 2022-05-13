@@ -29,7 +29,7 @@
 
     h1 {
       @apply mb-3;
-      @apply text-4xl;
+      @apply text-5xl;
       @apply font-medium;
       @apply leading-[50px];
     }
