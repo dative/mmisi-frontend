@@ -1,0 +1,74 @@
+{% extends 'page.twig' %}
+
+{% set pageIntro %}
+  <p>
+    For over 50 years, we focused on infusing our integrity
+    into helping our clients protect their most valuable
+    assets. Our goal is to design insurance solutions to
+    reduce risk, protect assets, and let you sleep at night.
+  </p>
+  <p>
+    We review your policies for risk exposures to help
+    educate you on what’s working, what’s not, and what’s
+    missing. We work with over 100 companies to provide
+    solutions for our clients’ needs.
+  </p>
+{% endset %}
+
+{% set entry = {
+  title: 'Independent, Entrepreneurial Insurance Agents',
+  coverPicture: 'https://unsplash.it/800/450?image=856',
+  pageIntro: pageIntro,
+  contentBlocks: [
+    {
+      type: 'profileGrid',
+      profiles: [
+        {
+          fullName: 'Douglas MacDonald',
+          certification: 'CPCU, CIC, CRM',
+          jobTitle: 'President',
+          profilePicture: 'https://randomuser.me/api/portraits/men/1.jpg'
+        },
+        {
+          fullName: 'John Vokey',
+          certification: 'CIC',
+          jobTitle: 'PL Account Manager',
+          profilePicture: 'https://randomuser.me/api/portraits/men/2.jpg'
+        },
+        {
+          fullName: 'Sara Giguere',
+          certification: 'CIC',
+          jobTitle: 'CFO',
+          profilePicture: 'https://randomuser.me/api/portraits/women/1.jpg'
+        },
+        {
+          fullName: 'Courtney Finigan',
+          certification: 'CIC, CRM, CMIP',
+          jobTitle: 'VP of Business Services',
+          profilePicture: 'https://randomuser.me/api/portraits/women/2.jpg'
+        },
+        {
+          fullName: 'Gabriel DeSouza',
+          certification: 'CIC',
+          jobTitle: 'CL Account Manager',
+          profilePicture: 'https://randomuser.me/api/portraits/men/3.jpg'
+        },
+        {
+          fullName: 'Kirsten Adams',
+          certification: '',
+          jobTitle: 'Accounting Coordinator',
+          profilePicture: 'https://randomuser.me/api/portraits/women/3.jpg'
+        },
+        {
+          fullName: 'Suzanne Harrington',
+          certification: '',
+          jobTitle: 'CL Account Assistant'
+        }
+      ]
+    }
+  ]
+} %}
+
+{% block subcontent %}
+  {% include '_assembled/_footer_cta.twig' %}
+{% endblock %}

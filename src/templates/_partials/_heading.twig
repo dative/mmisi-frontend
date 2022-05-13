@@ -1,0 +1,26 @@
+{#
+
+Heading component
+
+Notes:
+The heading component is a wrapper for the h1, h2, h3, h4, h5, h6 tags.
+
+Usage:
+
+{% include "_partials/_heading.twig" with {
+  text: "Heading Text",
+  htag: "h2",
+} %}
+
+#}
+{% set htag = htag|default('h2') %}
+{% if (htag|lower) in ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] %}
+  {% set headingTag %}
+    <DIV class="h2 after:content-[''] after:block after:w-16 after:h-2 after:bg-plum after:mt-4">
+      {{ text|default('[heading prop missing]') }}
+    </DIV>
+  {% endset %}
+  {{ headingTag|replace({ DIV: htag })|raw }}
+{% else %}
+  Error: htag must be one of the following: h1, h2, h3, h4, h5, h6
+{% endif %}

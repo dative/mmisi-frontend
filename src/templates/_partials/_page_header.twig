@@ -1,0 +1,17 @@
+{#
+
+Page Header component
+
+Usage:
+
+{% include "_partials/_page_header.twig" with {
+  heading: "Page Title"
+} %}
+
+#}
+<header class="mb-8">
+  {% include '_partials/_heading.twig' with {
+    text: heading,
+    htag: 'h1'
+  } %}
+</header>

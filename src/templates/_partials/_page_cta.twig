@@ -1,0 +1,42 @@
+{#
+
+Page CTA component
+
+Usage:
+
+{% include "_partials/_page_cta.twig" with {
+  contents: '<p>Your headline</p>',
+  btnLink: {
+    url: 'https://www.example.com',
+    text: 'Button Text',
+  },
+  sub: "<p>Extra content to be displayed after the CTA box</p>"
+} %}
+
+#}
+
+{% if contents is defined and (contents|length) > 0 %}
+  <aside class="px-3 py-8">
+    <div class="mx-auto max-w-narrow">
+      <div class="flex flex-col items-center justify-between gap-5 p-6 bg-white border rounded-lg border-plum-light md:flex-row md:bg-transparent">
+        <div class="text-lg font-medium text-center md:text-left md:text-2xl">
+          {{ contents|raw }}
+        </div>
+
+        {% if btnLink is defined and btnLink %}
+          <div class="text-center">
+            <a href="{{ btnLink.url }}" class="px-12 text-lg btn">
+              {{ btnLink.text }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+
+      {% if sub is defined and sub %}
+        <div class="py-4 leading-6 text-center no-underline md:py-8">
+          {{ sub|raw }}
+        </div>
+      {% endif %}
+    </div>
+  </aside>
+{% endif %}

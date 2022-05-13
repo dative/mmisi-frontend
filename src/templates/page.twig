@@ -1,23 +1,25 @@
-{% extends "_layouts/_generic_page_layout.twig" %}
-
-{% block headLinks %}
-	{{ parent() }}
-	<link rel="amphtml" href="/amp">
-{% endblock headLinks %}
+{% extends '_layouts/_generic_page_layout.twig' %}
 
 {% block content %}
-	<section>
-		<h1>content</h1>
-	</section>
-{% endblock %}
+  <div class="px-3 py-8 lg:py-20">
+    <article class="mx-auto max-w-narrow">
+      {% if entry is defined and entry %}
+        {% if entry.title %}
+          {% include '_partials/_page_header.twig' with {
+            heading: entry.title
+          } %}
+        {% endif %}
 
-{% block subcontent %}
-	<section>
-		<h2>subcontent</h2>
-	</section>
+        {% if entry.contentBlocks is defined and entry.contentBlocks %}
+          {% include '_partials/_content_blocks.twig' with {
+            blocks: entry.contentBlocks
+          } %}
+        {% endif %}
+      {% else %}
+        <pre>
+          entry is not defined.
+        </pre>
+      {% endif %}
+    </article>
+  </div>
 {% endblock %}
-
-{# -- Any JavaScript that should be included before </body> -- #}
-{% block bodyJs %}
-	{{ parent() }}
-{% endblock bodyJs %}

@@ -1,0 +1,45 @@
+{#
+
+Accordion Block component
+
+Usage:
+
+{% include "_blocks/_accordion.twig" with {
+  blk: {
+    heading: "Accordion Heading",
+    contents: "<p>Your Markup</p>"
+  }
+} %}
+
+#}
+{% if
+  blk is defined
+    and blk
+    and blk.heading is defined
+    and blk.heading
+    and blk.contents is defined
+    and blk.contents %}
+  <div class="accordion">
+    <div class="p-4 bg-white rounded-md">
+      <button type="button"
+        class="flex flex-row items-center w-full gap-4 peer"
+        aria-expanded="false"
+        data-toggle-control>
+        <div class="w-[44px] h-[44px] flex items-center justify-center">
+          <img src="/img/house-icon.svg" alt="" />
+        </div>
+        <div class="flex-1 font-semibold text-left md:text-xl">
+          {{ blk.heading }}
+        </div>
+        <div class="w-[44px] h-[44px] flex items-center justify-center">
+          {% include '_partials/_arrow_down.svg.twig' %}
+        </div>
+      </button>
+      <div class="pt-4">
+        <div class="redactor">
+          {{ blk.contents }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

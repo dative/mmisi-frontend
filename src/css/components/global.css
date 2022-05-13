@@ -6,6 +6,17 @@
  * @Author: webrgp
  * @Date: 2022-04-28 16:07:33
  * @Last Modified by: webrgp
- * @Last Modified time: 2022-04-28 16:08:36
+ * @Last Modified time: 2022-05-10 13:04:25
  *
  */
+
+@layer base {
+  html,
+  body {
+    @apply bg-plum-lightest;
+  }
+
+  a {
+    @apply transition-colors text-plum hover:text-plum-dark;
+  }
+}

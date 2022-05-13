@@ -1,0 +1,16 @@
+{#
+
+Rich Text Block component
+
+Usage:
+
+{% include "_partials/_richText.twig" with {
+  contents: "<p>Your Markup</p>",
+} %}
+
+#}
+{% if blk is defined and blk and blk.contents is defined and blk.contents %}
+  <div class="redactor">
+    {{ blk.contents }}
+  </div>
+{% endif %}

@@ -1,0 +1,58 @@
+{#
+
+Section Feature Block component
+
+@param heading: (Required) String
+@param coverPicture: (Url) String
+@param contents: (HTML) String
+@param htag: String
+
+Usage:
+
+{% include "_blocks/_sectionFeature.twig" with {
+  blk: {
+    heading: "Section title",
+    coverPicture: "https://picsum.photos/640/448?random=1",
+    contents: "<p>Your Markup</p>",
+    htag: "h2",
+    flip: true,
+  }
+} %}
+
+#}
+{% if blk is defined and blk and blk.heading is defined and blk.heading %}
+  {% set flip = blk.flip is defined ? blk.flip : false %}
+  {% set htag = blk.htag is defined ? blk.htag : 'h2' %}
+
+  <div class="flex flex-col gap-8 {{
+    flip
+      ? 'md:flex-row'
+      : 'md:flex-row-reverse'
+    }}">
+    {% if blk.coverPicture is defined and blk.coverPicture %}
+      <div class="flex-shrink-0 w-full md:w-[350px]">
+        <picture>
+          <img data-src="{{ blk.coverPicture }}"
+            alt=""
+            class="object-cover w-full rounded"
+            loading="lazy" />
+        </picture>
+      </div>
+    {% endif %}
+
+    <div class="flex flex-col flex-1 gap-8">
+      <div>
+        {% include '_partials/_heading.twig' with {
+          text: blk.heading,
+          htag: htag
+        } %}
+      </div>
+
+      {% if blk.contents is defined and blk.contents %}
+        <div class="flex flex-col gap-8">
+          {{ blk.contents|raw }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

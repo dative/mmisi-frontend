@@ -6,10 +6,75 @@
  * @Author: webrgp
  * @Date: 2022-04-28 16:07:33
  * @Last Modified by: webrgp
- * @Last Modified time: 2022-04-28 16:38:09
+ * @Last Modified time: 2022-05-11 19:02:17
  *
  */
 
 * {
   @apply antialiased;
+}
+
+@layer components {
+
+  .redactor > * {
+    @apply font-sans text-lg leading-8 my-6 first:mt-0 last:mb-0;
+  }
+
+  .anchor,
+  .redactor a {
+    @apply font-bold hover:underline;
+  }
+
+  .h1,
+  .redactor h1 {
+    @apply text-[32px] font-medium leading-[50px] lg:text-[48px];
+  }
+
+  .h2,
+  .redactor h2 {
+    @apply text-[24px] font-bold leading-[32px] lg:text-[32px] lg:leading-[39px];
+  }
+
+  .h3,
+  .redactor h3 {
+    @apply text-[24px] font-medium leading-[32px] lg:text-[32px] lg:leading-[39px];
+  }
+
+  .h4,
+  .redactor h4 {
+    @apply text-[24px] font-bold leading-[32px];
+  }
+
+  .h5,
+  .redactor h5 {
+    @apply text-[24px] font-medium leading-[32px];
+  }
+
+  .ul,
+  .redactor ul {
+    @apply list-disc list-inside;
+
+    & > li {
+
+      @apply my-3;
+
+      &::marker {
+        @apply text-plum-light;
+      }
+    }
+  }
+
+  .ol,
+  .redactor ol {
+    @apply list-decimal list-inside;
+
+    & > li {
+
+      @apply my-3;
+
+      &::marker {
+        @apply text-plum;
+      }
+    }
+  }
 }

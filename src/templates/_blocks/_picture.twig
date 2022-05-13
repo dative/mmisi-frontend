@@ -1,0 +1,18 @@
+{#
+
+Picture Block component
+
+Usage:
+
+{% include "_partials/_picture.twig" with {
+  image: "https://picsum.photos/640/448?random=1",
+} %}
+
+#}
+{% if blk is defined and blk and blk.image is defined and blk.image %}
+  <div>
+    <picture>
+      <img data-src="{{ blk.image }}" alt="" class="w-full" loading="lazy" />
+    </picture>
+  </div>
+{% endif %}

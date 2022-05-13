@@ -2,7 +2,9 @@
 
 module.exports = {
   content: [
-    "./src/**/*.{js,ts,css,twig}",
+    "./src/templates/**/*.twig",
+    "./src/js/**/*.{js,ts}",
+    "./src/css/**/*.css",
   ],
   theme: {
     colors: {
@@ -27,9 +29,11 @@ module.exports = {
     },
     screens: {
       'sm': '640px',
-      'md': '1024px',
-      'lg': '1440px',
-      'xl': '1640px',
+      'md': '768px',
+      'lg': '960px',
+      'xl': '1024px',
+      '2xl': '1440px',
+      '3xl': '1640px',
     },
     extend: {
       backgroundImage: {
