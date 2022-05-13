@@ -1,12 +1,12 @@
-<header id="site-header" class="max-w-screen-lg mx-auto">
-	<section>
+<header id="site-header">
+	<section class="max-w-screen-lg mx-auto overflow-x-auto">
 		<ul class="flex flex-row items-center justify-center md:justify-end md:bg-white bg-plum-lightest">
 			{% for n in [
-                { url: '#', text: 'CLIENT PORTAL' },
+                { url: '#', text: 'Client Portal' },
                 { url: '#', text: '1-800-800-8990' },
               ] %}
-				<li>
-					<a href="{{ n.url }}" class="flex gap-3.5 text-sm leading-5 font-semibold tracking-[2%] text-plum m-2.5">
+				<li class="flex-none">
+					<a href="{{ n.url }}" class="flex gap-3.5 text-sm leading-5 font-semibold tracking-[2%] text-plum m-2.5 uppercase">
 						{{ n.text}}
 						{% if not loop.last %}
 							<span class="w-px h-5 bg-plum-light"></span>
@@ -16,7 +16,7 @@
 			{% endfor %}
 		</ul>
 	</section>
-	<section class="flex flex-row items-center md:justify-between justify-evenly md:mx-7 h-36">
+	<section class="flex flex-row items-center justify-between px-3">
 		<a href="#">
 			{% include "_partials/_logo_color.svg.twig" %}
 			<span class="sr-only">Murray and McDonald Insurance Services, Inc.</span>
@@ -26,7 +26,7 @@
 				<span class="hamburger-inner !bg-plum before:!bg-plum after:!bg-plum"></span>
 			</span>
 		</button>
-		<nav class="hidden md:flex md:self-end">
+		<nav class="hidden md:flex">
 			<ul class="flex flex-row items-center gap-4">
 				{% for n in [
                     { url: '#', text: 'Our Company' },
