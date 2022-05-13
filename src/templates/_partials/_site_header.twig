@@ -1,12 +1,12 @@
 <header id="site-header">
   <section class="mx-auto max-w-screen-narrow">
-    <div class="">
+    <div >
       <div
-        class="flex justify-center p-3 py-2 bg-plum-lightest md:justify-end md:bg-white"
+        class="flex justify-center p-3 py-2 bg-plum-lightest md:justify-end md:bg-white md:pb-0"
       >
-        <a href="#" class="font-semibold text-plum text-sm">CLIENT PORTAL</a>
+        <a href="#" class="text-sm font-semibold text-plum">CLIENT PORTAL</a>
         <div class="px-5">{% include "_partials/_retangle.svg.twig"%}</div>
-        <a href="#" class="font-semibold text-plum text-sm">1-800-800-8990</a>
+        <a href="#" class="text-sm font-semibold text-plum">1-800-800-8990</a>
       </div>
       <div class="flex justify-between px-4 pb-3 max-h-fit">
         <a href="/">{% include "_partials/_logo.svg.twig"%}</a>
@@ -25,12 +25,12 @@
 
           <div
             class="items-center justify-between hidden font-medium md:flex "
-          > {% for n in [ { url: '#', text: 'Our Company' }, { url: '#', text:
-          'Our Services' } ] %}
-          <a href="{{n.url}}" class="text-lg px-4">{{ n.text }}</a>
+          > <div class="mr-6">{% for n in [ { url: '#', text: 'Our Company' }, { url: '#', text:
+            'Our Services' } ] %}
+            <a href="{{n.url}}" class="px-4 text-lg text-black">{{ n.text }}</a>
 
-          {% endfor %}
-            <button class="h-16 w-[182px] text-white rounded-md  bg-plum-gradient">
+            {% endfor %}</div>
+            <button class="h-16 w-[182px] text-white text-lg font-semibold rounded-md   bg-plum-gradient">
               Schedule a Call
             </button>
           </div>
@@ -39,7 +39,7 @@
     </div>
     <div
       id="sidebar"
-      class="flex z-10 items-center hidden w-screen h-screen transition-all bg-white md:hidden"
+      class="z-10 flex items-center hidden w-screen h-screen transition-all bg-white md:hidden"
     >
       <nav class="pl-5">
         <ul class="flex flex-col gap-4">
@@ -72,5 +72,4 @@
     </div>
   </section>
 </header>
-
 
