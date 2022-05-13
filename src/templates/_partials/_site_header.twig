@@ -1,44 +1,83 @@
 <header id="site-header">
-	<section class="max-w-screen-narrow mx-auto">
-		<div class="">
-			<div class="flex justify-center py-3 px-4 font-semibold text-plum bg-plum-lightest md:justify-end md:bg-white md:p-3 md:pb-0">
-				<a href="#">CLIENT PORTAL</a>
-				<div class="px-3">{% include "_partials/_retangle.svg.twig"%}</div>
-				<a href="#">1-800-8990</a>
-			</div>
-			<div class="flex justify-between px-4 pb-3 max-h-fit">
-				<div>{% include "_partials/_logo.svg.twig"%}</div>
-				<div class="flex items-end justify-end">
-					<div class="sm:flex md:hidden">
-						<button onclick="sidebar()" class="hamburger hamburger--squeeze" type="button">
-							<span class="hamburger-box">
-								<span class="hamburger-inner"></span>
-							</span>
-						</button>
-					</div>
+  <section class="mx-auto max-w-screen-narrow">
+    <div class="">
+      <div
+        class="flex justify-center px-4 py-3 font-semibold hide text-plum bg-plum-lightest md:justify-end md:bg-white md:p-3 md:pb-0"
+      >
+        <a href="#">CLIENT PORTAL</a>
+        <div class="px-3">{% include "_partials/_retangle.svg.twig"%}</div>
+        <a href="#">1-800-8990</a>
+      </div>
+      <div class="flex justify-between px-4 pb-3 max-h-fit">
+        <a href="/">{% include "_partials/_logo.svg.twig"%}</a>
+        <div class="flex items-end justify-end">
+          <div class="z-20 sm:flex md:hidden">
+            <button
+              onclick="sidebar()"
+              class="hamburger hamburger--squeeze"
+              type="button"
+            >
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
 
-
-					<div class="justify-between hidden font-medium items-center md:flex w-96">
-						<a href="#">Our Company</a>
-						<a href="#">Our Services</a>
-						<button class="h-12 w-36 text-white rounded bg-plum-gradient">
-							Schedule a Call
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="sidebar" class="min-w-full min-h-full z-10 hidden md:hidden">Sidebar</div>
-	</section>
+          <div
+            class="items-center justify-between hidden font-medium md:flex w-96"
+          >
+            <a href="#">Our Company</a>
+            <a href="#">Our Services</a>
+            <button class="h-12 text-white rounded w-36 bg-plum-gradient">
+              Schedule a Call
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sidebar"
+      class="z-10 items-center hidden w-screen h-screen transition-all bg-white md:hidden"
+    >
+      <nav class="pl-5">
+        <ul class="flex flex-col gap-4">
+          {% for n in [ { url: '#', text: 'Our Company' }, { url: '#', text:
+          'Our Services' }, { url: '#', text: 'Schedule a Call' }, ] %}
+          <li>
+            <a
+              href="{{ n.url }}"
+              class="font-bold text-[22px] leading-[27px] tracking-[2px] text-plum"
+            >
+              {{ n.text }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        <ul class="flex flex-col gap-4 pt-4">
+          {% for n in [ { url: '#', text: 'Client Portal' }, { url: '#', text:
+          'Make a Payment' }, { url: '#', text: 'Report a Claim' }, { url: '#',
+          text: 'Request Certificate/Binder' }, { url: '#', text: 'Contact' }, {
+          url: '#', text: 'Blog' }, { url: '#', text: 'Careers' }, { url: '#',
+          text: 'Privacy & Accessibility' }, ] %}
+          <li class="w-full">
+            <a href="{{ n.url }}" class="font-medium text-plum">
+              {{ n.text }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </section>
 </header>
 
 <script>
-	function sidebar() {
-let sideScreen = document.getElementById('sidebar');
-if (sideScreen.style.display == 'none') {
-sideScreen.style.display = 'flex';
-} else {
-sideScreen.style.display = 'none';
-}
-}
+  function sidebar() {
+    let sideScreen = document.getElementById('sidebar')
+    if (sideScreen.style.display == 'flex') {
+      sideScreen.style.display = 'none'
+    } else {
+      sideScreen.style.display = 'flex'
+    }
+  }
 </script>
