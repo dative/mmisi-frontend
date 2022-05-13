@@ -1,5 +1,7 @@
+{# prettier-ignore #}
 {# -- Shim to handle lazy image loading if native isn't available -- #}
 <script>
+  {# prettier-ignore #}
   // From https://web.dev/browser-level-image-lazy-loading/#how-do-i-handle-browsers-that-don't-yet-support-native-lazy-loading
   if ('loading' in HTMLImageElement.prototype) {
     // Replace the img.src with what is in the data-src property
@@ -16,7 +18,7 @@
     // Dynamically import the LazySizes library
     const script = document.createElement('script');
     script.type = 'module';
-    script.src ='{{ mix("/js/lazysizes-wrapper.js") }}';
-    document.body.appendChild(script);
-  }
+    script.src ='{{
+    mix('/js/lazysizes-wrapper.js')
+  }}'; document.body.appendChild(script); }
 </script>

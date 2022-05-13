@@ -1,0 +1,156 @@
+{% extends 'page.twig' %}
+
+{% set introText %}
+  <p>
+    This page is a "Kitchen Sink" of all the available components of this
+    website.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam omnis
+    amet, magni ipsa explicabo aperiam cupiditate repellendus voluptates iste
+    facere iure dolorem. Debitis animi quae excepturi. Pariatur deserunt amet
+    neque!
+  </p>
+  <p>
+    Dicta sequi nisi officiis, veniam doloremque incidunt officia fuga ratione
+    in doloribus possimus consequatur praesentium aut deserunt eaque magni
+    recusandae itaque ipsum impedit, expedita rem quam iusto nihil qui?
+    Doloremque?
+  </p>
+  <p>
+    Tempore rerum sit labore quidem voluptatum eligendi voluptatem animi
+    placeat, fugiat quisquam, commodi recusandae ut? Consectetur error eaque
+    exercitationem cum ut, natus tempora, temporibus mollitia alias corporis
+    minus numquam nesciunt?
+  </p>
+{% endset %}
+
+{% set individualsFamilies %}
+  <p>
+    Families and individuals need insurance to protect themselves. Our insurance
+    agents work to determine the coverage needed to insure your cars, homes,
+    boats, and more.
+  </p>
+
+  <p>
+    <strong>Here’s how we can help:</strong>
+  </p>
+
+  <div>
+    {% include '_blocks/_accordion.twig' with {
+      blk: {
+        heading: 'Property & Liability',
+        contents: '
+        <ul>
+          <li>Lorem, ipsum dolor.</li>
+          <li>Odio, reiciendis itaque.</li>
+          <li>Illo, magnam. Iure!</li>
+          <li>Velit, ipsum numquam!</li>
+          <li>Blanditiis, ea maiores?</li>
+          <li>Illum, voluptatibus eligendi.</li>
+          <li>Distinctio, voluptatem nam?</li>
+          <li>Numquam, inventore et.</li>
+        </ul>'
+      }
+    } %}
+    {% include '_blocks/_accordion.twig' with {
+      blk: { heading: 'Vehicles & Recreation', contents: '<p>Your Markup</p>' }
+    } %}
+    {% include '_blocks/_accordion.twig' with {
+      blk: { heading: 'Life & Health', contents: '<p>Your Markup</p>' }
+    } %}
+    {% include '_blocks/_accordion.twig' with {
+      blk: { heading: 'Full-Time Client', contents: '<p>Your Markup</p>' }
+    } %}
+  </div>
+{% endset %}
+
+{% set entry = {
+  title: 'Kitchen Sink',
+  contentBlocks: [
+    { type: 'richText', contents: introText },
+    {
+      type: 'sectionFeature',
+      heading: 'Our Services',
+      coverPicture: 'https://picsum.photos/640/448?random=1',
+      contents: '<div class="redactor"><p>Sometimes choosing the right insurance coverage for personal or professional needs is complicated. We are here to advise you on insurance strategies that are cost effective and lower your risk.</p></div>',
+      htag: 'h2'
+    },
+    {
+      type: 'sectionFeature',
+      heading: 'Individuals & Families',
+      coverPicture: 'https://picsum.photos/640/448?random=2',
+      contents: individualsFamilies,
+      htag: 'h2',
+      flip: true
+    },
+    {
+      type: 'accordions',
+      accordions: [
+        {
+          heading: 'Room for Growth and Development',
+          contents: '<p>Your Markup</p>'
+        },
+        {
+          heading: 'Room for Growth and Development',
+          contents: '<p>Your Markup</p>'
+        },
+        {
+          heading: 'Room for Growth and Development',
+          contents: '<p>Your Markup</p>'
+        }
+      ]
+    },
+    { type: 'picture', image: 'https://picsum.photos/640/448?random=3' },
+    {
+      type: 'profileGrid',
+      profiles: [
+        {
+          fullName: 'Douglas MacDonald',
+          certification: 'CPCU, CIC, CRM',
+          jobTitle: 'President',
+          profilePicture: 'https://randomuser.me/api/portraits/men/1.jpg'
+        },
+        {
+          fullName: 'John Vokey',
+          certification: 'CIC',
+          jobTitle: 'PL Account Manager',
+          profilePicture: 'https://randomuser.me/api/portraits/men/2.jpg'
+        },
+        {
+          fullName: 'Sara Giguere',
+          certification: 'CIC',
+          jobTitle: 'CFO',
+          profilePicture: 'https://randomuser.me/api/portraits/women/1.jpg'
+        },
+        {
+          fullName: 'Courtney Finigan',
+          certification: 'CIC, CRM, CMIP',
+          jobTitle: 'VP of Business Services',
+          profilePicture: 'https://randomuser.me/api/portraits/women/2.jpg'
+        },
+        {
+          fullName: 'Gabriel DeSouza',
+          certification: 'CIC',
+          jobTitle: 'CL Account Manager',
+          profilePicture: 'https://randomuser.me/api/portraits/men/3.jpg'
+        },
+        {
+          fullName: 'Kirsten Adams',
+          certification: '',
+          jobTitle: 'Accounting Coordinator',
+          profilePicture: 'https://randomuser.me/api/portraits/women/3.jpg'
+        },
+        {
+          fullName: 'Suzanne Harrington',
+          certification: '',
+          jobTitle: 'CL Account Assistant'
+        }
+      ]
+    }
+  ]
+} %}
+
+{% block subcontent %}
+  {% include '_assembled/_footer_cta.twig' %}
+{% endblock %}

@@ -1,0 +1,47 @@
+{#
+
+Profile Card component
+
+Usage:
+
+{% include "_partials/_profile_card.twig" with {
+  profile: {
+    fullName: "John Doe",
+    certification: "CPCU, CIC, CRM",
+    jobTitle: "President",
+    profilePicture: "https://picsum.photos/640/448?random=1"
+  }
+} %}
+
+#}
+{% if profile is defined and profile %}
+  <div class="h-full p-4 bg-white rounded-md">
+    <div class="flex flex-col items-center h-full gap-4">
+      <div class="w-[150px] h-[150px]">
+        {% if profile.profilePicture is defined and profile.profilePicture %}
+          <picture>
+            <img data-src="{{ profile.profilePicture }}"
+              alt=""
+              class="w-full rounded-full"
+              loading="lazy" />
+          </picture>
+        {% else %}
+          {% include '_partials/_user_profile.svg.twig' %}
+        {% endif %}
+      </div>
+      <div class="flex flex-col justify-between flex-1 gap-2 text-center">
+        <div>
+          <div class="text-lg font-bold">
+            {{ profile.fullName }}
+          </div>
+          <div class="text-xs text-accent-dark">
+            {{ profile.certification }}
+          </div>
+        </div>
+        <div class="text-sm">
+          {{ profile.jobTitle }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

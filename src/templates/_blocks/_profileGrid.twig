@@ -1,0 +1,29 @@
+{#
+
+Profile Grid Block component
+
+Usage:
+
+{% include "_partials/_profileGrid.twig" with {
+  profiles: [{profile}]
+} %}
+
+Notes:
+
+View _partials/_profile_card.twig for profile data model
+
+#}
+{% if
+  blk is defined
+    and blk
+    and blk.profiles is defined
+    and blk.profiles is iterable
+    and blk.profiles %}
+  <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    {% for profile in blk.profiles %}
+      {% include '_partials/_profile_card.twig' with {
+        profile: profile
+      } %}
+    {% endfor %}
+  </div>
+{% endif %}

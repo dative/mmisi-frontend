@@ -1,0 +1,7 @@
+#site-navigation {
+  @apply transition-all duration-300 ease-in-out overflow-hidden h-auto max-h-0 lg:max-h-max;
+
+  &.active {
+    @apply max-h-[700px] lg:max-h-fit;
+  }
+}

@@ -1,0 +1,71 @@
+/*
+ * @Author: webrgp
+ * @Date: 2022-05-09 22:51:28
+ * @Last Modified by: webrgp
+ * @Last Modified time: 2022-05-10 00:27:48
+ *
+ * @credits: https://jonsuh.com/hamburgers/
+ */
+
+:root {
+  --hamburger-width: 34px;
+  --hamburger-height: 24px;
+  --hamburger-inner-height: 3.5px;
+  --hamburger-inner-space: -9px;
+}
+
+@layer components {
+
+  .hamburger {
+    @apply inline-block cursor-pointer transition-opacity duration-150 ease-linear bg-transparent border-0 m-0 overflow-visible leading-[0];
+
+    &:hover,
+    &[aria-expanded='true']:hover {
+      @apply opacity-70;
+    }
+
+    &[aria-expanded='true'] .hamburger-inner {
+      @apply bg-plum rotate-45 delay-[120ms];
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+      &::before {
+        @apply bg-plum top-0 opacity-0;
+        transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+      }
+
+      &::after {
+        @apply bg-plum bottom-0 -rotate-90;
+        transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+    }
+  }
+
+  .hamburger-box {
+    @apply relative inline-block w-[var(--hamburger-width)] h-[var(--hamburger-height)];
+  }
+
+  .hamburger-inner {
+    @apply block top-1/2 -mt-0.5 duration-75;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+    &,
+    &::before,
+    &::after {
+      @apply absolute transition-transform w-[var(--hamburger-width)] h-[var(--hamburger-inner-height)] bg-plum duration-150 ease-[ease];
+    }
+
+    &::before,
+    &::after {
+      @apply block content-[""];
+    }
+
+    &::before {
+      @apply top-[var(--hamburger-inner-space)];
+      transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    }
+    &::after {
+      @apply bottom-[var(--hamburger-inner-space)];
+      transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+  }
+}

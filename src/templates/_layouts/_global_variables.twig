@@ -10,12 +10,48 @@
 └─────────────────────────────────────────────────────────────────────────────┘
 #}
 
-
 {# -- Prefetch & preconnect headers and links -- #}
-{% set siteUrl = "http://localhost:8080"%}
+{% set siteUrl = 'http://localhost:8080' %}
 
 {# -- General global variables -- #}
 {% set baseUrl = siteUrl ~ '/' %}
 
+{% set secondaryNav = [
+  {
+    url: '#',
+    text: 'Client Portal'
+  },
+  {
+    url: '#',
+    text: 'Make a Payment'
+  },
+  {
+    url: '#',
+    text: 'Report a Claim'
+  },
+  {
+    url: '#',
+    text: 'Request Certificate/Binder'
+  },
+  {
+    url: '#',
+    text: 'Contact'
+  },
+  {
+    url: '#',
+    text: 'Blog'
+  },
+  {
+    url: '#',
+    text: 'Careers'
+  },
+  {
+    url: '#',
+    text: 'Privacy & Accessibility'
+  }
+] %}
+
 {# -- Twig output from the render; this must be in a block -- #}
-{% endapply %}{% block htmlPage %}{% endblock %}
+{% endapply %}
+{% block htmlPage %}
+{% endblock %}

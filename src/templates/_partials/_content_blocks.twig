@@ -1,0 +1,9 @@
+{% if blocks is defined and blocks is iterable %}
+  <div class="flex flex-col gap-20">
+    {% for blk in blocks %}
+      {% if blk.type is defined %}
+        {% include '_blocks/_' ~ blk.type ~ '.twig' with { blk: blk } %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

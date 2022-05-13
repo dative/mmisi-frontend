@@ -1,0 +1,28 @@
+@layer components {
+  .accordion {
+
+    @apply w-full;
+
+    & + & {
+      @apply mt-4;
+    }
+
+    [data-toggle-control=""][aria-expanded=false] + * {
+      @apply hidden;
+    }
+
+    [data-toggle-control=""][aria-expanded=true] svg {
+      @apply rotate-180;
+    }
+
+    .redactor {
+      ul {
+        @apply list-none md:columns-2;
+
+        li {
+          @apply md:mt-0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{#
+
+Accordions Block component
+
+Usage:
+
+{% include "_blocks/_accordions.twig" with {
+  blk: {
+    accordions: [{accordion}]
+  }
+} %}
+
+#}
+{% if blk is defined and blk and blk.accordions is defined and blk.accordions %}
+  <div>
+    {% for accBlk in blk.accordions %}
+      {% include '_blocks/_accordion.twig' with { blk: accBlk } %}
+    {% endfor %}
+  </div>
+{% endif %}

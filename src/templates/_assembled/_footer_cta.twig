@@ -1,0 +1,16 @@
+{% set sub %}
+  <p>
+    <strong>Want to talk now?</strong>
+    Call or text
+    <a href="tel:+18008008990">800-800-8990</a>
+  </p>
+{% endset %}
+
+{% include '_partials/_page_cta.twig' with {
+  contents: '<h3>Your greatest risk is the one you don’t know about</h3>',
+  btnLink: {
+    url: 'https://hellodative.com',
+    text: 'Schedule a Call'
+  },
+  sub: sub
+} %}

@@ -1,0 +1,8 @@
+
+@layer components {
+
+  .btn {
+    @apply transition-all no-underline inline-flex bg-plum-gradient justify-center items-center p-5 text-white rounded-md font-semibold whitespace-nowrap hover:text-white;
+  }
+
+}

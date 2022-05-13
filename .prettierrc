@@ -5,5 +5,8 @@
   "semi": false,
   "trailingComma": "none",
   "printWidth": 80,
-  "arrowParens": "avoid"
+  "twigPrintWidth": 80,
+  "twigAlwaysBreakObjects": false,
+  "arrowParens": "avoid",
+  "plugins": ["./node_modules/prettier-plugin-twig-melody"]
 }

@@ -1,5 +1,69 @@
-<header id="site-header">
-  <section class="max-w-screen-lg mx-auto">
-    <h2>site-header</h2>
+<header id="site-header" class="pb-3 bg-white md:pb-4">
+  <section class="mx-auto max-w-screen-2xl">
+    <div class="flex flex-col">
+      <div class="z-50 block overflow-x-auto bg-plum-lightest lg:overflow-visible lg:-mb-4 lg:bg-transparent">
+        <div class="flex flex-row px-3 py-2 divide-x-2 divide-plum-light lg:justify-end">
+          {% for n in [
+            { url: '#', text: 'Client Portal' },
+            { url: 'tel:+18008008990', text: '1-800-800-8990' }
+          ] %}
+            <a href="{{ n.url }}"
+              class="flex-none px-5 text-sm font-semibold tracking-wide text-center no-underline uppercase whitespace-nowrap text-plum first:ml-auto last:mr-auto lg:last:mr-0 lg:last:pr-0">
+              {{ n.text }}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="flex flex-col px-3 min-h-[101px] lg:flex-row lg:items-end">
+        <div class="flex flex-row items-end justify-between flex-1">
+          <a href="/">
+            {% include '_partials/_logo_color.svg.twig' %}
+            <span class="sr-only">
+              Murray & MacDonald Insurance Services, Inc
+            </span>
+          </a>
+
+          <div class="lg:hidden">
+            <button id="hamburger-menu-button"
+              class="hamburger"
+              type="button"
+              aria-label="Menu"
+              data-toggle-control="site-navigation"
+              aria-expanded="false">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div id="site-navigation" class="overflow-visible">
+          <div class="py-8 flex flex-col justify-center gap-[18px] lg:h-auto lg:items-center lg:gap-8 lg:flex-row lg:py-0 overflow-visible">
+            {% for n in [
+              { url: '#', text: 'Our Company' },
+              { url: '#', text: 'Our Services' }
+            ] %}
+              <a href="{{ n.url }}"
+                class="no-underline text-[22px] font-bold text-plum lg:text-lg lg:font-medium lg:text-black lg:hover:text-plum-dark">
+                {{ n.text }}
+              </a>
+            {% endfor %}
+
+            <a href="#"
+              class="no-underline text-[22px] font-bold text-plum lg:text-lg lg:btn">
+              Schedule a Call
+            </a>
+
+            {% for n in secondaryNav %}
+              <a href="{{ n.url }}"
+                class="no-underline text-plum font-medium tracking-[2px] lg:hidden">
+                {{ n.text }}
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </header>
