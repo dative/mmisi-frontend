@@ -1,14 +1,14 @@
 const hamburguerBtn = document.getElementById('hamburguer')
 const sideScreen = document.getElementById('sidebar')
 
-if(sideScreen && hamburguerBtn!= null){
+if (sideScreen && hamburguerBtn != null) {
 
-hamburguerBtn.addEventListener("click", sidebar)
+    hamburguerBtn.addEventListener("click", sidebar)
 
-function sidebar() {
+    function sidebar() {
 
-    hamburguerBtn!.classList.toggle("is-active")
+        hamburguerBtn!.classList.toggle("is-active")
 
-  sideScreen!.classList.toggle("hidden")
-  }
+        sideScreen!.classList.toggle("hidden")
+    }
 }
