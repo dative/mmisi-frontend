@@ -1,23 +1,23 @@
 <header id="site-header">
-  <section class="max-w-screen-lg mx-auto">
+  <section class="max-w-screen-lg  mx-auto">
     <div class="bg-plum-lightest overflow-x-auto md:bg-transparent">
-      <ul
-        class="flex flex-row divide-x-2 divide-plum-light py-2  justify-center md:justify-end">
-        {% for n in [
-          { url: '#', text: 'Covid'},
-          { url: '#', text: 'Weather Alert'},
-          { url: '#', text: 'Weather Alert'},
-          { url: '#', text: 'client portal'},
-          { url: 'tel:1-800-800-8990', text: '1-800-800-8990'},
-          ] %}
-        <li class="px-5 flex-none">
-          <a href="{{ n.url }}" class="font-semibold text-sm text-plum uppercase">{{ n.text }}</a>
-        </li>
-        {% endfor %}
-      </ul>
+        <ul
+          class="flex flex-row divide-x-2 divide-plum-light py-2 w-max mx-auto md:w-full md:justify-end">
+          {% for n in [
+            { url: '#', text: 'Covid'},
+            { url: '#', text: 'Weather Alert'},
+            { url: '/typography', text: 'Typography'},
+            { url: '#', text: 'client portal'},
+            { url: 'tel:1-800-800-8990', text: '1-800-800-8990'},
+            ] %}
+          <li class="px-5 flex-none">
+            <a href="{{ n.url }}" class="font-semibold text-sm text-plum uppercase">{{ n.text }}</a>
+          </li>
+          {% endfor %}
+        </ul>
     </div>
 
-    <div class="flex flex-row pt-1 px-3 justify-between items-center">
+    <div class="flex flex-row px-3 justify-between items-center md:z-10 md:mt-[-15px]">
         <div class="flex flex-col">
           <a href="/">
             {% include "_partials/img/_logo_color.svg.twig" %}
@@ -30,10 +30,16 @@
             </span>
           </button>
         </div>
-          <nav class="flex-1 md:max-w-[485px] hidden md:block md:items-center">
-            <ul class="flex flex-col items-center md:flex-row">
-              <li class="p-2 font-medium"><a href="#" class="p-3 hover:bg-plum rounded-lg hover:text-white">Our Company</a></li>
-              <li class="p-2 font-medium"><a href="#" class="p-3 hover:bg-plum rounded-lg hover:text-white">Our Services</a></li>
+          <nav class="flex-1 hidden md:block md:items-center">
+            <ul class="flex flex-col items-center md:flex-row md:justify-end">
+              {% for nav in [
+                { url: '#', text: 'Our Company'},
+                { url: '#', text: 'Our Services'},
+                ] %}
+              <li class="p-2 font-medium">
+                <a href="{{ nav.url }}" class="hover:text-plum">{{ nav.text }}</a>
+              </li>
+              {% endfor %}
               <li class="p-2">
                 <a href="#">
                   <button class="rounded-lg bg-plum p-5 hover:bg-plum-dark
