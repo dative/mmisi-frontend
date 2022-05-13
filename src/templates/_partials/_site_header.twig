@@ -1,3 +1,77 @@
 <header id="site-header">
-  <h2>site-header</h2>
+  <section class="mx-auto max-w-heatherNarrow">
+    <div class ="p-[10px]  md:justify-between">
+
+      <div id="client-portal"  class ="md:float-right">
+        <div class ="mx-auto w-[280px] h-5 md:mb-8">
+          <ul class ="flex flex-row justify-between font-Montserrat text-[14px] font-semibold text-plum leading-[17px]">
+            <li class=""><a href="/">CLIENT PORTAL </a></li>
+            <li class="">
+              <a href="/">
+                {% include "_partials\_divisor.svg.twig" %}
+
+              </a>
+            </li>
+            <li class=""><a href="/">1-800-800-8990</a></li>
+          </ul>
+        </div>
+
+        <div class ="w-[485px] h-16 hidden md:contents float-right gap-[30px]">
+            <ul class ="flex font-Montserrat text-[18px] font-medium leading-[22px]">
+              <li class ="text-black my-[20px] mx-[15px]"><a href="/">Our Company</a></li>
+              <li class ="text-black my-[20px] mx-[15px]"><a href="/">Our Services</a></li>
+              <li class ="p-5 text-white rounded bg-plum-gradient ml-[20px]"><a href="/">Schedule a Call</a></li>
+            </ul>
+        </div>
+      </div>
+
+
+      <div class ="h-[140px] flex flex-row">
+        <div class ="w-5/6">
+          {% include "_partials\_logo_heather.svg.twig" %}
+        </div>
+
+        <div class ="w-1/6 md:hidden">
+          <div onclick="openMenu()" id="menu-han" class ="mt-[61px] float-right mr-1">
+            {% include "_partials\_menu_hamburguer2.svg.twig" %}
+          </div>
+          <div onclick="closeMenu()" id="menu-x"  class ="mt-[61px] float-right mr-1 hidden">
+            {% include "_partials\_menu_t.svg.twig" %}
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class ="">
+
+    </div>
+  </section>
+  <script>
+    
+
+    var a = 0;
+    function openMenu() {
+      document.querySelector("#menu-han").classList.add('hidden');
+      document.querySelector("#client-portal").classList.add('hidden');
+      document.querySelector("#menu-x").classList.remove('hidden');
+      document.querySelector("#content-complete").classList.add('hidden');
+      document.querySelector("#logo-footer").classList.add('invisible');
+      document.querySelector("#social-midias").classList.add('invisible');
+      document.querySelector("#site-footer").classList.remove('bg-plum-gradient', 'text-white');
+      document.querySelector("#site-footer").classList.add('text-plum');
+      a = 1;
+    }
+    function closeMenu() {
+      document.querySelector("#menu-han").classList.remove('hidden');
+      document.querySelector("#client-portal").classList.remove('hidden');
+      document.querySelector("#menu-x").classList.add('hidden');
+      document.querySelector("#content-complete").classList.remove('hidden');
+      document.querySelector("#logo-footer").classList.remove('invisible');
+      document.querySelector("#social-midias").classList.remove('invisible');
+      document.querySelector("#site-footer").classList.remove('text-plum');
+      document.querySelector("#site-footer").classList.add('bg-plum-gradient', 'text-white');
+      a = 0;
+    }
+  </script>
 </header>
