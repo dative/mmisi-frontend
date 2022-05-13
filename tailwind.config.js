@@ -39,6 +39,8 @@ module.exports = {
       maxWidth: {
         "narrow": "1110px",
       },
+        'narrow': '1110px',
+      }
     },
   },
   plugins: [
