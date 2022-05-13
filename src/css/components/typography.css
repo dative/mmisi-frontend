@@ -89,5 +89,9 @@
     pre {
       @apply my-3.5;
     }
+    
+    a {
+      @apply text-plum font-semibold text-[20px] leading-[32px]
+    }
   }
 }

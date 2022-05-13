@@ -11,6 +11,7 @@ module.exports = {
       'white': '#ffffff',
       'black': '#19191A',
       'marigold': '#D5A439',
+      "purple": '#9B51E0',
       'plum': {
         'lightest': '#F8F7FB',
         'light': '#C6BEDF',
