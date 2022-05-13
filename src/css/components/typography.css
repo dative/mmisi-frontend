@@ -13,3 +13,80 @@
 * {
   @apply antialiased;
 }
+*
+
+
+
+@layer components {
+
+  .visual {
+
+    * {
+      @apply text-black bg-plum-lightest font-sans;
+    }
+
+    h1 {
+      @apply leading-tight font-medium text-4xl mb-7;
+    }
+
+    h2 {
+      @apply leading-tight font-bold text-4xl my-7;
+      ;
+    }
+
+    h3 {
+      @apply leading-tight font-medium text-2xl my-7;
+      ;
+
+    }
+
+    h4 {
+      @apply leading-tight font-bold text-3xl my-7;
+    }
+
+    h5 {
+      @apply leading-tight font-medium text-3xl my-7;
+    }
+
+    h6 {
+      @apply font-normal leading-normal text-xl my-7;
+    }
+
+    p {
+      @apply font-normal leading-normal text-xl;
+    }
+
+    footer {
+      @apply font-normal leading-normal text-xl;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      @apply lg: text-base;
+    }
+
+
+    ul {
+      @apply list-disc list-inside my-5 marker: text-plum-light;
+    }
+
+    ol {
+      @apply list-decimal list-inside my-5 marker: text-plum;
+    }
+
+    li {
+      @apply leading-loose font-normal text-2xl;
+
+    }
+
+    .menu-button li {
+      @apply p-3 hover: bg-plum rounded-lg hover:text-white;
+
+    }
+  }
+}

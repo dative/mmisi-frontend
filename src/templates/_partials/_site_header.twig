@@ -1,3 +1,50 @@
-<header id="site-header">
-  <h2>site-header</h2>
-</header>
+<header id="site-header" class="text-plum bg-plum-lightest">
+	<section class="mx-auto max-w-narrow">
+		<div class="p-7 bg-plum-lightest md:bg-transparent">
+			<div class="flex flex-row px-10 divide-x-2 divide-plum-light py-3 text-sm justify-center md:justify-end">
+
+				<div class="font-semibold text-plum  pr-5 uppercase">
+					<a href="#">client portal</a>
+				</div>
+
+				<div class="font-semibold text-plum pl-5">
+					<a href="tel:+1-800-800-8990">1-800-800-8990</a>
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-row pt-2 pl-2 pb-6 justify-between">
+
+			<div class="flex flex-col">
+				<a href="/">
+					{% include "_partials/_logo_color.svg.twig" %}
+				</a>
+			</div>
+			<div class="flex flex-col justify-end md:hidden">
+				<button>
+					<a href="/">
+						{% include "_partials/_hamburguer.svg.twig" %}
+					</a>
+				</button>
+			</div>
+			<nav class="flex-1 md:max-w-[485px] hidden md:block md:items-center">
+
+				<ul class="flex flex-col items-center md:flex-row">
+
+					<li class="p-3 font-medium">
+						<a href="#" class="menu-button">Our Company</li>
+
+					</li>
+					<li class="p-3 font-medium"></li>
+
+					<a href="#" class="menu-button">Our Services</li>
+
+				</li>
+				<li class="p-3">
+					<a href="#">
+						<button class="rounded-lg bg-plum p-6 hover:bg-plum-dark text-white font-semibold">Schedule a Call</button>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</section></header>
