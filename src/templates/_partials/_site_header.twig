@@ -25,23 +25,22 @@
 					</button>
 				</div>
 
-				<div class="flex-col hidden pt-10 px-5 md:px-0 md:pb-4 md:flex md:justify-end gap-[18px]" role="menubar"> 
-					<div>
-						<ul class="flex-row md:flex">
+				<div class="flex-col hidden pt-10 px-5 md:px-0 md:pb-0 md:flex md:justify-end gap-[18px]" role="menubar"> 
+					<div class="flex">
+						<ul class="flex-row md:flex justify-center items-center">
 							{% for item in services %}
 								{% if item.text != "Schedule a Call" %}
 									<li class="mb-[18px] md:mb-0"><a href="{{item.url}}" class="font-bold md:font-medium text-purple
 									md:mr-[30px] md:text-black md:text-[18px] tracking-[2px] md:tracking-normal
 									leading-[27px] text-[22px] md:py-5">{{item.text}}</a></li>
 									{% else %}
-									<li><a href="#" class="font-bold md:font-medium text-purple
-									md:text-[18px] tracking-[2px] leading-[27px] md:tracking-normal text-[22px] 
-									md:bg-plum-gradient md:rounded-md md:text-white md:p-5">Schedule a Call</a></li> 
+									<li><a href="{{item.url}}" class="font-bold text-purple tracking-[2px] 
+									leading-[27px] text-[22px] md:hidden">{{item.text}}</a></li>
+									<button class="hidden md:flex primary-btn">Schedule a Call</button>
 								{% endif %}
 							{% endfor %}
 						</ul>
 					</div>
-
 					<nav class="md:hidden">
 						<ul class="flex flex-col gap-4">
 							{% for item in nav %}
