@@ -1,30 +1,28 @@
 <header id="site-header">
-	<section class="box-border w-screen flex-column align-center">
-		<div class="flex justify-around pr-2 mx-auto align-center bg-plum-lightest md:absolute md:right-2 md:top-2 md:bg-white">
-			<a href="#" class="font-semibold text-plum ">CLIENTE PORTAL</a>
-			<div class="w-px h-5 bg-plum-light md:h-3 md:m-2"></div>
-			<a href="#" class="font-semibold text-plum ">1-800-800-8990</a>
+	<section class="box-border relative w-screen max-w-screen-lg mx-auto flex-column align-center pb-[49px] md:pb-[19px]">
+		<div class="flex justify-center w-screen max-w-screen-md py-[10px] md:py-0  mx-auto align-center bg-plum-lightest md:w-auto md:text-sm md:absolute md:right-[32px] md:top-0 md:bg-transparent text-plum">
+			<a href="#" class="font-semibold ">CLIENTE PORTAL</a>
+			<div class="w-px h-5 bg-plum-light md:h-3 mx-[20px]"></div>
+			<a href="#" class="font-semibold ">1-800-800-8990</a>
 		</div>
 		<div
-			class="flex justify-between p-2 align-bottom bg-white ">
-			{# Verificar altura #}
-			<a href="#"><img class="h-24" src="./img/logo.svg" alt="logo Murray & MacDonald"></a>
+			class="flex justify-between p-2 align-bottom bg-white md:p-0 md:mx-[30px] md:mt-[15px] lg:ml-[13%]">
 
-			{# Parte do Hamburguer --> Ex:2 https://larainfo.com/blogs/tailwind-css-navbar-ui-example #}
-			<div class="items-center self-end hidden space-x-8 md:flex">
-				<a href="#">Our Company</a>
-				<a href="#">Our Services</a>
+			<a href="#"><img class="md:max-h-[116px] h-[100%] min-h-[101px]" src="./img/logo.svg" alt="logo Murray & MacDonald"></a>
+
+
+			<div class="items-center self-end hidden space-x-8 text-base md:flex">
+				<a class="text-base" href="#">Our Company</a>
+				<a class="text-base" href="#">Our Services</a>
 				<a class="p-5 font-bold text-white rounded-md bg-plum-gradient hover:bg-plum " href="#">Schedule a Calll</a>
-
 			</div>
+
 			<button class="self-end md:hidden hamburger hamburger--squeeze " type="button">
 				<span class="hamburger-box">
 					<span class="hamburger-inner"></span>
 				</span>
 			</button>
-			{# <div class="flex self-end w-8 md:hidden ">
-							<img src="./img/burguer.svg">
-						</div> #}
+
 		</div>
 	</section>
 </header>
