@@ -2,19 +2,16 @@
 
 {% block headLinks %}
 	{{ parent() }}
+	<link rel="amphtml" href="/amp">
 {% endblock headLinks %}
 
 {% block content %}
-	<section class="max-w-screen-xl mx-auto pb-3 md:px-5 bg-plum-lightest">
-		<div>content</div>
+	<section>
+		<h1>content</h1>
 	</section>
-{% endblock %}
-
-{% block subcontent %}
 {% endblock %}
 
 {# -- Any JavaScript that should be included before </body> -- #}
 {% block bodyJs %}
 	{{ parent() }}
 {% endblock bodyJs %}
-{% endblock %}
