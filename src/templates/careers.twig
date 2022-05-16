@@ -1,0 +1,63 @@
+{% extends 'page.twig' %}
+
+{% set contentsLi %}
+  <ul>
+    <li>Condo</li>
+    <li>Home</li>
+    <li>Renter / Tenant</li>
+    <li>Vacation Home</li>
+    <li>Income Property</li>
+    <li>Personal Valuables</li>
+  </ul>
+{% endset %}
+
+{% set notJustAJob %}
+  <div class="redactor">
+    <p>
+      If you think all insurance is the same, think again. There are a number of
+      areas that you can specialize in that match your interests and have a huge
+      opportunity for growth and revenue. At Murray & MacDonald, you'll have a
+      number of opportunities to advance your career. This includes ownership,
+      paid time off, and more.
+    </p>
+
+    {% include '_blocks/_accordion.twig' with {
+      blk: { heading: 'Excellent Benefits', contents: contentsLi }
+    } %}
+    {% include '_blocks/_accordion.twig' with {
+      blk: { heading: 'Positive Work Culture', contents: contentsLi }
+    } %}
+    {% include '_blocks/_accordion.twig' with {
+      blk: { heading: 'Professional Developmen', contents: contentsLi }
+    } %}
+  </div>
+{% endset %}
+
+{% set entry = {
+  contentBlocks: [
+    {
+      type: 'sectionFeature',
+      heading: 'Is a career in the insurance industry right for you?',
+      coverPicture: 'https://picsum.photos/640/448?random=1',
+      contents: '<div class="redactor">
+        <p>
+          If you like being independent, the answer is "yes." As an independent insurance agent,
+          you have freedom of schedule, no caps on income, lots of opportunity, and the ability to control your destiny.
+        </p>
+      </div>',
+      htag: 'h2',
+      flip: true
+    },
+    {
+      type: 'sectionFeature',
+      heading: 'Not just a job, a carrer.',
+      coverPicture: 'https://picsum.photos/640/448?random=2',
+      contents: notJustAJob,
+      htag: 'h2',
+    },
+  ]
+} %}
+
+{% block subcontent %}
+  {% include '_assembled/_footer_cta.twig' %}
+{% endblock %}
