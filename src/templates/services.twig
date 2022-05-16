@@ -1,12 +1,13 @@
 {% extends 'page.twig' %}
 
 {% set individualsFamilies %}
-  <p>
-    Families and individuals need insurance to protect themselves. Our insurance
-    agents work to determine the coverage needed to insure your cars, homes,
-    boats, and more.
-  </p>
-
+  <div class="redactor">
+    <p>
+      Families and individuals need insurance to protect themselves. Our insurance
+      agents work to determine the coverage needed to insure your cars, homes,
+      boats, and more.
+    </p>
+  </div>
   <p>
     <strong>Here’s how we can help:</strong>
   </p>
@@ -41,10 +42,12 @@
 {% endset %}
 
 {% set businessNonProfit %}
-  <p>
-    Whether you are a sole proprietor or a fully staffed organization, our direct relationships with regional, national, and global insurance companies allow us to design property & casualty insurance and employee benefits programs for our clients. We work to secure the insurance coverage your firm will need.
-  </p>
+  <div class="redactor">
 
+    <p>
+      Whether you are a sole proprietor or a fully staffed organization, our direct relationships with regional, national, and global insurance companies allow us to design property & casualty insurance and employee benefits programs for our clients. We work to secure the insurance coverage your firm will need.
+    </p>
+  </div>
   <p>
     <strong>Here’s how we can help:</strong>
   </p>
@@ -88,9 +91,11 @@
       heading: 'Our Services',
       coverPicture: 'https://picsum.photos/640/448?random=1',
       contents:
-      '<p>
-        Sometimes choosing the right insurance coverage for personal or professional needs is complicated. We are here to advise you on insurance strategies that are cost effective and lower your risk.
-      </p>',
+      '<div class="redactor">
+        <p>
+          Sometimes choosing the right insurance coverage for personal or professional needs is complicated. We are here to advise you on insurance strategies that are cost effective and lower your risk.
+        </p>
+       </div>',
       htag: 'h2'
     },
     {
