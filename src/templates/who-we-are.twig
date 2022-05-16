@@ -1,25 +1,75 @@
 {% extends 'page.twig' %}
 
 {% set pageIntro %}
-  <p>
-    For over 50 years, we focused on infusing our integrity
-    into helping our clients protect their most valuable
-    assets. Our goal is to design insurance solutions to
-    reduce risk, protect assets, and let you sleep at night.
-  </p>
-  <p>
-    We review your policies for risk exposures to help
-    educate you on what’s working, what’s not, and what’s
-    missing. We work with over 100 companies to provide
-    solutions for our clients’ needs.
-  </p>
+  <div class='redactor'>
+    <p>
+      For over 50 years, we focused on infusing our integrity
+      into helping our clients protect their most valuable
+      assets. Our goal is to design insurance solutions to
+      reduce risk, protect assets, and let you sleep at night.
+    </p>
+    <p>
+      We review your policies for risk exposures to help
+      educate you on what’s working, what’s not, and what’s
+      missing. We work with over 100 companies to provide
+      solutions for our clients’ needs.
+    </p>
+  </div>
 {% endset %}
 
+{% set wordRisk %}
+  <div class='redactor'>
+    <p>
+      There’s an excitement to certain risks - Riding a bicycle
+      with no hands. Jumping into the deep end. Betting on a race 
+      horse. We control our choice to take part in these types of risks.
+    </p>
+    <p>
+      To us at Murray & MacDonald, risk is calculated by loss that 
+      is out of our control. The results are unpredictable and 
+      unexpected, and can be devastating when you’re not properly insured.
+    </p>
+    <p>
+      We invest time to get to know you and the insurance protection you
+      need. By utilizing industry knowledge and tools, we develop insurance
+      solutions to help you achieve your goals. 
+    </p>
+    <p>
+      Our focus is to do what is right, to provide you with professional
+      advice and competitively priced insurance programs that will protect
+      you, your family, businesses and organizations. 
+    </p>
+  </div>
+{% endset %}
+
+{% set businessPersonal %}
+  <div class='redactor'>
+    <p>
+      We live and work in the community we insure, investing 10% of our profits
+      into local charities and non-profits.
+    </p>
+
+    <p>
+      <strong>Each year we donate to over 100 organizations. </strong>
+    </p>
+    
+    <p>
+      When you do business with us, you also support charitable organizations 
+      in the community.
+    </p>
+  </div>
+{% endset %}
+
+
 {% set entry = {
-  title: 'Independent, Entrepreneurial Insurance Agents',
-  coverPicture: 'https://unsplash.it/800/450?image=856',
-  pageIntro: pageIntro,
   contentBlocks: [
+    {
+      type: 'sectionFeature',
+      heading: 'Independent, Entrepreneurial Insurance Agents',
+      coverPicture: 'https://picsum.photos/640/448?random=1',
+      contents: pageIntro,
+      htag: 'h1'
+    },
     {
       type: 'profileGrid',
       profiles: [
@@ -63,8 +113,70 @@
           fullName: 'Suzanne Harrington',
           certification: '',
           jobTitle: 'CL Account Assistant'
+        },
+        {
+          fullName: 'Kim Kerins',
+          certification: '',
+          jobTitle: 'PL Account Manager'
+        },
+        {
+          fullName: 'Janet Scrima',
+          certification: '',
+          jobTitle: 'Receptionist',
+          profilePicture: 'https://randomuser.me/api/portraits/women/4.jpg'
+        },
+        {
+          fullName: 'Sharen Rabesa',
+          certification: '',
+          jobTitle: 'Client Services'
+        },
+        {
+          fullName: 'John Shelott',
+          certification: '',
+          jobTitle: 'PL Account Manager'
+        },
+        {
+          fullName: 'Kelly Carlson',
+          certification: '',
+          jobTitle: 'Client Services',
+          profilePicture: 'https://randomuser.me/api/portraits/women/5.jpg'
+        },
+        {
+          fullName: 'Zach Tonello',
+          certification: '',
+          jobTitle: 'CL Account Manager',
+          profilePicture: 'https://randomuser.me/api/portraits/men/4.jpg'
+        },
+        {
+          fullName: 'Bob Carreiro',
+          certification: '',
+          jobTitle: 'Client Services Supervisor'
+        },
+        {
+          fullName: 'Kelly Amorim',
+          certification: '',
+          jobTitle: 'Client Services',
+          profilePicture: 'https://randomuser.me/api/portraits/women/6.jpg'
+        },
+        {
+          fullName: 'Sandi Abrams',
+          certification: 'CIC',
+          jobTitle: 'PL Account Manager'
         }
       ]
+    },
+    {
+      type: 'sectionFeature',
+      heading: 'What do you think of when you hear the word risk?',
+      coverPicture: 'https://picsum.photos/640/448?random=2',
+      contents: wordRisk,
+      flip: true
+    },
+    {
+      type: 'sectionFeature',
+      heading: 'Sometime business <i>is</i> personal',
+      coverPicture: 'https://picsum.photos/640/448?random=3',
+      contents: businessPersonal
     }
   ]
 } %}
