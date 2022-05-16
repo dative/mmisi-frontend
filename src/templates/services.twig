@@ -1,0 +1,108 @@
+{% extends 'page.twig' %}
+
+{% set contentsLi %}
+<ul>
+  <li>Condo</li>
+  <li>Home</li>
+  <li>Renter / Tenant</li>
+  <li>Vacation Home</li>
+  <li>Income Property</li>
+  <li>Personal Valuables</li>
+</ul>
+{% endset %}
+
+{% set individualFamilies %}
+<div class="redactor">
+  <p>
+    Families and individuals need insurance to protect themselves. Our
+    insurance agents work to determine the coverage needed to insure your
+    cars, homes, boats, and more.
+  </p>
+  <p>
+    <strong>
+      Here’s how we can help:
+    </strong>
+  </p>
+
+  {% include '_blocks/_accordion.twig' with {
+  blk: { heading: 'Property & Liability', contents: contentsLi }
+  } %}
+  {% include '_blocks/_accordion.twig' with {
+  blk: { heading: 'Vehicles & Recreation', contents: contentsLi }
+  } %}
+  {% include '_blocks/_accordion.twig' with {
+  blk: { heading: 'Life & Health', contents: contentsLi }
+  } %}
+  {% include '_blocks/_accordion.twig' with {
+  blk: { heading: 'Full-Time Client', contents: contentsLi }
+  } %}
+</div>
+{% endset %}
+
+
+{% set businessesNomProfits %}
+<div class="redactor">
+  <p>
+    Whether you are a sole proprietor or a fully staffed organization, our
+    direct relationships with regional, national, and global insurance companies
+    allow us to design property & casualty insurance and employee benefits
+    programs for our clients. We work to secure the insurance coverage your firm
+    will need.
+
+  </p>
+  <p>
+    <strong>Here’s how we can help:</strong>
+  </p>
+</div>
+
+<div>
+  {% include '_blocks/_accordion.twig' with {
+  blk: { heading: 'Protectiong Assets', contents: contentsLi }
+  } %}
+  {% include '_blocks/_accordion.twig' with {
+  blk: { heading: 'Financial Solvency', contents: contentsLi }
+  } %}
+  {% include '_blocks/_accordion.twig' with {
+  blk: { heading: 'Professional Services', contents: contentsLi }
+  } %}
+  {% include '_blocks/_accordion.twig' with {
+  blk: { heading: 'Employee Protection', contents: contentsLi }
+  } %}
+</div>
+</div>
+{% endset %}
+
+{% set entry = {
+contentBlocks: [
+{
+type: 'sectionFeature',
+heading: 'Our Services',
+coverPicture: 'https://picsum.photos/640/448?random=1',
+contents: '<div class="redactor">
+  <p>Sometimes choosing the right insurance coverage for personal or
+    professional needs is complicated. We are here to advise you on insurance
+    strategies that are cost effective and lower your risk.</p>
+</div>',
+htag: 'h2'
+},
+{
+type: 'sectionFeature',
+heading: 'Individuals & Families',
+coverPicture: 'https://picsum.photos/640/448?random=2',
+contents: individualFamilies,
+htag: 'h2',
+flip: true
+},
+{
+type: 'sectionFeature',
+heading: 'Businesses & Non-Profits',
+coverPicture: 'https://picsum.photos/640/448?random=3',
+contents: businessesNomProfits,
+htag: 'h2',
+}
+]
+} %}
+
+{% block subcontent %}
+{% include '_assembled/_footer_cta.twig' %}
+{% endblock %}

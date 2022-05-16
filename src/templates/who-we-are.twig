@@ -1,125 +1,133 @@
 {% extends 'page.twig' %}
 
 {% set pageIntro %}
-  <p>
-    For over 50 years, we focused on infusing our integrity into helping our
-    clients protect their most valuable assets. Our goal is to design insurance
-    solutions to reduce risk, protect assets, and let you sleep at night.
-  </p>
-  <p>
-    We review your policies for risk exposures to help educate you on what’s
-    working, what’s not, and what’s missing. We work with over 100 companies to
-    provide solutions for our clients’ needs.
-  </p>
+<p>
+  For over 50 years, we focused on infusing our integrity into helping our
+  clients protect their most valuable assets. Our goal is to design insurance
+  solutions to reduce risk, protect assets, and let you sleep at night.
+</p>
+<p>
+  We review your policies for risk exposures to help educate you on what’s
+  working, what’s not, and what’s missing. We work with over 100 companies to
+  provide solutions for our clients’ needs.
+</p>
 {% endset %}
 
 {% set sometimeBusiness %}
-  <div class="redactor">
-    <p>
-      We live and work in the community we insure, investing 10% of our profits
-      into local charities and non-profits.
-    </p>
-    <p>
-      <strong>Each year we donate to over 100 organizations.</strong>
-    </p>
-    <p>
-      When you do business with us, you also support charitable organizations in
-      the community.
-    </p>
-  </div>
+<div class="redactor">
+  <p>
+    We live and work in the community we insure, investing 10% of our profits
+    into local charities and non-profits.
+  </p>
+  <p>
+    <strong>Each year we donate to over 100 organizations.</strong>
+  </p>
+  <p>
+    When you do business with us, you also support charitable organizations in
+    the community.
+  </p>
+</div>
 {% endset %}
 
 {% set wordRisk %}
-  <div class="redactor">
-    <p>
-      There’s an excitement to certain risks - Riding a bicycle with no hands. Jumping into the deep end. Betting on a race horse. We control our choice to take part in these types of risks.
-    </p>
+<div class="redactor">
+  <p>
+    There’s an excitement to certain risks - Riding a bicycle with no hands.
+    Jumping into the deep end. Betting on a race horse. We control our choice to
+    take part in these types of risks.
+  </p>
 
-    <p>
-      To us at Murray & MacDonald, risk is calculated by loss that is out of our control. The results are unpredictable and unexpected, and can be devastating when you’re not properly insured.
-    </p>
+  <p>
+    To us at Murray & MacDonald, risk is calculated by loss that is out of our
+    control. The results are unpredictable and unexpected, and can be
+    devastating when you’re not properly insured.
+  </p>
 
-    <p>
-      We invest time to get to know you and the insurance protection you need. By utilizing industry knowledge and tools, we develop insurance solutions to help you achieve your goals.
-    </p>
+  <p>
+    We invest time to get to know you and the insurance protection you need. By
+    utilizing industry knowledge and tools, we develop insurance solutions to
+    help you achieve your goals.
+  </p>
 
-    <p>
-      Our focus is to do what is right, to provide you with professional advice and competitively priced insurance programs that will protect you, your family, businesses and organizations.
-    </p>
+  <p>
+    Our focus is to do what is right, to provide you with professional advice
+    and competitively priced insurance programs that will protect you, your
+    family, businesses and organizations.
+  </p>
 
-  </div>
+</div>
 {% endset %}
 
 {% set entry = {
-  title: 'Independent, Entrepreneurial Insurance Agents',
-  coverPicture: 'https://unsplash.it/800/450?image=856',
-  pageIntro: pageIntro,
-  contentBlocks: [
-    { type: 'richText', contents: pageIntro },
-    {
-      type: 'profileGrid',
-      profiles: [
-        {
-          fullName: 'Douglas MacDonald',
-          certification: 'CPCU, CIC, CRM',
-          jobTitle: 'President',
-          profilePicture: 'https://randomuser.me/api/portraits/men/1.jpg'
-        },
-        {
-          fullName: 'John Vokey',
-          certification: 'CIC',
-          jobTitle: 'PL Account Manager',
-          profilePicture: 'https://randomuser.me/api/portraits/men/2.jpg'
-        },
-        {
-          fullName: 'Sara Giguere',
-          certification: 'CIC',
-          jobTitle: 'CFO',
-          profilePicture: 'https://randomuser.me/api/portraits/women/1.jpg'
-        },
-        {
-          fullName: 'Courtney Finigan',
-          certification: 'CIC, CRM, CMIP',
-          jobTitle: 'VP of Business Services',
-          profilePicture: 'https://randomuser.me/api/portraits/women/2.jpg'
-        },
-        {
-          fullName: 'Gabriel DeSouza',
-          certification: 'CIC',
-          jobTitle: 'CL Account Manager',
-          profilePicture: 'https://randomuser.me/api/portraits/men/3.jpg'
-        },
-        {
-          fullName: 'Kirsten Adams',
-          certification: '',
-          jobTitle: 'Accounting Coordinator',
-          profilePicture: 'https://randomuser.me/api/portraits/women/3.jpg'
-        },
-        {
-          fullName: 'Suzanne Harrington',
-          certification: '',
-          jobTitle: 'CL Account Assistant'
-        }
-      ]
-    },
-    {
-      type: 'sectionFeature',
-      heading: 'What do you think of when you hear the word risk?',
-      contents: wordRisk,
-      coverPicture: 'https://picsum.photos/640/448?random=1',
-      htag: 'h2',
-      flip: true
-    },
-    {
-      type: 'sectionFeature',
-      heading: 'Sometime business <i>is</i> personal',
-      coverPicture: 'https://picsum.photos/640/448?random=2',
-      contents: sometimeBusiness,
-      htag: 'h2'
-    }
-  ]
+title: 'Independent, Entrepreneurial Insurance Agents',
+coverPicture: 'https://unsplash.it/800/450?image=856',
+pageIntro: pageIntro,
+contentBlocks: [
+{ type: 'richText', contents: pageIntro },
+{
+type: 'profileGrid',
+profiles: [
+{
+fullName: 'Douglas MacDonald',
+certification: 'CPCU, CIC, CRM',
+jobTitle: 'President',
+profilePicture: 'https://randomuser.me/api/portraits/men/1.jpg'
+},
+{
+fullName: 'John Vokey',
+certification: 'CIC',
+jobTitle: 'PL Account Manager',
+profilePicture: 'https://randomuser.me/api/portraits/men/2.jpg'
+},
+{
+fullName: 'Sara Giguere',
+certification: 'CIC',
+jobTitle: 'CFO',
+profilePicture: 'https://randomuser.me/api/portraits/women/1.jpg'
+},
+{
+fullName: 'Courtney Finigan',
+certification: 'CIC, CRM, CMIP',
+jobTitle: 'VP of Business Services',
+profilePicture: 'https://randomuser.me/api/portraits/women/2.jpg'
+},
+{
+fullName: 'Gabriel DeSouza',
+certification: 'CIC',
+jobTitle: 'CL Account Manager',
+profilePicture: 'https://randomuser.me/api/portraits/men/3.jpg'
+},
+{
+fullName: 'Kirsten Adams',
+certification: '',
+jobTitle: 'Accounting Coordinator',
+profilePicture: 'https://randomuser.me/api/portraits/women/3.jpg'
+},
+{
+fullName: 'Suzanne Harrington',
+certification: '',
+jobTitle: 'CL Account Assistant'
+}
+]
+},
+{
+type: 'sectionFeature',
+heading: 'What do you think of when you hear the word risk?',
+contents: wordRisk,
+coverPicture: 'https://picsum.photos/640/448?random=1',
+htag: 'h2',
+flip: true
+},
+{
+type: 'sectionFeature',
+heading: 'Sometime business <i>is</i> personal',
+coverPicture: 'https://picsum.photos/640/448?random=2',
+contents: sometimeBusiness,
+htag: 'h2'
+}
+]
 } %}
 
 {% block subcontent %}
-  {% include '_assembled/_footer_cta.twig' %}
+{% include '_assembled/_footer_cta.twig' %}
 {% endblock %}
