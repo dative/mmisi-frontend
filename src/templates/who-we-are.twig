@@ -17,6 +17,30 @@
 </div>
 {% endset %}
 
+{% set thinkRisk %}
+<div class="redactor">
+  <p>
+    There’s an excitement to certain risks - Riding a bicycle with no hands. Jumping into the deep end. Betting on a race horse. We control our choice to take part in these types of risks.
+  </p>
+  <p>
+    To us at Murray & MacDonald, risk is calculated by loss that is out of our control. The results are unpredictable and unexpected, and can be devastating when you’re not properly insured.
+  </p>
+  <p>We invest time to get to know you and the insurance protection you need. By utilizing industry knowledge and tools, we develop insurance solutions to help you achieve your goals.
+  </p>
+  <p>
+    Our focus is to do what is right, to provide you with professional advice and competitively priced insurance programs that will protect you, your family, businesses and organizations.   </p>
+</div>
+{% endset %}
+
+{% set businessPersonal %}
+<div class="redactor">
+  <p>We live and work in the community we insure, investing 10% of our profits into local charities and non-profits.</p>
+  <p><b>Each year we donate to over 100 organizations.</b></p>
+  <p>When you do business with us, you also support charitable organizations in the community.</p></div>
+{% endset %}
+
+
+
   {# [TO-REVIEW]
     [] title in conflict with sectionFeature heading #}
 {% set entry = {
@@ -131,10 +155,7 @@
       type: 'sectionFeature',
       heading: 'What do you think of when you hear the word risk?',
       coverPicture: 'https://picsum.photos/640/448?random=2',
-      contents: '<div class="redactor"><p>There’s an excitement to certain risks - Riding a bicycle with no hands. Jumping into the deep end. Betting on a race horse. We control our choice to take part in these types of risks.</p>
-         <p>To us at Murray & MacDonald, risk is calculated by loss that is out of our control. The results are unpredictable and unexpected, and can be devastating when you’re not properly insured.</p>
-         <p>We invest time to get to know you and the insurance protection you need. By utilizing industry knowledge and tools, we develop insurance solutions to help you achieve your goals. </p>
-        <p>Our focus is to do what is right, to provide you with professional advice and competitively priced insurance programs that will protect you, your family, businesses and organizations. </p></div>',
+      contents: thinkRisk,
       htag: 'h2',
       flip: true
     },
@@ -142,9 +163,7 @@
       type: 'sectionFeature',
       heading: 'Sometimes business <i>is</i> personal',
       coverPicture: 'https://picsum.photos/640/448?random=3',
-      contents: '<div class="redactor"><p>We live and work in the community we insure, investing 10% of our profits into local charities and non-profits.</p>
-        <p><b>Each year we donate to over 100 organizations.</b></p>
-        <p>When you do business with us, you also support charitable organizations in the community.</p></div>',
+      contents: businessPersonal,
       htag: 'h2',
     },
   ]

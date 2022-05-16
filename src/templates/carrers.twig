@@ -34,18 +34,20 @@
   </div>
 {% endset %}
 
+
+{% set carrerForYou %}
+<div class="redactor">
+  <p>If you like being independent, the answer is "yes." As an independent insurance agent, you have freedom of schedule, no caps on income, lots of opportunity, and the ability to control your destiny.</p>
+</div>
+{% endset %}
+
 {% set entry = {
-  title: '',
-  coverPicture: 'https://unsplash.it/800/450?image=856',
-  pageIntro: pageIntro,
   contentBlocks: [
     {
       type: 'sectionFeature',
       heading: 'Is a career in the insurance industry right for you?',
       coverPicture: 'https://picsum.photos/640/448?random=2',
-      contents: '<div class="redactor">
-                  <p>If you like being independent, the answer is "yes." As an independent insurance agent, you have freedom of schedule, no caps on income, lots of opportunity, and the ability to control your destiny.</p>
-                </div>'   ,
+      contents: carrerForYou,
       htag: 'h2',
       flip: true
     },
