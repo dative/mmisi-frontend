@@ -40,20 +40,17 @@
 
         <div id="site-navigation" class="overflow-visible">
           <div class="py-8 flex flex-col justify-center gap-[18px] lg:h-auto lg:items-center lg:gap-8 lg:flex-row lg:py-0 overflow-visible">
-            {% for n in [
-              { url: '#', text: 'Our Company' },
-              { url: '#', text: 'Our Services' }
-            ] %}
+            {% for n in primanyNav %}
               <a href="{{ n.url }}"
-                class="no-underline text-[22px] font-bold text-plum lg:text-lg lg:font-medium lg:text-black lg:hover:text-plum-dark">
+                {% if loop.last %}
+                class="no-underline text-[22px] font-bold text-plum lg:text-lg lg:btn"
+                {% else %}
+                class="no-underline text-[22px] font-bold text-plum lg:text-lg lg:font-medium lg:text-black lg:hover:text-plum-dark"
+                {% endif %}
+              >
                 {{ n.text }}
               </a>
             {% endfor %}
-
-            <a href="#"
-              class="no-underline text-[22px] font-bold text-plum lg:text-lg lg:btn">
-              Schedule a Call
-            </a>
 
             {% for n in secondaryNav %}
               <a href="{{ n.url }}"

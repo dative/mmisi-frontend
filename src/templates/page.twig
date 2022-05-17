@@ -3,23 +3,33 @@
 {% block content %}
   <div class="px-3 py-8 lg:py-20">
     <article class="mx-auto max-w-narrow">
+
       {% if entry is defined and entry %}
         {% if entry.title and entry.showTitle == true %}
           {% include '_partials/_page_header.twig' with {
             heading: entry.title
           } %}
         {% endif %}
+        
+      {% block beforeContentBlocks %}
 
-        {% if entry.contentBlocks is defined and entry.contentBlocks %}
+      {% endblock %}
+
+      {% if
+        entry is defined
+          and entry
+          and entry.contentBlocks is defined
+          and entry.contentBlocks %}
+        <div class="my-8 lg:my-14">
           {% include '_partials/_content_blocks.twig' with {
             blocks: entry.contentBlocks
           } %}
-        {% endif %}
-      {% else %}
-        <pre>
-          entry is not defined.
-        </pre>
+        </div>
       {% endif %}
+
+      {% block afterContentBlocks %}
+
+      {% endblock %}
     </article>
   </div>
 {% endblock %}

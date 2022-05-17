@@ -9,11 +9,7 @@
 
       <div class="lg:hidden">
         <ul class="flex flex-col gap-4">
-          {% for n in [
-            { url: '#', text: 'Our Company' },
-            { url: '#', text: 'Our Services' },
-            { url: '#', text: 'Schedule a Call' }
-          ] %}
+          {% for n in primanyNav %}
             <li>
               <a href="{{ n.url }}"
                 class="text-white no-underline font-bold text-[22px] leading-[27px] tracking-[2px] hover:text-plum-lightest hover:opacity-80">
@@ -24,12 +20,12 @@
         </ul>
       </div>
 
-      <nav class="flex-1 lg:max-w-[635px] lg:flex lg:items-center">
-        <ul class="flex flex-col gap-4 lg:flex-row lg:flex-wrap lg:gap-x-0">
+      <nav class="flex-1 lg:max-w-[554px] lg:max-h-40 lg:flex lg:items-center">
+        <ul class="flex flex-col gap-4 lg:mt-4 lg:h-full lg:flex-wrap lg:gap-x-12 lg:items-end">
           {% for n in secondaryNav %}
-            <li class="w-full lg:w-1/2">
+            <li class="w-full">
               <a href="{{ n.url }}"
-                class="text-white no-underline font-medium tracking-[2px] lg:font-bold hover:text-plum-lightest hover:opacity-80">
+                class="text-white no-underline font-medium tracking-[2px] lg:font-bold lg:text-base hover:text-plum-lightest hover:opacity-80">
                 {{ n.text }}
               </a>
             </li>

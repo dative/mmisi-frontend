@@ -1,0 +1,136 @@
+{% extends 'page.twig' %}
+
+{% set richContents %}
+  <p>
+    <strong>Need help reporting a claim?</strong>
+    Contact us during business hours to speak with an advisor directly.
+  </p>
+{% endset %}
+
+{% set entry = {
+  title: 'Report a Claim',
+  contentBlocks: [
+    {
+      type: 'cta',
+      contents: richContents,
+      btnLink: { url: '#', text: 'Pay with ePay' }
+    }
+  ]
+} %}
+
+{% set carriers = [
+  {
+    name: 'AIG',
+    url: 'https://www.aig.com/individual/individual-claims#accordion-child_ps_accordion_2',
+    logo: 'https://riskadvice.com/images/provider_logo/aig-logo.png'
+  },
+  {
+    name: '',
+    url: 'https://www.arbella.com/claims/report-an-accident',
+    logo: 'https://riskadvice.com/images/provider_logo/arbella.png'
+  },
+  {
+    name: '',
+    url: 'http://www.bcbs.com/?referrer=http://www.mmisi.com/claim.php',
+    logo: 'https://riskadvice.com/images/provider_logo/bcbs.png'
+  },
+  {
+    name: '',
+    url: 'https://www.cinfin.com/claims',
+    logo: 'https://riskadvice.com/images/provider_logo/cincinnati-insurance.png'
+  },
+  {
+    name: '',
+    url: 'https://www.hagerty.com/claim/claim_main.aspx',
+    logo: 'https://riskadvice.com/images/provider_logo/hagerty.png'
+  },
+  {
+    name: '',
+    url: 'https://www.harvardpilgrim.org/portal/page?_pageid=213,243588&amp;_dad=portal&amp;_schema=PORTAL',
+    logo: 'https://riskadvice.com/images/provider_logo/harvard.png'
+  },
+  {
+    name: '',
+    url: 'https://www.nbic.com/claims/',
+    logo: 'https://riskadvice.com/images/provider_logo/nbic.png'
+  },
+  {
+    name: '',
+    url: 'https://www.nationalfloodservices.com/',
+    logo: 'https://riskadvice.com/images/provider_logo/nfs.png'
+  },
+  {
+    name: '',
+    url: 'https://claims.nationalgeneral.com/report',
+    logo: 'https://riskadvice.com/images/provider_logo/national-general.png'
+  },
+  {
+    name: '',
+    url: 'http://www.nmu.com/NMU/pages/services/claims.page?',
+    logo: 'https://riskadvice.com/images/provider_logo/nmu.png'
+  },
+  {
+    name: '',
+    url: 'http://www.nlcinsurance.com/products_and_services/claims.htm',
+    logo: 'https://riskadvice.com/images/provider_logo/newlondon.png'
+  },
+  {
+    name: '',
+    url: 'https://www.phly.com/aboutphly/Claims/',
+    logo: 'https://riskadvice.com/images/provider_logo/philadelphia.png'
+  },
+  {
+    name: '',
+    url: 'http://www.prac.com/claim-center',
+    logo: 'https://riskadvice.com/images/provider_logo/plymouthrock.png'
+  },
+  {
+    name: '',
+    url: 'https://www.progressive.com/claims/',
+    logo: 'https://riskadvice.com/images/provider_logo/progressive.png'
+  },
+  {
+    name: '',
+    url: 'http://www.rlicorp.com/contact/claims/default.asp',
+    logo: 'https://riskadvice.com/images/provider_logo/rli.png'
+  },
+  {
+    name: '',
+    url: 'https://www.safetyinsurance.com/claimsservices/index.html',
+    logo: 'https://riskadvice.com/images/provider_logo/safety.png'
+  },
+  {
+    name: '',
+    url: 'https://www.scottsdaleins.com/public/insurance_products/report_claim.jsp',
+    logo: 'https://riskadvice.com/images/provider_logo/scottsdale.png'
+  },
+  {
+    name: '',
+    url: 'https://www.thebarnstable.com/submit-a-claim/',
+    logo: 'https://riskadvice.com/images/provider_logo/the-barnstable.png'
+  },
+  {
+    name: '',
+    url: 'https://www.travelers.com/claims/report-claim/index.aspx',
+    logo: 'https://riskadvice.com/images/provider_logo/travelers.png'
+  },
+  {
+    name: '',
+    url: 'https://ezpay.usli.com/Policy/FraudWarning/?a=Logon&amp;c=Account',
+    logo: 'https://riskadvice.com/images/provider_logo/usli.png'
+  },
+  {
+    name: '',
+    url: 'http://www.upcinsurance.com/policyholders/submit-a-claim/',
+    logo: 'https://riskadvice.com/images/provider_logo/upc.png'
+  },
+  {
+    name: '',
+    url: 'https://webclaims.zurichna.com/',
+    logo: 'https://riskadvice.com/images/provider_logo/zurich.png'
+  }
+] %}
+
+{% block afterContentBlocks %}
+  {% include '_partials/_carrier_grid.twig' with { carriers: carriers } %}
+{% endblock %}

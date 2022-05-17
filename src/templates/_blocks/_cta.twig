@@ -1,0 +1,37 @@
+{#
+
+CTA Block component
+
+Usage:
+
+{% include "_blocks/_cta.twig" with {
+  contents: '<p>Your headline</p>',
+  btnLink: {
+    url: 'https://www.example.com',
+    text: 'Button Text',
+  }
+} %}
+
+#}
+{% if
+  blk is defined
+    and blk
+    and blk.contents is defined
+    and blk.contents
+    and blk.btnLink is defined
+    and blk.btnLink %}
+  <div>
+    <div class="mx-auto max-w-narrow">
+      <div class="flex flex-col items-center justify-between gap-5 p-6 bg-white border rounded-lg border-plum-light md:flex-row md:bg-transparent">
+        <div class="text-center md:text-left">
+          {{ blk.contents|raw }}
+        </div>
+        <div class="text-center">
+          <a href="{{ blk.btnLink.url }}" class="px-12 text-lg btn-green">
+            {{ blk.btnLink.text }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
