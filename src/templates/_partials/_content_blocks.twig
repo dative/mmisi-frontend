@@ -2,7 +2,9 @@
   <div class="flex flex-col gap-16 lg:gap-20">
     {% for blk in blocks %}
       {% if blk.type is defined %}
-        {% include '_blocks/_' ~ blk.type ~ '.twig' with { blk: blk } %}
+        {# prettier-ignore-start #}
+        {% include '_blocks/_' ~ blk.type ~ '.twig' ignore missing with { blk: blk } %}
+        {# prettier-ignore-end #}
       {% endif %}
     {% endfor %}
   </div>

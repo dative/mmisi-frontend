@@ -1,0 +1,10 @@
+{% if
+  alert is defined and alert and alert.message is defined and alert.message %}
+  <div class="px-5 py-4 text-sm font-semibold rounded-md {{
+    alert.type is defined and alert.type == 'error'
+      ? 'bg-marigold bg-opacity-30'
+      : 'bg-plum-light bg-opacity-50'
+    }}">
+    {{ alert.message }}
+  </div>
+{% endif %}

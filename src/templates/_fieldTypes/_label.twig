@@ -1,0 +1,24 @@
+{#
+
+Input Label component
+
+Note: This component is not meant to be used standalone.
+
+Usage:
+
+{% include "_fieldTypes/_label.twig" with {
+  field:   {
+    label: 'Full Name',
+    required: true,
+  },
+} %}
+
+#}
+{% if field is defined and field and field.label is defined and field.label %}
+  <span class="text-base font-semibold">
+    {{ field.label }}
+    {% if field.required is defined and field.required %}
+      <span class="text-pastel-blue">*</span>
+    {% endif %}
+  </span>
+{% endif %}

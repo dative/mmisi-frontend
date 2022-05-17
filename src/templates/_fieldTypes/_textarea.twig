@@ -1,0 +1,35 @@
+{#
+
+Textarea component
+
+Usage:
+
+{% include "_fieldTypes/_textarea.twig" with {
+  field:   {
+    type: 'textarea',
+    name: 'message',
+    label: 'Message',
+    value: 'your message here',
+    required: true,
+    error: false,
+    rows: 4,
+  },
+} %}
+
+#}
+{% if
+  field is defined
+    and field
+    and field.type is defined
+    and field.type == 'textarea' %}
+  <label class="block">
+    {% include '_fieldTypes/_label.twig' with { field: field } only %}
+    {# prettier-ignore-start #}
+    <textarea
+      {% include "_fieldTypes/_classAttr.twig" with { field: field } only %}
+      name="{{ field.name }}"
+      rows="{{ field.rows is defined and field.rows > 0 ? field.rows : 4 }}"
+      {{ field.required is defined and field.required ? 'required' : '' }}>{{ field.value }}</textarea>
+    {# prettier-ignore-end #}
+  </label>
+{% endif %}

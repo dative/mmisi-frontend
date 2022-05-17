@@ -1,0 +1,32 @@
+{#
+
+Input Type Email component
+
+Usage:
+
+{% include "_fieldTypes/_email.twig" with {
+  field:   {
+    type: 'email',
+    name: 'email',
+    label: 'Email',
+    value: 'john@doe.com',
+    required: true,
+    error: false
+  },
+} %}
+
+#}
+{% if
+  field is defined
+    and field
+    and field.type is defined
+    and field.type == 'email' %}
+  <label class="block">
+    {% include '_fieldTypes/_label.twig' with { field: field } only %}
+    <input type="email"
+      {% include "_fieldTypes/_classAttr.twig" with { field: field } only %}
+      name="{{ field.name }}"
+      value="{{ field.value }}"
+      {{ field.required is defined and field.required ? 'required' : '' }} />
+  </label>
+{% endif %}

@@ -1,0 +1,150 @@
+{% extends '_layouts/_generic_page_layout.twig' %}
+
+{% block content %}
+  <section class="px-3 py-8 lg:py-20">
+    <div class="mx-auto max-w-narrow">
+      <div>
+        <h1 class="sr-only">
+          Contact
+        </h1>
+
+        <div class="flex flex-col-reverse gap-16 md:flex-col">
+          <div class="flex flex-col md:flex-row lg:justify-between md:divide-x divide-plum-light">
+            {% for c in [
+              {
+                title: 'Call or Text',
+                link: { url: 'tel:+18008008990', text: '800-800-8990' }
+              },
+              {
+                title: 'Fax',
+                link: { url: 'tel:+15082894111', text: '508-289-4111' }
+              },
+              {
+                title: 'Email',
+                link: {
+                  url: 'mailto:service@riskadvice.com',
+                  text: 'service@riskadvice.com'
+                }
+              }
+            ] %}
+              <div class="flex-1 px-8">
+                <div class="flex flex-col py-1 md:items-center">
+                  <div class="text-base font-medium md:text-center">
+                    {{ c.title }}
+                  </div>
+                  <div class="text-xl font-semibold md:text-center">
+                    <a href="{{ c.link.url }}">{{ c.link.text }}</a>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+          <div>
+            <div class="flex flex-col gap-8 lg:flex-row">
+              <div class="flex-1">
+                <div class="p-4 bg-white rounded-md md:p-8 shadow-card">
+                  <form class="flex flex-col gap-7">
+                    {% include '_partials/_alert.twig' with {
+                      alert: {
+                        type: 'success',
+                        message: 'Your message has been sent, thank you.'
+                      }
+                    } %}
+
+                    {% include '_partials/_alert.twig' with {
+                      alert: {
+                        type: 'error',
+                        message: 'Please complete the fields below. '
+                      }
+                    } %}
+
+                    {% for field in [
+                      {
+                        type: 'text',
+                        name: 'name',
+                        label: 'Full Name',
+                        value: 'John Smith',
+                        required: true,
+                        error: false
+                      },
+                      {
+                        type: 'email',
+                        name: 'email',
+                        label: 'Email',
+                        value: 'john@doe.com',
+                        required: true,
+                        error: true
+                      },
+                      {
+                        type: 'tel',
+                        name: 'phone',
+                        label: 'Phone',
+                        value: '555-444-8888',
+                        required: true,
+                        error: false
+                      },
+                      {
+                        type: 'textarea',
+                        name: 'message',
+                        label: 'How can we help you?',
+                        value: 'Your message goes here.',
+                        required: true,
+                        error: false
+                      }
+                    ] %}
+                      {# prettier-ignore-start #}
+                      {% include '_fieldTypes/_' ~ field.type ~ '.twig' ignore missing with {
+                        field: field
+                      } only %}
+                      {# prettier-ignore-end #}
+                    {% endfor %}
+
+                    <div>
+                      <button type="submit" class="px-16 py-4 font-medium btn">
+                        Send
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <aside>
+                <div class="flex flex-col gap-8">
+                  {% for loc in [
+                    {
+                      title: 'Bourne Office',
+                      address: '550 MacArthur Boulevard
+                        Bourne, MA 02532',
+                      hours: 'Monday - Friday • 8:30am - 4:30pm'
+                    },
+                    {
+                      title: 'Falmouth Office',
+                      address: '406 Jones Road
+                        Falmouth, MA 02540',
+                      hours: 'Monday - Friday • 8:30am - 4:30pm'
+                    }
+                  ] %}
+                    <div class="flex flex-col gap-3">
+                      <div class="text-lg font-bold leading-none">
+                        {{ loc.title }}
+                      </div>
+                      <hr class="border-plum-light" />
+                      <div>
+                        {{ loc.address|nl2br }}
+                      </div>
+                      <div>
+                        {{ loc.hours }}<br />
+                        <em>Also Available By Appointment</em>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

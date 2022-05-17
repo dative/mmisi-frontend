@@ -1,0 +1,24 @@
+{#
+
+Input Class Attributes component
+
+Note: This component is not meant to be used standalone.
+
+Usage:
+
+{% include "_fieldTypes/_classAttr.twig" with {
+  field:   {
+    error: true
+  },
+} %}
+
+#}
+{% spaceless %}
+  {% if field is defined and field %}
+    {{ 'class="block w-full mt-1 rounded-md '
+      ~ (field.error is defined and field.error
+        ? 'border-marigold selection:bg-marigold selection:bg-opacity-30 focus:border-marigold focus:ring focus:ring-marigold focus:ring-opacity-30'
+        : 'border-accent selection:bg-plum-light selection:bg-opacity-50 focus:border-plum-light focus:ring focus:ring-plum-light focus:ring-opacity-50')
+      ~ '"' }}
+  {% endif %}
+{% endspaceless %}

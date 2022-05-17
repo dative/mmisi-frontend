@@ -1,0 +1,32 @@
+{#
+
+Input Type Text component
+
+Usage:
+
+{% include "_fieldTypes/_text.twig" with {
+  field:   {
+    type: 'text',
+    name: 'name',
+    label: 'Full Name',
+    value: 'John Doe',
+    required: true,
+    error: false
+  },
+} %}
+
+#}
+{% if
+  field is defined
+    and field
+    and field.type is defined
+    and field.type == 'text' %}
+  <label class="block">
+    {% include '_fieldTypes/_label.twig' with { field: field } only %}
+    <input type="text"
+      {% include "_fieldTypes/_classAttr.twig" with { field: field } only %}
+      name="{{ field.name }}"
+      value="{{ field.value }}"
+      {{ field.required is defined and field.required ? 'required' : '' }} />
+  </label>
+{% endif %}
