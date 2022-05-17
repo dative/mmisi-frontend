@@ -19,18 +19,128 @@
 {% set primanyNav = [
   { url: '/who-we-are.html', text: 'Our Company' },
   { url: '/services.html', text: 'Our Services' },
-  { url: '#', text: 'Schedule a Call' }
+  { url: '/schedule-call.html', text: 'Schedule a Call' }
 ] %}
 
 {% set secondaryNav = [
   { url: '#', text: 'Client Portal' },
   { url: '/payments.html', text: 'Make a Payment' },
-  { url: '#', text: 'Report a Claim' },
+  { url: '/claims.html', text: 'Report a Claim' },
   { url: '#', text: 'Request Certificate/Binder' },
   { url: '#', text: 'Contact' },
   { url: '#', text: 'Blog' },
   { url: '#', text: 'Careers' },
   { url: '#', text: 'Privacy & Accessibility' }
+] %}
+
+{% set carriers = [
+  {
+    name: 'AIG',
+    paymentLink: 'https://www.aig.com/pcg/contact-us/make-a-payment',
+    claimsLink: 'https://www.aig.com/individual/individual-claims#accordion-child_ps_accordion_2',
+    logo: 'https://riskadvice.com/images/provider_logo/aig-logo.png'
+  },
+  {
+    name: 'Arbella',
+    paymentLink: 'https://www.arbella.com/pay-your-insurance-bill',
+    claimsLink: 'https://www.arbella.com/claims',
+    logo: 'https://riskadvice.com/images/provider_logo/arbella.png'
+  },
+  {
+    name: 'Cincinnati',
+    paymentLink: 'https://onlineservice.cinfin.com/b2c/Account_Self_Service/QuickPayment.aspx',
+    claimsLink: 'https://www.cinfin.com/claims',
+    logo: 'https://riskadvice.com/images/provider_logo/cincinnati-insurance.png'
+  },
+  {
+    name: 'Hagerty',
+    paymentLink: 'https://login.hagerty.com/identity/login?signin=b4a3f314dfd47123c1855281e1fcf873',
+    claimsLink: 'https://www.hagerty.com/claim/claim_main.aspx',
+    logo: 'https://riskadvice.com/images/provider_logo/hagerty.png'
+  },
+  {
+    name: 'Hartford',
+    paymentLink: 'https://www.thehartford.com/account-access',
+    claimsLink: 'https://www.thehartford.com/claims',
+    logo: 'https://riskadvice.com/images/provider_logo/hartford.png'
+  },
+  {
+    name: 'Narragansett',
+    paymentLink: 'https://www.nbic.com/make-payment/',
+    claimsLink: 'https://www.nbic.com/claims/',
+    logo: 'https://riskadvice.com/images/provider_logo/nbic.png'
+  },
+  {
+    name: 'National Flood',
+    paymentLink: 'https://www.myflood.com/paymybill/',
+    claimsLink: 'https://myflood.com/',
+    logo: 'https://riskadvice.com/images/provider_logo/nfs.png'
+  },
+  {
+    name: 'National General',
+    paymentLink: 'https://nationalgeneral.com/Account/Enterpolicy.asp',
+    claimsLink: 'https://claims.nationalgeneral.com/?_ga=2.168293092.439623512.1649867213-1962321445.1649867213',
+    logo: 'https://riskadvice.com/images/provider_logo/national-general.png'
+  },
+  {
+    name: 'New London County Mutual',
+    paymentLink: 'https://www.vuebill.com/nlc/Login.aspx?ReturnUrl=%2fnlc%2f',
+    logo: 'https://riskadvice.com/images/provider_logo/newlondon.png'
+  },
+  {
+    name: 'Philadelphia',
+    paymentLink: 'https://www.phly.com/myphly/login.aspx?ReturnUrl=/myphly/myphly.aspx',
+    claimsLink: 'https://www.phly.com/Claims/default.aspx',
+    logo: 'https://riskadvice.com/images/provider_logo/philadelphia.png'
+  },
+  {
+    name: 'Plymouth Rock',
+    paymentLink: 'https://www.plymouthrock.com/',
+    claimsLink: 'https://efnol.plymouthrock.com/#/login',
+    logo: 'https://riskadvice.com/images/provider_logo/plymouthrock.png'
+  },
+  {
+    name: 'Progressive',
+    paymentLink: 'https://www.progressive.com/home/home/',
+    claimsLink: 'https://www.progressive.com/claims/',
+    logo: 'https://riskadvice.com/images/provider_logo/progressive.png'
+  },
+  {
+    name: 'Safety',
+    paymentLink: 'https://www.safetyinsurance.com/myaccount/login.pl?back_url=/myaccount/billing.pl',
+    claimsLink: 'https://www.safetyinsurance.com/myaccount/login.pl?back_url=%2Fmyaccount%2Freportclaim.pl',
+    logo: 'https://riskadvice.com/images/provider_logo/safety.png'
+  },
+  {
+    name: 'SBLI',
+    paymentLink: 'https://my.sbli.com/MakePayment.aspx',
+    claimsLink: 'https://my.sbli.com/ReportDeath.aspx',
+    logo: 'https://riskadvice.com/images/provider_logo/sbli.png'
+  },
+  {
+    name: 'Barnstable',
+    paymentLink: 'https://www.thebarnstable.com/',
+    claimsLink: 'https://www.thebarnstable.com/submit-a-claim/',
+    logo: 'https://riskadvice.com/images/provider_logo/the-barnstable.png'
+  },
+  {
+    name: 'Travelers',
+    paymentLink: 'https://www.travelers.com/pay-your-bill?lob=bi',
+    claimsLink: 'https://www.travelers.com/claims',
+    logo: 'https://riskadvice.com/images/provider_logo/travelers.png'
+  },
+  {
+    name: 'UPC',
+    paymentLink: 'https://www.upcinsurance.com/policyholders/payments/',
+    claimsLink: 'https://www.upcinsurance.com/policyholders/claims-center',
+    logo: 'https://riskadvice.com/images/provider_logo/upc.png'
+  },
+  {
+    name: 'Zurich',
+    paymentLink: 'https://www.zurichna.com/',
+    claimsLink: 'https://www.zurichna.com/claims',
+    logo: 'https://riskadvice.com/images/provider_logo/zurich.png'
+  }
 ] %}
 
 {# -- Twig output from the render; this must be in a block -- #}

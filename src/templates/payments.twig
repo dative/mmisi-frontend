@@ -18,99 +18,14 @@
   ]
 } %}
 
-{% set carriers = [
-  {
-    name: 'AIG',
-    url: 'https://www.aig.com/individual/insurance/private-client-group/make-a-payment',
-    logo: 'https://riskadvice.com/images/provider_logo/aig-logo.png'
-  },
-  {
-    name: 'Arbella',
-    url: 'http://www.arbella.com/pay-your-insurance-bill',
-    logo: 'https://riskadvice.com/images/provider_logo/arbella.png'
-  },
-  {
-    name: 'CIC',
-    url: 'https://onlineservice.cinfin.com/b2c/Account_Self_Service/QuickPayment.aspx',
-    logo: 'https://riskadvice.com/images/provider_logo/cincinnati-insurance.png'
-  },
-  {
-    name: 'Hagerty',
-    url: 'https://login.hagerty.com/identity/login?signin=b4a3f314dfd47123c1855281e1fcf873',
-    logo: 'https://riskadvice.com/images/provider_logo/hagerty.png'
-  },
-  {
-    name: '',
-    url: 'http://www.thehartford.com/account-access',
-    logo: 'https://riskadvice.com/images/provider_logo/hartford.png'
-  },
-  {
-    name: '',
-    url: 'https://www.nbic.com/make-payment/',
-    logo: 'https://riskadvice.com/images/provider_logo/nbic.png'
-  },
-  {
-    name: '',
-    url: 'https://www.floodpro.net/Skins/001/logon.asp',
-    logo: 'https://riskadvice.com/images/provider_logo/nfs.png'
-  },
-  {
-    name: '',
-    url: 'http://www.nationalgeneral.com/Account/Enterpolicy.asp',
-    logo: 'https://riskadvice.com/images/provider_logo/national-general.png'
-  },
-  {
-    name: '',
-    url: 'https://www.vuebill.com/nlc/Login.aspx?ReturnUrl=%2fnlc%2f',
-    logo: 'https://riskadvice.com/images/provider_logo/newlondon.png'
-  },
-  {
-    name: '',
-    url: 'https://www.phly.com/myphly/login.aspx?ReturnUrl=/myphly/myphly.aspx',
-    logo: 'https://riskadvice.com/images/provider_logo/philadelphia.png'
-  },
-  {
-    name: '',
-    url: 'http://www.prac.com/customer-and-eservices/billing-and-payments',
-    logo: 'https://riskadvice.com/images/provider_logo/plymouthrock.png'
-  },
-  {
-    name: '',
-    url: 'https://onlineservice4.progressive.com/SelfService.Web/SelfService.aspx?Page=Login.AuthenticateUser&amp;QueryStringSetKey=SessionGateway&amp;OfferingID=SelfService&amp;SessionStart=TRUE',
-    logo: 'https://riskadvice.com/images/provider_logo/progressive.png'
-  },
-  {
-    name: '',
-    url: 'https://www.safetyinsurance.com/myaccount/login.pl?back_url=/myaccount/billing.pl',
-    logo: 'https://riskadvice.com/images/provider_logo/safety.png'
-  },
-  {
-    name: '',
-    url: 'https://www.mysbli.com/MakePayment.aspx',
-    logo: 'https://riskadvice.com/images/provider_logo/sbli.png'
-  },
-  {
-    name: '',
-    url: 'https://www.thebarnstable.com/',
-    logo: 'https://riskadvice.com/images/provider_logo/the-barnstable.png'
-  },
-  {
-    name: '',
-    url: 'https://www.travelers.com/business-insurance/epay.aspx',
-    logo: 'https://riskadvice.com/images/provider_logo/travelers.png'
-  },
-  {
-    name: '',
-    url: 'http://www.upcinsurance.com/policyholders/payments/',
-    logo: 'https://riskadvice.com/images/provider_logo/upc.png'
-  },
-  {
-    name: '',
-    url: 'http://www.zurichna.com/zna/onlineservices/online_customer/customer_services/ezpay.htm',
-    logo: 'https://riskadvice.com/images/provider_logo/zurich.png'
-  }
-] %}
+{% set payments = [] %}
+
+{% for carrier in carriers %}
+  {% set payments =
+    payments|merge([carrier|merge({ url: carrier.paymentLink })])
+  %}
+{% endfor %}
 
 {% block afterContentBlocks %}
-  {% include '_partials/_carrier_grid.twig' with { carriers: carriers } %}
+  {% include '_partials/_carrier_grid.twig' with { carriers: payments } only %}
 {% endblock %}
