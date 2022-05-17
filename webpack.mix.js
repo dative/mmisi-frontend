@@ -25,6 +25,9 @@ if (!mix.inProduction()) {
   mix.sourceMaps();
   mix.webpackConfig(() => {
     return {
+      stats: {
+        children: false // change to true for more detail warnings
+      },
       plugins: [
         new BrowserSyncPlugin({
           host: 'localhost',
