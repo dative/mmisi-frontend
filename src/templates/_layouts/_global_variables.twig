@@ -17,41 +17,18 @@
 {% set baseUrl = siteUrl ~ '/' %}
 
 {% set secondaryNav = [
-  {
-    url: '#',
-    text: 'Client Portal'
-  },
-  {
-    url: '#',
-    text: 'Make a Payment'
-  },
-  {
-    url: '#',
-    text: 'Report a Claim'
-  },
-  {
-    url: '#',
-    text: 'Request Certificate/Binder'
-  },
-  {
-    url: '#',
-    text: 'Contact'
-  },
-  {
-    url: '#',
-    text: 'Blog'
-  },
-  {
-    url: '#',
-    text: 'Careers'
-  },
-  {
-    url: '#',
-    text: 'Privacy & Accessibility'
-  }
+  { url: '#', text: 'Client Portal' },
+  { url: 'payments.html', text: 'Make a Payment' },
+  { url: '#', text: 'Report a Claim' },
+  { url: '#', text: 'Request Certificate/Binder' },
+  { url: '#', text: 'Contact' },
+  { url: '#', text: 'Blog' },
+  { url: '#', text: 'Careers' },
+  { url: '#', text: 'Privacy & Accessibility' }
 ] %}
 
 {# -- Twig output from the render; this must be in a block -- #}
 {% endapply %}
 {% block htmlPage %}
+
 {% endblock %}
