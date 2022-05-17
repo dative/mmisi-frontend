@@ -13,6 +13,7 @@ module.exports = {
       'white': '#ffffff',
       'black': '#19191A',
       'marigold': '#D5A439',
+      'green': '#6FCF97',
       'plum': {
         'lightest': '#F8F7FB',
         'light': '#C6BEDF',
@@ -32,6 +33,7 @@ module.exports = {
       'md': '768px',
       'lg': '960px',
       'xl': '1024px',
+      'narrow': '1110px',
       '2xl': '1440px',
       '3xl': '1640px',
     },
@@ -41,6 +43,10 @@ module.exports = {
       },
       maxWidth: {
         'narrow': '1110px',
+      },
+      boxShadow: {
+        'card': '0px 4px 36px rgba(0, 0, 0, 0.04)',
+        'nav': '0px 4px 4px rgba(0, 0, 0, 0.1)'
       }
     },
   },
