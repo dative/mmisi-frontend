@@ -28,4 +28,36 @@
     background-size: 100% auto;
     background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 450'%3E%3Cpath d='M0 48.6885V449.393h1440V235.37c-269.14-5.6-446.573-69.991-611.947-130.005C599.257 22.334 393.546-52.3189 0 48.6885Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
   }
+
+  .svg-check {
+    @apply inline-block w-8 h-8;
+    background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M31.748 15.9028c0 8.5605-6.9396 15.5-15.5 15.5-8.56045 0-15.500014-6.9395-15.500014-15.5C.747986 7.34239 7.68755.402832 16.248.402832c8.5604 0 15.5 6.939558 15.5 15.499968ZM14.4551 24.11l11.5-11.5c.3905-.3905.3905-1.0237 0-1.4142l-1.4142-1.41422c-.3905-.39056-1.0237-.39056-1.4142 0L13.748 19.1602l-4.3787-4.3787c-.3905-.3905-1.02369-.3905-1.41425 0l-1.41419 1.4142c-.3905.3905-.3905 1.0237 0 1.4142l6.50004 6.5c.3905.3906 1.0236.3906 1.4142.0001Z' fill='%23D5A439'/%3E%3C/svg%3E");
+  }
+
+  .pic-bubble {
+    @apply absolute animate-orbit;
+    picture {
+      img {
+        @apply rounded-full object-cover w-full border border-white;
+      }
+    }
+    &:nth-child(1) {
+      @apply w-[160px] aspect-1 top-0 left-[44.2857%] md:w-[203px];
+      animation-duration: 20s;
+    }
+    &:nth-child(2) {
+      @apply w-[166px] aspect-1 bottom-0 left-[16.5714%] md:w-[212px];
+      animation-duration: 30s;
+    }
+    &:nth-child(3) {
+      @apply w-[120px] aspect-1 left-0 top-[14.2857%] md:w-[152px];
+      animation-duration: 30s;
+      animation-direction: reverse;
+    }
+    &:nth-child(4) {
+      @apply w-[114px] aspect-1 right-0 top-[47.8571%] md:w-[144px];
+      animation-duration: 30s;
+      animation-direction: reverse;
+    }
+  }
 }

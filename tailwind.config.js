@@ -39,6 +39,9 @@ module.exports = {
       '3xl': '1640px',
     },
     extend: {
+      animation: {
+        orbit: 'orbit 10s linear infinite',
+      },
       backgroundImage: {
         'plum-gradient': 'linear-gradient(180deg, #775AA0 0%, #574275 100%);',
       },
@@ -48,6 +51,12 @@ module.exports = {
       boxShadow: {
         'card': '0px 4px 36px rgba(0, 0, 0, 0.04)',
         'nav': '0px 4px 4px rgba(0, 0, 0, 0.1)'
+      },
+      keyframes: {
+        orbit: {
+          from: { transform: 'rotate(0) translateX(0.5rem) rotate(0)' },
+          to: { transform: 'rotate(360deg) translateX(0.5rem) rotate(-360deg)' },
+        }
       },
       maxWidth: {
         'narrow': '1110px',
