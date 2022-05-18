@@ -3,8 +3,8 @@
 {% block content %}
   <div class="px-3 py-8 lg:py-20">
     <article class="mx-auto max-w-narrow">
-      {% if entry is defined and entry %}
-        {% if entry.title %}
+      {% if entry is defined and entry.title %}
+        {% if entry.title and entry.activeTitle == true %}
           {% include '_partials/_page_header.twig' with {
             heading: entry.title
           } %}
