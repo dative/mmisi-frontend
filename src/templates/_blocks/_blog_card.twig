@@ -1,0 +1,19 @@
+{% if blk is defined 
+  and blk 
+  and blk.coverPicture is defined 
+  and blk.coverPicture 
+  and blk.posDate is defined 
+  and blk.posDate
+  and blk.title is defined
+  and blk.title
+  and blk.url is defined
+  and blk.url %}
+  <div class="blog-card ">
+    <div class="blog-image" style='background: url({{blk.coverPicture}}); background-size: cover;'>
+    </div>
+    <div class="px-4 py-8">
+      <p class="mb-4 uppercase">{{ blk.posDate|date("F j\\, Y") }}</p>
+      <a href="{{ blk.url }}" class="blogTitle">{{ blk.title|title }}</a>
+    </div>
+  </div>
+{% endif %}
