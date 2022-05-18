@@ -1,0 +1,35 @@
+{% extends '_layouts/_generic_page_layout.twig' %}
+
+{% block content %}
+  <div class="px-3 py-8 lg:pt-20">
+    <article class="mx-auto max-w-narrow">
+      {% block pageHeader %}
+        {% if entry is defined and entry and entry.title %}
+          {% include '_partials/_page_header.twig' with {
+            heading: entry.title
+          } %}
+        {% endif %}
+      {% endblock %}
+
+      {% block beforeContentBlocks %}
+
+      {% endblock %}
+
+      {% if
+        entry is defined
+          and entry
+          and entry.contentBlocks is defined
+          and entry.contentBlocks %}
+        <div class="my-16 lg:my-20">
+          {% include '_partials/_content_blocks.twig' with {
+            blocks: entry.contentBlocks
+          } %}
+        </div>
+      {% endif %}
+
+      {% block afterContentBlocks %}
+
+      {% endblock %}
+    </article>
+  </div>
+{% endblock %}

@@ -42,13 +42,16 @@ module.exports = {
       backgroundImage: {
         'plum-gradient': 'linear-gradient(180deg, #775AA0 0%, #574275 100%);',
       },
-      maxWidth: {
-        'narrow': '1110px',
+      backgroundPosition: {
+        'top-hack': 'center -1px',
       },
       boxShadow: {
         'card': '0px 4px 36px rgba(0, 0, 0, 0.04)',
         'nav': '0px 4px 4px rgba(0, 0, 0, 0.1)'
-      }
+      },
+      maxWidth: {
+        'narrow': '1110px',
+      },
     },
   },
   plugins: [

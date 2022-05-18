@@ -1,0 +1,13 @@
+{% extends '_layouts/_content_page.twig' %}
+
+{% block pageHeader %}
+  {% include '_blocks/_sectionFeature.twig' with {
+    blk: {
+      heading: entry.title,
+      coverPicture: entry.coverPicture is defined ? entry.coverPicture : null,
+      videoUrl: entry.videoUrl is defined ? entry.videoUrl : null,
+      contents: entry.pageIntro is defined ? entry.pageIntro : null,
+      htag: 'h1'
+    }
+  } %}
+{% endblock %}

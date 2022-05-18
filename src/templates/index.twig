@@ -1,11 +1,44 @@
 {% extends '_layouts/_generic_page_layout.twig' %}
 
-{# DON'T MODIFY THE HOME PAGE #}
+{% block headLinks %}
+  {{ parent() }}
+  <link rel="stylesheet" href="{{ mix('/css/home.css') }}" />
+{% endblock %}
 
 {% block content %}
-  <div class="mx-auto max-w-screen-2xl">
-    <h1 class="">
-      Home Page
-    </h1>
+  <div class="relative home-page">
+    <div class="z-0 svg-bg-1"></div>
+    <div class="relative z-20 px-3 py-8">
+      <div class="mx-auto max-w-narrow">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center">
+          <div class="flex-1">
+            <div class="flex flex-col gap-4">
+              <h2 class="h2">
+                Helping to insure individuals, families, businesses, and
+                non-profits for over 50 years
+              </h2>
+              <a href="#" class="text-lg font-semibold leading-none">
+                Learn More
+              </a>
+            </div>
+          </div>
+          <div class="md:w-[445px]">
+            <picture class="relative">
+              <img data-src="https://picsum.photos/640/448?random=1"
+                alt=""
+                class="object-cover w-full rounded"
+                loading="lazy" />
+
+              <button type="button"
+                data-video="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                class="absolute inset-0 flex flex-col items-center justify-center bg-black rounded bg-opacity-20">
+                {% include '_partials/_play_button.svg.twig' %}
+              </button>
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="z-0 svg-bg-3"></div>
   </div>
 {% endblock %}

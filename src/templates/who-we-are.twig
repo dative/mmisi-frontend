@@ -1,4 +1,4 @@
-{% extends 'page.twig' %}
+{% extends '_layouts/_content_title_page.twig' %}
 
 {% set entry = {
   title: 'Independent, Entrepreneurial Insurance Agents',
@@ -97,17 +97,6 @@
     }
   ]
 } %}
-
-{% block pageHeader %}
-  {% include '_blocks/_sectionFeature.twig' with {
-    blk: {
-      heading: entry.title,
-      coverPicture: entry.coverPicture is defined ? entry.coverPicture : null,
-      contents: entry.pageIntro is defined ? entry.pageIntro : null,
-      htag: 'h1'
-    }
-  } %}
-{% endblock %}
 
 {% block subcontent %}
   {% include '_assembled/_footer_cta.twig' %}

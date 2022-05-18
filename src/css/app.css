@@ -45,12 +45,6 @@
 @import 'tailwindcss/utilities';
 
 /**
- * Include styles for individual pages
- *
- */
-@import './pages/home.css';
-
-/**
  * Include vendor css.
  *
  */

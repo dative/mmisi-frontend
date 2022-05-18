@@ -1,47 +1,38 @@
-{% extends 'page.twig' %}
+{% extends '_layouts/_content_title_page.twig' %}
 
 {% set richContents %}
   <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing
-    elit. Sunt id modi blanditiis quo. Velit ipsum tenetur
-    architecto tempora quidem nostrum aperiam explicabo
-    voluptates voluptatum! Laboriosam ex necessitatibus
-    harum deserunt laudantium?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt id modi
+    blanditiis quo. Velit ipsum tenetur architecto tempora quidem nostrum
+    aperiam explicabo voluptates voluptatum! Laboriosam ex necessitatibus harum
+    deserunt laudantium?
   </p>
   <p>
-    Numquam id, magnam quam dignissimos mollitia, commodi,
-    totam veniam ipsum sequi perspiciatis nam reprehenderit
-    architecto quasi aliquam possimus qui ut nobis inventore
-    assumenda dolorem impedit quidem velit quas sed?
+    Numquam id, magnam quam dignissimos mollitia, commodi, totam veniam ipsum
+    sequi perspiciatis nam reprehenderit architecto quasi aliquam possimus qui
+    ut nobis inventore assumenda dolorem impedit quidem velit quas sed?
     Obcaecati!
   </p>
   <p>
-    Ipsam veniam minima velit repellendus. Ea ipsam facilis
-    ratione est quod odio voluptas soluta, temporibus
-    consequatur officiis totam tempore eaque incidunt
-    corporis explicabo accusamus ut eum in ducimus beatae
-    quisquam.
+    Ipsam veniam minima velit repellendus. Ea ipsam facilis ratione est quod
+    odio voluptas soluta, temporibus consequatur officiis totam tempore eaque
+    incidunt corporis explicabo accusamus ut eum in ducimus beatae quisquam.
   </p>
   <p>
-    Delectus distinctio, modi soluta sapiente facilis in
-    dolore dicta, consectetur dolor impedit deleniti nobis
-    tenetur! Earum in ipsa aliquam iste harum voluptas ab,
-    aut officiis ut repudiandae quae, velit laboriosam.
+    Delectus distinctio, modi soluta sapiente facilis in dolore dicta,
+    consectetur dolor impedit deleniti nobis tenetur! Earum in ipsa aliquam iste
+    harum voluptas ab, aut officiis ut repudiandae quae, velit laboriosam.
   </p>
   <p>
-    Incidunt, aliquid minus facilis, architecto nam dolore
-    pariatur quidem labore explicabo voluptatem est
-    repudiandae? Illo adipisci unde ipsa ipsum, tenetur
-    officia, sit quo, fuga minus eius expedita doloribus
-    deleniti et.
+    Incidunt, aliquid minus facilis, architecto nam dolore pariatur quidem
+    labore explicabo voluptatem est repudiandae? Illo adipisci unde ipsa ipsum,
+    tenetur officia, sit quo, fuga minus eius expedita doloribus deleniti et.
   </p>
 {% endset %}
 
 {% set entry = {
   title: 'Privacy & Accessibility',
-  contentBlocks: [
-    { type: 'richText', contents: richContents }
-  ]
+  contentBlocks: [{ type: 'richText', contents: richContents }]
 } %}
 
 {% block subcontent %}

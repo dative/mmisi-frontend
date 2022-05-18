@@ -18,6 +18,7 @@ mix.ts("src/js/app.ts", "public/js")
 mix.ts("src/js/utils/lazysizes-wrapper.ts", "public/js")
 
 mix.postCss("src/css/app.css", "public/css")
+mix.postCss("src/css/pages/home.css", "public/css")
 
 mix.copyDirectory('src/img/**', 'public/img')
 
