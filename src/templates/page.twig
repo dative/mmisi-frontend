@@ -3,26 +3,13 @@
 {% block content %}
   <div class="px-3 py-8 lg:pt-20">
     <article class="mx-auto max-w-narrow">
-      {% if entry is defined and entry and entry.title %}
-        {% if
-          (entry.pageIntro is defined and entry.pageIntro)
-            or (entry.coverPicture is defined and entry.coverPicture) %}
-          {% include '_blocks/_sectionFeature.twig' with {
-            blk: {
-              heading: entry.title,
-              coverPicture: entry.coverPicture is defined
-                ? entry.coverPicture
-                : null,
-              contents: entry.pageIntro is defined ? entry.pageIntro : null,
-              htag: 'h1'
-            }
-          } %}
-        {% else %}
+      {% block pageHeader %}
+        {% if entry is defined and entry and entry.title %}
           {% include '_partials/_page_header.twig' with {
             heading: entry.title
           } %}
         {% endif %}
-      {% endif %}
+      {% endblock %}
 
       {% block beforeContentBlocks %}
 
