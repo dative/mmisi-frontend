@@ -27,6 +27,7 @@ Usage:
       {% include "_fieldTypes/_classAttr.twig" with { field: field } only %}
       name="{{ field.name }}"
       value="{{ field.value }}"
+      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
       {{ field.required is defined and field.required ? 'required' : '' }} />
   </label>
 {% endif %}

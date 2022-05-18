@@ -1,0 +1,164 @@
+{% extends 'page.twig' %}
+
+{% set entry = { title: 'Request a Certificate or Binder' } %}
+
+{% block afterContentBlocks %}
+  <div class="my-16 lg:my-20">
+    <form>
+      <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-8 md:flex-row">
+          <div class="flex-1">
+            {% include '_fieldTypes/_text.twig' with {
+              field: { type: 'text', name: 'field1', label: 'Field' }
+            } only %}
+          </div>
+          <div class="flex-1">
+            {% include '_fieldTypes/_text.twig' with {
+              field: { type: 'text', name: 'field2', label: 'Field' }
+            } only %}
+          </div>
+          <div class="flex-1">
+            {% include '_fieldTypes/_text.twig' with {
+              field: { type: 'text', name: 'field3', label: 'Field' }
+            } only %}
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-8 md:flex-row">
+          <div class="flex-1">
+            {% include '_fieldTypes/_text.twig' with {
+              field: { type: 'text', name: 'field1', label: 'Field' }
+            } only %}
+          </div>
+          <div class="flex-1">
+            {% include '_fieldTypes/_text.twig' with {
+              field: { type: 'text', name: 'field3', label: 'Field' }
+            } only %}
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-8 md:flex-row">
+          <div class="flex flex-row flex-wrap gap-x-8 gap-y-4">
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: { type: 'checkbox', name: 'field4', label: 'Checkbox' }
+            } only %}
+
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: { type: 'checkbox', name: 'field4', label: 'Checkbox' }
+            } only %}
+
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: { type: 'checkbox', name: 'field4', label: 'Checkbox' }
+            } only %}
+
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: { type: 'checkbox', name: 'field4', label: 'Checkbox' }
+            } only %}
+
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: { type: 'checkbox', name: 'field4', label: 'Checkbox' }
+            } only %}
+
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: { type: 'checkbox', name: 'field4', label: 'Checkbox' }
+            } only %}
+
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: { type: 'checkbox', name: 'field4', label: 'Checkbox' }
+            } only %}
+
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: { type: 'checkbox', name: 'field4', label: 'Checkbox' }
+            } only %}
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-8 md:flex-row">
+          <div class="flex flex-row flex-wrap flex-1 gap-x-8 gap-y-4">
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: {
+                type: 'checkbox',
+                name: 'field4',
+                label: 'Checkbox',
+                checked: true
+              }
+            } only %}
+
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: { type: 'checkbox', name: 'field4', label: 'Checkbox' }
+            } only %}
+
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: { type: 'checkbox', name: 'field4', label: 'Checkbox' }
+            } only %}
+
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: { type: 'checkbox', name: 'field4', label: 'Checkbox' }
+            } only %}
+          </div>
+          <div class="flex flex-row flex-wrap flex-1 gap-x-8 gap-y-4">
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: { type: 'checkbox', name: 'field4', label: 'Checkbox' }
+            } only %}
+
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: { type: 'checkbox', name: 'field4', label: 'Checkbox' }
+            } only %}
+
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: { type: 'checkbox', name: 'field4', label: 'Checkbox' }
+            } only %}
+
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: { type: 'checkbox', name: 'field4', label: 'Checkbox' }
+            } only %}
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-8 md:flex-row">
+          <div class="flex-1">
+            {% include '_fieldTypes/_select.twig' with {
+              field: {
+                type: 'select',
+                name: 'field1',
+                label: 'Subject',
+                options: ['Option 1', 'Option 2', 'Option 3'],
+                value: 'Option 2'
+              }
+            } only %}
+          </div>
+          <div class="flex-1">
+            {% include '_fieldTypes/_text.twig' with {
+              field: { type: 'text', name: 'field3', label: 'Field' }
+            } only %}
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-8 md:flex-row">
+          <div class="flex-1">
+            {% include '_fieldTypes/_textarea.twig' with {
+              field: { type: 'textarea', name: 'message', label: 'Textarea' }
+            } only %}
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center justify-between gap-8 md:flex-row">
+          <div class="flex-1">
+            {% include '_fieldTypes/_checkbox.twig' with {
+              field: {
+                type: 'checkbox',
+                name: 'field4',
+                label: 'Sign me up for email newsletter',
+                checked: true
+              }
+            } only %}
+          </div>
+
+          <button type="submit" class="px-16 py-4 font-medium btn">
+            Submit Form
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+{% endblock %}

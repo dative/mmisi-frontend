@@ -1,0 +1,38 @@
+{#
+
+Input Select component
+
+Usage:
+
+{% include "_fieldTypes/_select.twig" with {
+  field:   {
+    type: 'select',
+    name: 'name',
+    label: 'Full Name',
+    value: 'John Doe',
+    options: ['John Doe', 'Jane Doe', 'Joe Doe'],
+    required: true,
+    error: false
+  },
+} %}
+
+#}
+{% if
+  field is defined
+    and field
+    and field.type is defined
+    and field.type == 'select' %}
+  <label class="block">
+    {% include '_fieldTypes/_label.twig' with { field: field } only %}
+    <select type="text"
+      {% include "_fieldTypes/_classAttr.twig" with { field: field } only %}
+      name="{{ field.name }}"
+      value="{{ field.value }}"
+      {{ field.required is defined and field.required ? 'required' : '' }} placeholder="dasdsad">
+        <option value="" >-- Choose --</option>
+        {% for option in field.options %}
+          <option value="{{ option }}" {{ option == field.value ? 'selected'}}>{{ option }}</option>
+        {% endfor %}
+      </select>
+  </label>
+{% endif %}

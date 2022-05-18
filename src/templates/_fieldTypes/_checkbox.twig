@@ -1,0 +1,37 @@
+{#
+
+Input Checkbox Text component
+
+Usage:
+
+{% include "_fieldTypes/_checkbox.twig" with {
+  field:   {
+    type: 'checkbox',
+    name: 'name',
+    label: 'Full Name',
+    value: 'John Doe',
+    required: true,
+    checked: true,
+    error: false
+  },
+} %}
+
+#}
+{% if
+  field is defined
+    and field
+    and field.type is defined
+    and field.type == 'checkbox' %}
+  <label class="inline-flex flex-row items-center">
+    <input type="checkbox"
+      class="rounded mr-2 text-plum {{
+      field.error is defined and field.error
+        ? 'border-marigold selection:bg-marigold selection:bg-opacity-30 focus:border-marigold focus:ring focus:ring-offset-0 focus:ring-marigold focus:ring-opacity-30'
+        : 'border-accent selection:bg-plum-light selection:bg-opacity-50 focus:border-plum-light focus:ring focus:ring-offset-0 focus:ring-plum-light focus:ring-opacity-50'
+      }}"
+      value="{{ field.value }}"
+      {{ field.required is defined and field.required ? 'required' : '' }}
+      {{ field.checked is defined and field.checked ? 'checked' : '' }} />
+    {% include '_fieldTypes/_label.twig' with { field: field } only %}
+  </label>
+{% endif %}
