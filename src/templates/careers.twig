@@ -1,48 +1,21 @@
 {% extends 'page.twig' %}
 
-{% set individualsAndFamilies %}
+{% set sectionJobs %}
   <div class="redactor">
     <p>
-      Families and individuals need insurance to protect themselves. Our
-      insurance agents work to determine the coverage needed to insure your
-      cars, homes, boats, and more.
-    </p>
-    <p>
-      <strong>Here’s how we can help:</strong>
+      If you think all insurance is the same, think again. There are a number of
+      areas that you can specialize in that match your interests and have a huge
+      opportunity for growth and revenue. At Murray & MacDonald, you'll have a
+      number of opportunities to advance your career. This includes ownership,
+      paid time off, and more.
     </p>
   </div>
   {% include '_blocks/_accordions.twig' with {
     blk: {
       accordions: [
-        { heading: 'Property & Liability', contents: '<p>Your Markup</p>' },
-        { heading: 'Vehicles & Recreation', contents: '<p>Your Markup</p>' },
-        { heading: 'Life & Health', contents: '<p>Your Markup</p>' },
-        { heading: 'Full-Time Client', contents: '<p>Your Markup</p>' }
-      ]
-    }
-  } %}
-{% endset %}
-
-{% set businessNonProfits %}
-  <div class="redactor">
-    <p>
-      Whether you are a sole proprietor or a fully staffed organization, our
-      direct relationships with regional, national, and global insurance
-      companies allow us to design property & casualty insurance and employee
-      benefits programs for our clients. We work to secure the insurance
-      coverage your firm will need.
-    </p>
-    <p>
-      <strong>Here’s how we can help:</strong>
-    </p>
-  </div>
-  {% include '_blocks/_accordions.twig' with {
-    blk: {
-      accordions: [
-        { heading: 'Protecting Assets', contents: '<p>Your Markup</p>' },
-        { heading: 'Financial Solvency', contents: '<p>Your Markup</p>' },
-        { heading: 'Professional Services', contents: '<p>Your Markup</p>' },
-        { heading: 'Employee Protection', contents: '<p>Your Markup</p>' }
+        { heading: 'Excellent Benefits', contents: '<p>Your Markup</p>' },
+        { heading: 'Positive Work Culture', contents: '<p>Your Markup</p>' },
+        { heading: 'Professional Development', contents: '<p>Your Markup</p>' }
       ]
     }
   } %}
@@ -51,6 +24,7 @@
 {% set entry = {
   title: 'Is a career in the insurance industry right for you?',
   coverPicture: 'https://unsplash.it/800/450?image=856',
+  videoUrl: 'https://www.youtube.com/watch?v=DsC8jQXRbQE',
   pageIntro: '
     <div class="redactor">
       <p>
@@ -61,16 +35,9 @@
   contentBlocks: [
     {
       type: 'sectionFeature',
-      heading: 'Individuals & Families',
+      heading: 'Not just a job, a career.',
       coverPicture: 'https://picsum.photos/640/448?random=1',
-      contents: individualsAndFamilies,
-      flip: true
-    },
-    {
-      type: 'sectionFeature',
-      heading: 'Businesses & Non-Profits',
-      coverPicture: 'https://picsum.photos/640/448?random=1',
-      contents: businessNonProfits
+      contents: sectionJobs
     }
   ]
 } %}
@@ -80,8 +47,10 @@
     blk: {
       heading: entry.title,
       coverPicture: entry.coverPicture is defined ? entry.coverPicture : null,
+      videoUrl: entry.videoUrl is defined ? entry.videoUrl : null,
       contents: entry.pageIntro is defined ? entry.pageIntro : null,
-      htag: 'h1'
+      htag: 'h1',
+      flip: true
     }
   } %}
 {% endblock %}
