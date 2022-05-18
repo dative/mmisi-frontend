@@ -1,0 +1,70 @@
+{% extends 'page.twig' %}
+
+{% set entry = {
+  title: "Risk Advice Blog",
+   contentBlocks: [
+     {
+      type: 'blogCards',
+      cards: [
+        {
+          coverPicture: "https://picsum.photos/350/196?random=2",
+          posDate: "1652876482",
+          title: "protect yourself against distracted drivers",
+          url: "careers"
+        },
+         {
+          coverPicture: "https://picsum.photos/350/196?random=1",
+          posDate: "1642876482",
+          title: "protect yourself against distracted drivers",
+          url: "who-we-are"
+        },
+        {
+          coverPicture: "https://picsum.photos/350/196?random=1",
+          posDate: "1612876482",
+          title: "protect yourself against distracted drivers",
+          url: "services"
+        },
+        {
+          coverPicture: "https://picsum.photos/350/196?random=1",
+          posDate: "1611875482",
+          title: "protect yourself against distracted drivers",
+          url: "kitchen-sink"
+        },
+        {
+          coverPicture: "https://picsum.photos/350/196?random=1",
+          posDate: "1552269206",
+          title: "protect yourself against distracted drivers",
+          url: "typography"
+        },
+        {
+          coverPicture: "https://picsum.photos/350/196?random=1",
+          posDate: "1552269206",
+          title: "protect yourself against distracted drivers",
+          url: "#"
+        },
+        {
+          coverPicture: "https://picsum.photos/350/196?random=1",
+          posDate: "1552269206",
+          title: "protect yourself against distracted drivers",
+          url: "#"
+        },
+         {
+          coverPicture: "https://picsum.photos/350/196?random=1",
+          posDate: "1552269206",
+          title: "protect yourself against distracted drivers",
+          url: "#"
+        },
+         {
+          coverPicture: "https://picsum.photos/350/196?random=1",
+          posDate: "1552269206",
+          title: "protect yourself against distracted drivers",
+          url: "#"
+        }
+      ]
+    },
+   ]
+} %}
+
+{% block subcontent %}
+  {% include '_assembled/_footer_cta.twig' %}
+{% endblock %}
