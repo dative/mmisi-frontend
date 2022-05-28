@@ -6,7 +6,7 @@
  * @Author: webrgp
  * @Date: 2022-04-28 16:07:33
  * @Last Modified by: webrgp
- * @Last Modified time: 2022-05-11 19:02:17
+ * @Last Modified time: 2022-05-18 16:08:44
  *
  */
 
@@ -15,7 +15,6 @@
 }
 
 @layer components {
-
   .redactor > * {
     @apply font-sans text-lg leading-8 my-6 first:mt-0 last:mb-0;
   }
@@ -55,7 +54,6 @@
     @apply list-disc list-inside;
 
     & > li {
-
       @apply my-3;
 
       &::marker {
@@ -69,7 +67,6 @@
     @apply list-decimal list-inside;
 
     & > li {
-
       @apply my-3;
 
       &::marker {

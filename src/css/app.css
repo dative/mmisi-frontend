@@ -6,7 +6,7 @@
  * @Author: webrgp
  * @Date: 2022-04-28 16:07:33
  * @Last Modified by: webrgp
- * @Last Modified time: 2022-05-12 10:24:08
+ * @Last Modified time: 2022-05-18 16:35:35
  *
  */
 
@@ -43,6 +43,12 @@
  *
  */
 @import 'tailwindcss/utilities';
+
+/**
+ * Include styles for individual pages
+ *
+ */
+@import './pages/home.css';
 
 /**
  * Include vendor css.
