@@ -12,5 +12,48 @@
     {% include '_partials/_cards_slider.twig' %}
 
     {# CTAs #}
+    <div class="px-3 pb-16">
+      <div class="mx-auto max-w-narrow">
+        <div class="flex flex-col gap-8 md:flex-row">
+          {% for c in [
+            {
+              title: 'Businesses & Non-Profits',
+              content: '
+                <p>
+                  We design and implement plans that reduce an organization’s long-term cost of risk
+                </p>',
+              cta: 'Commercial Insurance Services'
+            },
+            {
+              title: 'Individuals & Families',
+              content: '
+                <p>
+                  We guide families and individuals through available coverage options for auto, home, umbrella, life, and recreational vehicles
+                </p>',
+              cta: 'Personal Insurance Services'
+            }
+          ] %}
+            <div class="flex-1">
+              <div class="flex flex-col gap-4 max-w-[445px] h-full">
+                <h4 class="h4">
+                  {{ c.title }}
+                </h4>
+                <hr class="border-t-plum-light" />
+                <div class="redactor">
+                  {{ c.content }}
+                </div>
+                <a href="#" class="mt-auto text-sm font-bold md:text-lg">
+                  {{ c.cta }}
+                </a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
   </div>
+{% endblock %}
+
+{% block subcontent %}
+  {% include '_assembled/_footer_cta.twig' %}
 {% endblock %}

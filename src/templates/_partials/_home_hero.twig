@@ -1,121 +1,149 @@
-<div class="relative pb-10">
-  <div class="z-0 svg-bg-1"></div>
-  <div class="relative z-20 px-3 py-8">
-    <div class="mx-auto max-w-narrow">
-      <div class="flex flex-col gap-8 md:gap-16">
-        <div class="flex flex-col gap-6 md:flex-row md:items-center lg:gap-32">
-          <div class="flex-1">
-            <div class="flex flex-col gap-4">
-              <h2 class="h2">
-                Helping to insure individuals, families, businesses, and
-                non-profits for over 50 years
-              </h2>
-              <a href="#" class="text-lg font-semibold leading-none">
-                Learn More
-              </a>
-            </div>
-          </div>
-          <div class="md:w-[320px] lg:w-[445px]">
-            <picture class="relative">
-              <img data-src="https://picsum.photos/640/448?random=1"
-                alt=""
-                class="object-cover w-full rounded"
-                loading="lazy" />
+<div class="relative">
+  <div class="absolute inset-0 z-0 ml-auto max-w-[90%]">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1441 354">
+      <path fill="#fff"
+        fill-rule="evenodd"
+        d="M1440.62.316406H.622314C269.762 8.70752 447.196 105.197 612.569 195.128c228.796 124.42 434.511 236.287 828.051 84.928V.316406Z"
+        clip-rule="evenodd" />
+    </svg>
+  </div>
 
-              <button type="button"
-                data-video="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                class="absolute inset-0 flex flex-col items-center justify-center bg-black rounded bg-opacity-20">
-                {% include '_partials/_play_button.svg.twig' %}
-              </button>
-            </picture>
-          </div>
-        </div>
-
-        <div class="flex flex-col md:flex-row md:gap-32 md:items-center">
-          <div class="my-8 relative flex-1 block lg:max-w-[445px]">
-            <div class="block w-full aspect-w-5 aspect-h-4"></div>
-            <div class="absolute inset-0 w-full h-full">
-              {% for b in [
-                { image: 'https://randomuser.me/api/portraits/men/1.jpg' },
-                { image: 'https://randomuser.me/api/portraits/men/2.jpg' },
-                { image: 'https://randomuser.me/api/portraits/men/3.jpg' },
-                { image: 'https://randomuser.me/api/portraits/men/4.jpg' }
-              ] %}
-                <div class="pic-bubble">
-                  <picture>
-                    <img data-src="{{ b.image }}" alt="" loading="lazy" />
-                  </picture>
+  <div class="relative z-20 pt-8">
+    <div class="relative flex flex-col gap-8 md:gap-16">
+      <div class="relative z-20 flex flex-col gap-8 md:gap-16">
+        <div class="px-3">
+          <div class="mx-auto max-w-narrow">
+            <div class="flex flex-col gap-6 md:flex-row md:items-center lg:gap-32">
+              <div class="flex-1">
+                <div class="flex flex-col gap-4">
+                  <h2 class="h2">
+                    Helping to insure individuals, families, businesses, and
+                    non-profits for over 50 years
+                  </h2>
+                  <a href="#" class="text-lg font-semibold leading-none">
+                    Learn More
+                  </a>
                 </div>
-              {% endfor %}
-            </div>
-          </div>
-          <div class="flex-1 lg:max-w-[445px]">
-            <div class="flex flex-col gap-6">
-              <h3 class="h2">
-                Insurance, advice & expertise, simplified
-              </h3>
-              <h5 class="h5">
-                Our Agents:
-              </h5>
-              <div>
-                <ul class="flex flex-col gap-8">
-                  {% for item in [
-                    'Represent top regional, national, and global insurance companies',
-                    'Create effective solutions to reduce your long-term cost of risk',
-                    'Help you manage your insurance program more effectively'
-                  ] %}
-                    <li class="svg-check">{{ item }}</li>
-                  {% endfor %}
-                </ul>
+              </div>
+              <div class="md:w-[320px] lg:w-[445px]">
+                <picture class="relative">
+                  <img data-src="https://picsum.photos/640/448?random=1"
+                    alt=""
+                    class="object-cover w-full rounded"
+                    loading="lazy" />
+
+                  <button type="button"
+                    data-video="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    class="absolute inset-0 flex flex-col items-center justify-center bg-black rounded bg-opacity-20">
+                    {% include '_partials/_play_button.svg.twig' %}
+                  </button>
+                </picture>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="flex flex-col gap-8">
-          <div>
-            <h2 class="h2 max-w-[700px]">
-              We help you understand and manage your risk and insurance programs
-            </h2>
-          </div>
-          <div>
-            <ol class="flex flex-col gap-8 list-numbered md:flex-row">
-              {% for item in [
-                {
-                  title: 'Connect',
-                  contents: '
-                  <p>Schedule a time to talk with an agent</p>
-                '
-                },
-                {
-                  title: 'Discover',
-                  contents: '
-                  <p>We assess your risks and existing insurance protection</p>
-                '
-                },
-                {
-                  title: 'Protect',
-                  contents: '
-                  <p>We design and implement insurance programs and strategies that reduce long-term costs</p>
-                '
-                }
-              ] %}
-                <li>
-                  <div>
-                    <h3 class="h3">
-                      {{ item.title }}
-                    </h3>
-                    <div class="text-lg">
-                      {{ item.contents }}
+        <div class="px-3">
+          <div class="mx-auto max-w-narrow">
+            <div class="flex flex-col md:flex-row md:gap-32 md:items-center">
+              <div class="my-8 relative flex-1 block lg:max-w-[445px]">
+                <div class="block w-full aspect-w-5 aspect-h-4"></div>
+                <div class="absolute inset-0 w-full h-full">
+                  {% for b in [
+                    { image: 'https://randomuser.me/api/portraits/men/1.jpg' },
+                    { image: 'https://randomuser.me/api/portraits/men/2.jpg' },
+                    { image: 'https://randomuser.me/api/portraits/men/3.jpg' },
+                    { image: 'https://randomuser.me/api/portraits/men/4.jpg' }
+                  ] %}
+                    <div class="pic-bubble">
+                      <picture>
+                        <img data-src="{{ b.image }}" alt="" loading="lazy" />
+                      </picture>
                     </div>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="flex-1 lg:max-w-[445px]">
+                <div class="flex flex-col gap-6">
+                  <h3 class="h2">
+                    Insurance, advice & expertise, simplified
+                  </h3>
+                  <h5 class="h5">
+                    Our Agents:
+                  </h5>
+                  <div>
+                    <ul class="flex flex-col gap-8">
+                      {% for item in [
+                        'Represent top regional, national, and global insurance companies',
+                        'Create effective solutions to reduce your long-term cost of risk',
+                        'Help you manage your insurance program more effectively'
+                      ] %}
+                        <li class="svg-check">{{ item }}</li>
+                      {% endfor %}
+                    </ul>
                   </div>
-                </li>
-              {% endfor %}
-            </ol>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="relative z-20 px-3">
+        <div class="mx-auto max-w-narrow">
+          <h2 class="h2 max-w-[700px]">
+            We help you understand and manage your risk and insurance programs
+          </h2>
+        </div>
+      </div>
+
+      <div class="absolute bottom-0 inset-x-0 z-0 mr-auto max-w-[90%]">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 1441 236">
+          <path fill="#fff"
+            fill-rule="evenodd"
+            d="M828.121 105.654c165.373 60.008 342.809 124.391 611.949 129.99H.0671387V48.9842C393.614-52.0118 599.324 22.6329 828.121 105.654Z"
+            clip-rule="evenodd" />
+        </svg>
+      </div>
+    </div>
+    <div class="px-3 pt-8 pb-[72px] bg-white">
+      <div class="mx-auto max-w-narrow">
+        <ol class="flex flex-col gap-8 list-numbered md:flex-row">
+          {% for item in [
+            {
+              title: 'Connect',
+              contents: '
+                      <p>Schedule a time to talk with an agent</p>
+                    '
+            },
+            {
+              title: 'Discover',
+              contents: '
+                      <p>We assess your risks and existing insurance protection</p>
+                    '
+            },
+            {
+              title: 'Protect',
+              contents: '
+                      <p>We design and implement insurance programs and strategies that reduce long-term costs</p>
+                    '
+            }
+          ] %}
+            <li>
+              <div>
+                <h3 class="h3">
+                  {{ item.title }}
+                </h3>
+                <div class="text-lg">
+                  {{ item.contents }}
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
     </div>
   </div>
-  <div class="z-0 svg-bg-3"></div>
 </div>
