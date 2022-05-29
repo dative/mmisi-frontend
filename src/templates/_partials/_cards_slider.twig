@@ -1,0 +1,48 @@
+<div class="cards-slider">
+  <div class="py-[72px]">
+    <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {% for i in range(0, 10) %}
+            <li class="splide__slide">
+              <div>
+                <div class="p-8 bg-white rounded-md shadow-card narrow:max-w-[540px]">
+                  <div>
+                    <blockquote class="flex flex-col gap-5">
+                      <div class="redactor">
+                        <p>
+                          Etiam porta sem malesuada magna mollis euismod. Donec
+                          id elit non mi porta gravida at eget metus asdsa
+                          dasdsadas sadsa
+                        </p>
+                      </div>
+                      <footer>
+                        <cite class="not-italic font-bold">Jeff</cite>
+                        – Restaurant Owner
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-row justify-center gap-3.5 p-4">
+      <button class="inline-block bg-no-repeat icon-circled-arrow w-[48px] h-[48px] cards-slider-prev"
+        type="button">
+        <span class="sr-only">Previous</span>
+      </button>
+      <button class="inline-block bg-no-repeat icon-circled-arrow rotate-180 w-[48px] h-[48px] cards-slider-next"
+        type="button">
+        <span class="sr-only">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+{% block bodyJs %}
+  <script type="module" src="{{ mix('/js/cards-slider.js') }}"></script>
+{% endblock %}

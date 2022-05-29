@@ -6,7 +6,7 @@
  * @Author: webrgp
  * @Date: 2022-04-28 16:07:33
  * @Last Modified by: webrgp
- * @Last Modified time: 2022-05-18 16:35:35
+ * @Last Modified time: 2022-05-28 12:54:12
  *
  */
 
@@ -32,6 +32,7 @@
 @import './components/webfonts.css';
 @import './components/typography.css';
 @import './components/global.css';
+@import './components/icons.css';
 @import './components/hamburger.css';
 @import './components/site-navigation.css';
 @import './components/buttons.css';
@@ -55,3 +56,5 @@
  *
  */
 @import 'vendor.css';
+
+@import '@splidejs/splide/dist/css/splide.min.css';
