@@ -1,4 +1,32 @@
-{% extends '_layouts/_content_page.twig' %}
+{% extends '_layouts/_content_blog_page.twig' %}
+
+
+{% set entry = {
+  title: "Risk Advice Blog",
+  heading: "Protect Yourself Against Distracted Drivers",
+  coverPicture: "https://picsum.photos/640/448?random=1",
+  postDate: 1642876482,
+  tags: ['auto insurance', 'risk Reduction'],
+  contentBlocks: [
+    {
+      type: 'richText',
+      contents: '<p>Did you know that at any given day there are approximately 660,000 drivers attempting to use their phones while behind the wheel of an automobile. And nearly 390,000 injuries occur each year from accidents caused by texting while driving. In fact, texting and driving is six times more likely to cause an accident than driving drunk.</p>'
+    },
+    {
+      type: 'picture',
+      image: 'https://picsum.photos/640/448?random=1'
+    },
+    {
+      type: 'accordions',
+      accordions: [
+        { heading: 'Room for Growth and Development', contents: '<p>Your Markup</p>' },
+        { heading: 'Room for Growth and Development', contents: '<p>Your Markup</p>' },
+        { heading: 'Room for Growth and Development', contents: '<p>Your Markup</p>' }
+      ]
+    }
+  ]
+} %}
+
 
 {% block subcontent %}
   {% include '_assembled/_footer_cta.twig' %}
