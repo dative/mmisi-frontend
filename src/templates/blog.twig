@@ -1,0 +1,15 @@
+{% extends '_layouts/_content_page.twig' %}
+
+{% set entry = {
+  title: "Risk Advice Blog",
+  contentBlocks: [
+    {
+    type: 'blogCards',
+    cards: blogPosts
+  },
+  ]
+} %}
+
+{% block subcontent %}
+  {% include '_assembled/_footer_cta.twig' %}
+{% endblock %}

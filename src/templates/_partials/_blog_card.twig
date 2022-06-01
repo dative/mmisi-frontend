@@ -1,0 +1,20 @@
+{% if blk is defined 
+  and blk 
+  and blk.coverPicture is defined 
+  and blk.coverPicture 
+  and blk.created_at is defined 
+  and blk.created_at
+  and blk.title is defined
+  and blk.title
+  and blk.url is defined
+  and blk.url %}
+  <div class="blog-card">
+    <picture>
+      <img class='w-full rounded-t-md' src="{{blk.coverPicture}}" alt="">
+    </picture>
+    <div class="px-4 py-8">
+      <p class="mb-4 uppercase">{{ blk.posDate|date("F j\\, Y") }}</p>
+      <a href="{{ blk.url }}" class="blogTitle">{{ blk.title|title }}</a>
+    </div>
+  </div>
+{% endif %}
