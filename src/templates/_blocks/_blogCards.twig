@@ -1,0 +1,9 @@
+{% if blk is defined and blk and blk.cards is defined and blk.cards %}
+  <div class="grid gap-[30px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    {% for cardBlk in blk.cards %}
+      {% include '_partials/_blog_card.twig' with { blk: cardBlk } %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <p>Nothing here.</p>
+{% endif %}
