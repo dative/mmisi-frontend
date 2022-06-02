@@ -9,9 +9,7 @@ The CMS is configure in a way to expose the following variables:
 The `entry` variable is object that contains all the content for a giving page. The only required property for an `entry` is `title`:
 
 ```twig
-{% set entry = {
-  title: "Page Title"
-} %}
+{% set entry = { title: 'Page Title' } %}
 ```
 
 but any other properties can be added to the `entry` object, as needed:
@@ -44,7 +42,7 @@ On your Twig page, you should set the `entry` object variable with the needed co
 } %}
 
 {% block content %}
-	<div class="px-3 py-8 lg:py-20">
+	<div class="px-7 py-8 lg:py-20">
     <article class="mx-auto max-w-narrow">
       {% if entry is defined and entry %}
 
@@ -94,39 +92,37 @@ The `contentBlocks` prop can only be of type array, more specifically, an array 
 The `type` prop should map to a twig component in order to allow for simple integration between the CMS and the frontend code. If we modify our previous example:
 
 ```twig
-{% extends "_layouts/_generic_page_layout.twig" %}
+{% extends '_layouts/_generic_page_layout.twig' %}
 
 {% set entry = {
-  title: "Page Title",
+  title: 'Page Title',
   contentBlocks: [
     {
-      type: "richText",
-      contents: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, neque?</p>"
-    },
+      type: 'richText',
+      contents: '<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, neque?</p>'
+    }
   ]
 } %}
 
 {% block content %}
-	<div class="px-3 py-8 lg:py-20">
+  <div class="px-7 py-8 lg:py-20">
     <article class="mx-auto max-w-narrow">
       {% if entry is defined and entry %}
-
         {% if entry.title is defined and entry.title %}
-          <h1>{{ entry.title }}</h1>
+          <h1>
+            {{ entry.title }}
+          </h1>
         {% endif %}
 
         {% for blk in entry.contentBlocks %}
-
           {% if blk.type is defined %}
-            {% include "_blocks/_" ~ blk.type ~ ".twig" ignore missing with {
-              blk: blk
-            } %}
+            {% include '_blocks/_' ~ blk.type ~ '.twig' with { blk: blk } %}
           {% endif %}
-
         {% endfor %}
-
       {% else %}
-        <pre>entry is not defined.</pre>
+        <pre>
+          entry is not defined.
+        </pre>
       {% endif %}
     </article>
   </div>
