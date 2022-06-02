@@ -1,25 +1,17 @@
 {% extends '_layouts/_generic_page_layout.twig' %}
 
-{% block pageHeader %}
-  <div class='flex flex-col max-w-[920px] mx-auto'>
-    {% include '_blocks/_blogHeader.twig' with {
-      blk: {
-        heading: entry.title,
-        coverPicture: entry.coverPicture is defined ? entry.coverPicture : null,
-        postDate: entry.postDate is defined ? entry.postDate : null,
-        tags: entry.tags is defined ? entry.tags : null
-      }
-    } %}
-  </div>
-{% endblock %}
-
 {% block content %}
   <div class="px-7 py-8 lg:pt-20">
-    <article class="mx-auto max-w-[920px]">
+    <article class="mx-auto max-w-narrow">
       {% block pageHeader %}
         {% if entry is defined and entry and entry.title %}
-          {% include '_partials/_page_header.twig' with {
-            heading: entry.title
+         {% include '_blocks/_blogHeader.twig' with {
+            blk: {
+              heading: entry.title,
+              coverPicture: entry.coverPicture is defined ? entry.coverPicture : null,
+              postDate: entry.postDate is defined ? entry.postDate : null,
+              tags: entry.tags is defined ? entry.tags : null
+            }
           } %}
         {% endif %}
       {% endblock %}
@@ -33,7 +25,7 @@
           and entry
           and entry.contentBlocks is defined
           and entry.contentBlocks %}
-        <div class="my-16 lg:my-20">
+        <div class="my-16 lg:my-20 max-w-[920px] mx-auto">
           {% include '_partials/_content_blocks.twig' with {
             blocks: entry.contentBlocks
           } %}
