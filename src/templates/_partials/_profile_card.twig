@@ -15,21 +15,20 @@ Usage:
 
 #}
 {% if profile is defined and profile %}
-  <div class="h-full p-4 bg-white rounded-md">
-    <div class="flex flex-col items-center h-full gap-4">
-      <div class="w-[150px] h-[150px]">
+  <div class="h-full p-4 bg-white rounded-sm ">
+    <div class="flex h-full gap-4 sm:flex-col sm:items-center">
+      <div class="w-[90px] h-[90px] sm:w-[150px] sm:h-[150px]">
         {% if profile.profilePicture is defined and profile.profilePicture %}
           <picture>
             <img data-src="{{ profile.profilePicture }}"
               alt=""
               class="w-full rounded-full"
               loading="lazy" />
-          </picture>
-        {% else %}
+      {% else %}
           {% include '_partials/_user_profile.svg.twig' %}
         {% endif %}
       </div>
-      <div class="flex flex-col justify-between flex-1 gap-2 text-center">
+      <div class="flex flex-col justify-center flex-1 gap-2 sm:justify-between sm:text-center">
         <div>
           <div class="text-lg font-bold">
             {{ profile.fullName }}
