@@ -32,20 +32,22 @@ Usage:
       : 'md:flex-row-reverse'
     }}">
     {% if blk.coverPicture is defined and blk.coverPicture %}
-      <div class="relative flex-shrink-0 w-full md:w-[350px]">
-        <picture class="relative">
-          <img data-src="{{ blk.coverPicture }}"
-            alt=""
-            class="object-cover w-full rounded"
-            loading="lazy" />
-          {% if blk.videoUrl is defined and blk.videoUrl %}
-            <button type="button"
-              data-video="{{ blk.videoUrl }}"
-              class="absolute inset-0 flex flex-col items-center justify-center bg-black rounded bg-opacity-20">
-              {% include '_partials/_play_button.svg.twig' %}
-            </button>
-          {% endif %}
-        </picture>
+      <div class="flex-shrink-0 w-full md:w-[350px]">
+        <div class='relative'>
+          <picture>
+            <img data-src="{{ blk.coverPicture }}"
+              alt=""
+              class="object-cover w-full rounded"
+              loading="lazy" />
+            {% if blk.videoUrl is defined and blk.videoUrl %}
+              <button type="button"
+                data-video="{{ blk.videoUrl }}"
+                class="absolute inset-0 flex flex-col items-center justify-center w-full bg-black rounded bg-opacity-20">
+                {% include '_partials/_play_button.svg.twig' %}
+              </button>
+            {% endif %}
+          </picture>
+        </div>
       </div>
     {% endif %}
 
