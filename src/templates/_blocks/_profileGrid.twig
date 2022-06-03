@@ -19,11 +19,9 @@ View _partials/_profile_card.twig for profile data model
     and blk.profiles is defined
     and blk.profiles is iterable
     and blk.profiles %}
-  <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+  <div class="grid grid-cols-1 gap-8 sm:w-full sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
     {% for profile in blk.profiles %}
-      {% include '_partials/_profile_card.twig' with {
-        profile: profile
-      } %}
+      {% include '_partials/_profile_card.twig' with { profile: profile } %}
     {% endfor %}
   </div>
 {% endif %}
