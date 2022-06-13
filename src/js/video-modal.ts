@@ -6,7 +6,7 @@
  * Add the data-video attribute to the button you
  * want to trigger the toogle, passing the video url.
  *
- * <button data-video="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Text</button>
+ * <button data-video="https://www.youtube.com/watch?v=-NAhnxRdMuQ">Text</button>
  */
 
  const VideoModal = (( el: Element) => {

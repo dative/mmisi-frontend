@@ -1,10 +1,9 @@
 {% extends '_layouts/_content_blog_page.twig' %}
 
-
 {% set entry = {
-  title: "Risk Advice Blog",
-  heading: "Protect Yourself Against Distracted Drivers",
-  coverPicture: "https://picsum.photos/640/448?random=1",
+  title: 'Risk Advice Blog',
+  heading: 'Protect Yourself Against Distracted Drivers',
+  coverPicture: 'https://placeholder.pics/svg/640x448/DEDEDE/DEDEDE/%20',
   postDate: 1642876482,
   tags: ['auto insurance', 'risk Reduction'],
   contentBlocks: [
@@ -14,19 +13,27 @@
     },
     {
       type: 'picture',
-      image: 'https://picsum.photos/640/448?random=1'
+      image: 'https://placeholder.pics/svg/640x448/DEDEDE/DEDEDE/%20'
     },
     {
       type: 'accordions',
       accordions: [
-        { heading: 'Room for Growth and Development', contents: '<p>Your Markup</p>' },
-        { heading: 'Room for Growth and Development', contents: '<p>Your Markup</p>' },
-        { heading: 'Room for Growth and Development', contents: '<p>Your Markup</p>' }
+        {
+          heading: 'Room for Growth and Development',
+          contents: '<p>Your Markup</p>'
+        },
+        {
+          heading: 'Room for Growth and Development',
+          contents: '<p>Your Markup</p>'
+        },
+        {
+          heading: 'Room for Growth and Development',
+          contents: '<p>Your Markup</p>'
+        }
       ]
     }
   ]
 } %}
-
 
 {% block subcontent %}
   {% include '_assembled/_footer_cta.twig' %}
