@@ -1,0 +1,45 @@
+{% if heading is defined
+      and heading
+      and postDate is defined
+      and postDate
+%}
+  <div class="flex flex-col gap-x-8 md:flex-row">
+    {% if coverPicture is defined and coverPicture %}
+      <div class="relative flex-shrink-0 w-full md:w-[350px]">
+        <picture class="relative">
+          <img data-src="{{ coverPicture }}"
+            alt=""
+            class="object-cover w-full rounded"
+            loading="lazy" />
+        </picture>
+      </div>
+    {% endif %}
+
+    <div class="flex flex-col flex-1 gap-8">
+      <div>
+        {% include '_partials/_heading.twig' with {
+          text: heading,
+          htag: 'h1'
+        } %}
+      </div>
+
+      <div class="flex flex-row flex-wrap gap-8">
+        <div class='flex flex-row items-center gap-2'>
+          <span class='icon-post-date'></span>
+          <a href='#' class='uppercase'>{{ posDate|date("F j\\, Y") }}</a href='#'>
+        </div>
+
+        {% if tags is defined and tags  %}
+
+        <div class='flex flex-row flex-wrap items-center gap-2'>
+          <span class='icon-post-categories'></span>
+          {% for tag in tags %}
+            <a href='#' class='uppercase'>{{ tag }}{{ loop.last ?: ', '}}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+{% endif %}

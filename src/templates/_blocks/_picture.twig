@@ -10,9 +10,12 @@ Usage:
 
 #}
 {% if blk is defined and blk and blk.image is defined and blk.image %}
-  <div>
+  <div class="w-full">
     <picture>
-      <img data-src="{{ blk.image }}" alt="" class="w-full rounded-md" loading="lazy" />
+      <img data-src="{{ blk.image }}"
+        alt=""
+        class="w-full rounded-md"
+        loading="lazy" />
     </picture>
   </div>
 {% endif %}

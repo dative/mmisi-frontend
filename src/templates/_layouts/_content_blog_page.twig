@@ -1,19 +1,17 @@
 {% extends '_layouts/_generic_page_layout.twig' %}
 
 {% block content %}
-  <div class="px-7 py-8 lg:pt-20">
+  <div class="py-8 px-7 lg:pt-20">
     <article class="mx-auto max-w-narrow">
       {% block pageHeader %}
-        {% if entry is defined and entry and entry.title %}
-         {% include '_blocks/_blogHeader.twig' with {
-            blk: {
-              heading: entry.title,
-              coverPicture: entry.coverPicture is defined ? entry.coverPicture : null,
-              postDate: entry.postDate is defined ? entry.postDate : null,
-              tags: entry.tags is defined ? entry.tags : null
-            }
-          } %}
-        {% endif %}
+        {% include '_partials/_blog_page_header.twig' with {
+          heading: entry.title,
+          coverPicture: entry.coverPicture is defined
+            ? entry.coverPicture
+            : null,
+          postDate: entry.postDate is defined ? entry.postDate : null,
+          tags: entry.tags is defined ? entry.tags : null
+        } %}
       {% endblock %}
 
       {% block beforeContentBlocks %}

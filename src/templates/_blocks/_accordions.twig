@@ -12,7 +12,7 @@ Usage:
 
 #}
 {% if blk is defined and blk and blk.accordions is defined and blk.accordions %}
-  <div>
+  <div class="w-full">
     {% for accBlk in blk.accordions %}
       {% include '_blocks/_accordion.twig' with { blk: accBlk } %}
     {% endfor %}
